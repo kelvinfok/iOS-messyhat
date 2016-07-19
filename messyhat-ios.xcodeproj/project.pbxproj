@@ -14,6 +14,7 @@
 		8D53456B1D3E098B00FCF23D /* CategoriesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */; };
 		8D53456E1D3E0C7F00FCF23D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53456D1D3E0C7F00FCF23D /* Category.swift */; };
 		8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53456F1D3E0D0E00FCF23D /* Categories.swift */; };
+		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewController.swift; sourceTree = "<group>"; };
 		8D53456D1D3E0C7F00FCF23D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8D53456F1D3E0D0E00FCF23D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */,
 				8D5345541D3DC74300FCF23D /* AppDelegate.swift */,
+				8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */,
 				8D5345581D3DC74300FCF23D /* Main.storyboard */,
 				8D53456C1D3E0A5A00FCF23D /* Model Classes */,
 				8D53455B1D3DC74300FCF23D /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D53456B1D3E098B00FCF23D /* CategoriesCollectionViewController.swift in Sources */,
+				8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */,
 				8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */,
 				8D53456E1D3E0C7F00FCF23D /* Category.swift in Sources */,
 				8D5345551D3DC74300FCF23D /* AppDelegate.swift in Sources */,
