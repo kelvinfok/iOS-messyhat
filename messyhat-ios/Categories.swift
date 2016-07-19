@@ -139,8 +139,9 @@ class Code
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "Web", image: UIImage(named: "coding")!, section: "Code"))
-        categories.append(Category(title: "Mobile", image: UIImage(named: "coding")!, section: "Code"))
+        categories.append(Category(title: "Web", image: UIImage(named: "code-web")!, section: "Code"))
+        categories.append(Category(title: "Mobile", image: UIImage(named: "code-mobile")!, section: "Code"))
+        categories.append(Category(title: "Game", image: UIImage(named: "code-game")!, section: "Code"))
         
         return categories
     }
@@ -151,9 +152,9 @@ class Design
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "UX/UI", image: UIImage(named: "design")!, section: "Design"))
-        categories.append(Category(title: "Print", image: UIImage(named: "design")!, section: "Design"))
-        categories.append(Category(title: "Spatial", image: UIImage(named: "design")!, section: "Design"))
+        categories.append(Category(title: "UX/UI", image: UIImage(named: "design-uxui")!, section: "Design"))
+        categories.append(Category(title: "Game", image: UIImage(named: "design-game")!, section: "Design"))
+        categories.append(Category(title: "Media", image: UIImage(named: "design-media")!, section: "Design"))
         
         return categories
     }
