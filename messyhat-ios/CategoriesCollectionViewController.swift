@@ -58,9 +58,17 @@ class CategoriesCollectionViewController: UICollectionViewController {
     }
     
     
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let category = categories.categoryForItemAtIndexPath(indexPath)
+        self.performSegueWithIdentifier("showProfileCollection", sender: category)
+        
+    }
     
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showProfileCollection" {
+            print("show next")
+        }
+    }
     
     
     

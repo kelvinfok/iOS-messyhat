@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Category-->
         <scene sceneID="DXd-Gp-EDN">
             <objects>
-                <collectionViewController title="Category" id="E7b-sh-k4L" customClass="CategoriesCollectionViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CategoryCollectionViewController" title="Category" id="E7b-sh-k4L" customClass="CategoriesCollectionViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Lhm-XE-DTc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,34 +102,88 @@
                             <outlet property="delegate" destination="E7b-sh-k4L" id="9zC-33-dYg"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="JKd-eI-jy2"/>
+                    <navigationItem key="navigationItem" title="All Category" id="JKd-eI-jy2"/>
+                    <connections>
+                        <segue destination="HQg-Wo-flm" kind="show" identifier="showProfileCollection" id="5Xu-Tr-r6q"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8Q-dk-yxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3377" y="1053"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--ProfilesCollection-->
         <scene sceneID="vMr-g0-3Cy">
             <objects>
-                <collectionViewController id="HQg-Wo-flm" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="ProfileCollection" title="ProfilesCollection" id="HQg-Wo-flm" customClass="ProfilesCollectionViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xKn-dP-w64">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="twa-tC-0ox">
-                            <size key="itemSize" width="50" height="50"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="twa-tC-0ox">
+                            <size key="itemSize" width="257" height="321"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uUN-Sf-Pd5">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="uUN-Sf-Pd5" customClass="ProfileCollectionViewCell" customModule="messyhat_ios" customModuleProvider="target">
+                                <rect key="frame" x="8" y="72" width="257" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="257" height="321"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-1l-nQA">
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="GrZ-1l-nQA" secondAttribute="height" multiplier="1:1" id="khk-CJ-rjw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelvin Fok" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2C5-wy-LFj">
+                                            <rect key="frame" x="8" y="271" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Master Ninja" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JP-Hb-4Z7">
+                                            <rect key="frame" x="0.0" y="292" width="257" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GrZ-1l-nQA" firstAttribute="leading" secondItem="uUN-Sf-Pd5" secondAttribute="leading" id="4Wq-5i-xcz"/>
+                                    <constraint firstItem="GrZ-1l-nQA" firstAttribute="top" secondItem="uUN-Sf-Pd5" secondAttribute="top" id="FME-7X-B0l"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="2C5-wy-LFj" secondAttribute="trailing" id="G79-aE-FKz"/>
+                                    <constraint firstItem="2JP-Hb-4Z7" firstAttribute="top" secondItem="2C5-wy-LFj" secondAttribute="bottom" id="GEw-k2-me5"/>
+                                    <constraint firstAttribute="trailing" secondItem="2JP-Hb-4Z7" secondAttribute="trailing" id="NfP-U6-oPO"/>
+                                    <constraint firstItem="2C5-wy-LFj" firstAttribute="leading" secondItem="uUN-Sf-Pd5" secondAttribute="leadingMargin" id="RFu-UI-jha"/>
+                                    <constraint firstItem="2C5-wy-LFj" firstAttribute="top" secondItem="uUN-Sf-Pd5" secondAttribute="top" id="RmC-ca-ebO"/>
+                                    <constraint firstAttribute="trailing" secondItem="GrZ-1l-nQA" secondAttribute="trailing" id="WGC-MS-GZi"/>
+                                    <constraint firstItem="2JP-Hb-4Z7" firstAttribute="leading" secondItem="uUN-Sf-Pd5" secondAttribute="leading" id="XXz-2q-4vT"/>
+                                    <constraint firstItem="2C5-wy-LFj" firstAttribute="leading" secondItem="uUN-Sf-Pd5" secondAttribute="leading" id="Yzm-X9-mpH"/>
+                                    <constraint firstAttribute="trailing" secondItem="2C5-wy-LFj" secondAttribute="trailing" id="lrz-H2-779"/>
+                                    <constraint firstItem="2C5-wy-LFj" firstAttribute="top" secondItem="GrZ-1l-nQA" secondAttribute="top" id="vf9-B1-ocJ"/>
+                                    <constraint firstItem="2JP-Hb-4Z7" firstAttribute="height" secondItem="2C5-wy-LFj" secondAttribute="height" id="xUl-Uv-Erb"/>
+                                    <constraint firstAttribute="bottom" secondItem="2JP-Hb-4Z7" secondAttribute="bottom" constant="8" id="zYw-6E-yPe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RmC-ca-ebO"/>
+                                        <exclude reference="Yzm-X9-mpH"/>
+                                        <exclude reference="lrz-H2-779"/>
+                                        <exclude reference="vf9-B1-ocJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="profileDescription" destination="2JP-Hb-4Z7" id="98W-8e-5Ha"/>
+                                    <outlet property="profileImageView" destination="GrZ-1l-nQA" id="Def-cg-4kM"/>
+                                    <outlet property="profileNameLabel" destination="2C5-wy-LFj" id="eSq-TZ-SsN"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -143,7 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cnZ-YT-YFF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2FN-bw-xzx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="2FN-bw-xzx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jv7-I1-rHU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -161,5 +217,6 @@
     </scenes>
     <resources>
         <image name="marketing" width="350" height="350"/>
+        <image name="profile" width="500" height="500"/>
     </resources>
 </document>
