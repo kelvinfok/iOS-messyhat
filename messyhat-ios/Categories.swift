@@ -29,7 +29,7 @@ class Categories
     {
         categories = createCategories()
         immutableCategories = categories
-        sections = ["Tech", "Arts", "Sports", "Business"]
+        sections = ["Tech", "Design", "Marketing", "Data"]
     }
     
     func deleteItemsAtIndexPaths(indexPaths: [NSIndexPath])
@@ -108,7 +108,10 @@ class Categories
     private func createCategories() -> [Category]
     {
         var newCategories = [Category]()
-        newCategories += Technology.categories()
+        newCategories += Tech.categories()
+        newCategories += Design.categories()
+        newCategories += Marketing.categories()
+        newCategories += Data.categories()
         return newCategories
     }
     
@@ -131,21 +134,51 @@ class Categories
     }
 }
 
-class Technology
+class Tech
 {
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "WIRED", image: UIImage(named: "coding")!, section: "Technology"))
-        categories.append(Category(title: "WIRED", image: UIImage(named: "design")!, section: "Technology"))
+        categories.append(Category(title: "WIRED", image: UIImage(named: "coding")!, section: "Tech"))
+        categories.append(Category(title: "WIRED", image: UIImage(named: "coding")!, section: "Tech"))
         
         return categories
     }
 }
 
+class Design
+{
+    class func categories() -> [Category]
+    {
+        var categories = [Category]()
+        categories.append(Category(title: "WIRED", image: UIImage(named: "design")!, section: "Tech"))
+        categories.append(Category(title: "WIRED", image: UIImage(named: "design")!, section: "Tech"))
+        
+        return categories
+    }
+}
 
+class Marketing
+{
+    class func categories() -> [Category]
+    {
+        var categories = [Category]()
+        categories.append(Category(title: "WIRED", image: UIImage(named: "marketing")!, section: "Tech"))
+        categories.append(Category(title: "WIRED", image: UIImage(named: "marketing")!, section: "Tech"))
+        
+        return categories
+    }
+}
 
-
-
-
+class Data
+{
+    class func categories() -> [Category]
+    {
+        var categories = [Category]()
+        categories.append(Category(title: "WIRED", image: UIImage(named: "data")!, section: "Tech"))
+        categories.append(Category(title: "WIRED", image: UIImage(named: "data")!, section: "Tech"))
+        
+        return categories
+    }
+}
 
