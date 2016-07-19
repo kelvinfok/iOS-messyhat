@@ -21,6 +21,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     }
     
     func updateUI() {
+        
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 3.0
         categoryImageView.image = category?.image
         categoryTitleLabel.text = category?.title
     }

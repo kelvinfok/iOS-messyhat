@@ -29,12 +29,11 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
-        return 1
+        return categories.numberOfSections
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return categories.numberOfCategories
+        return categories.numberOfCategoriesInSection(section)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -47,7 +46,16 @@ class CategoriesCollectionViewController: UICollectionViewController {
     }
     
     
-    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
+    {
+        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as! SectionHeaderView
+        
+        if let category = categories.categoryForItemAtIndexPath(indexPath) {
+            headerView.category = category
+        }
+        
+        return headerView
+    }
     
     
     
