@@ -165,9 +165,8 @@ class Marketing
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "SEO", image: UIImage(named: "marketing")!, section: "Marketing"))
-        categories.append(Category(title: "Content", image: UIImage(named: "marketing")!, section: "Marketing"))
-        categories.append(Category(title: "Social Media", image: UIImage(named: "marketing")!, section: "Marketing"))
+        categories.append(Category(title: "SEO", image: UIImage(named: "marketing-seo")!, section: "Marketing"))
+        categories.append(Category(title: "Social Media", image: UIImage(named: "marketing-socialmedia")!, section: "Marketing"))
         
         return categories
     }
@@ -178,8 +177,7 @@ class Data
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "Statistics", image: UIImage(named: "data")!, section: "Data"))
-        categories.append(Category(title: "Machine Learning", image: UIImage(named: "data")!, section: "Data"))
+        categories.append(Category(title: "Machine Learning", image: UIImage(named: "data-machinelearning")!, section: "Data"))
         
         return categories
     }
