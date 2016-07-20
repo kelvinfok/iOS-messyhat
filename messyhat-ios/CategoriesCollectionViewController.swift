@@ -8,18 +8,17 @@
 
 import UIKit
 
-class CategoriesCollectionViewController: UICollectionViewController {
-    
-    // data source
-    
     let categories = Categories()
+
+class CategoriesCollectionViewController: UICollectionViewController {
     
     private let leftAndRightPaddings: CGFloat = 32.0
     private let numberOfItemsPerRow: CGFloat = 3.0
+    var selectedCategory: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(CGRectGetWidth(collectionView!.frame))
+        print("Screen Size is \(CGRectGetWidth(collectionView!.frame))")
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)
@@ -59,14 +58,17 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         let category = categories.categoryForItemAtIndexPath(indexPath)
+        selectedCategory = category!.title
         self.performSegueWithIdentifier("showProfileCollection", sender: category)
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showProfileCollection" {
-            print("show next")
+            let destinationController = segue.destinationViewController as! ProfilesCollectionViewController
+            destinationController.selectedCategory = selectedCategory
         }
     }
     

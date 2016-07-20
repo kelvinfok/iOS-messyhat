@@ -10,12 +10,13 @@ import UIKit
 
     var category: Category!
 
+
 class ProfilesCollectionViewController: UICollectionViewController {
     
-
     private let heightAdjustment: CGFloat = 50.0
     private let leftAndRightPaddings: CGFloat = 24.0
     private let numberOfItemsPerRow: CGFloat = 2.0
+    var selectedCategory = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ProfilesCollectionViewController: UICollectionViewController {
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width + heightAdjustment)
+        self.title = selectedCategory
     }
     
     
@@ -47,9 +49,7 @@ class ProfilesCollectionViewController: UICollectionViewController {
         
         self.performSegueWithIdentifier("showProfile", sender: cell)
         
-        print("profile pic is clicked")
+        print("Show Profile")
     }
-    
-    
 
 }
