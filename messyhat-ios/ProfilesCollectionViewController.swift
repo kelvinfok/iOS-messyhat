@@ -41,5 +41,15 @@ class ProfilesCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) 
+        
+        self.performSegueWithIdentifier("showProfile", sender: cell)
+        
+        print("profile pic is clicked")
+    }
+    
+    
 
 }
