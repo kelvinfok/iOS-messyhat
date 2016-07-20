@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2FN-bw-xzx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7uW-JD-5RS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -199,19 +199,77 @@
             </objects>
             <point key="canvasLocation" x="4130" y="1053"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="ZKr-lN-Fzo">
             <objects>
-                <viewController id="7uW-JD-5RS" sceneMemberID="viewController">
+                <viewController id="7uW-JD-5RS" customClass="ProfileViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tZ3-VM-pE9"/>
                         <viewControllerLayoutGuide type="bottom" id="aWE-xh-AhO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MfX-iZ-QVI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="yNl-mM-cfD">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yNl-mM-cfD" secondAttribute="height" multiplier="1:1" id="LfJ-fj-izp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sally" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W4-hG-JeI">
+                                <rect key="frame" x="20" y="478" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FaQ-mh-3Pc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking to Exchange: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlm-Uw-7hu">
+                                <rect key="frame" x="20" y="526" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aBR-Ru-pwo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UN-2Q-qbV">
+                                <rect key="frame" x="20" y="574" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5T4-n7-x3a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3UN-2Q-qbV" firstAttribute="top" secondItem="Vlm-Uw-7hu" secondAttribute="bottom" constant="8" id="5KX-pu-52Z"/>
+                            <constraint firstItem="Vlm-Uw-7hu" firstAttribute="top" secondItem="0W4-hG-JeI" secondAttribute="bottom" constant="8" id="7be-RJ-MeO"/>
+                            <constraint firstAttribute="trailing" secondItem="yNl-mM-cfD" secondAttribute="trailing" id="B0R-ZN-gfR"/>
+                            <constraint firstItem="Vlm-Uw-7hu" firstAttribute="top" secondItem="0W4-hG-JeI" secondAttribute="bottom" constant="8" id="GIe-el-xc0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vlm-Uw-7hu" secondAttribute="trailing" constant="-8" id="Lgg-hs-aRh"/>
+                            <constraint firstItem="3UN-2Q-qbV" firstAttribute="trailing" secondItem="0W4-hG-JeI" secondAttribute="trailing" id="Mip-lh-bFM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0W4-hG-JeI" secondAttribute="trailing" id="QaS-Mm-Csq"/>
+                            <constraint firstItem="0W4-hG-JeI" firstAttribute="top" secondItem="yNl-mM-cfD" secondAttribute="bottom" id="Rpw-hE-TiF"/>
+                            <constraint firstItem="Vlm-Uw-7hu" firstAttribute="leading" secondItem="0W4-hG-JeI" secondAttribute="leading" id="ZC4-lw-kEd"/>
+                            <constraint firstItem="3UN-2Q-qbV" firstAttribute="leading" secondItem="0W4-hG-JeI" secondAttribute="leading" id="bUc-tC-lT4"/>
+                            <constraint firstItem="0W4-hG-JeI" firstAttribute="leading" secondItem="MfX-iZ-QVI" secondAttribute="leadingMargin" id="bgU-7s-xrj"/>
+                            <constraint firstItem="yNl-mM-cfD" firstAttribute="top" secondItem="tZ3-VM-pE9" secondAttribute="bottom" id="oSg-cm-fyv"/>
+                            <constraint firstItem="yNl-mM-cfD" firstAttribute="top" secondItem="tZ3-VM-pE9" secondAttribute="bottom" id="vDR-I8-VPp"/>
+                            <constraint firstItem="yNl-mM-cfD" firstAttribute="leading" secondItem="MfX-iZ-QVI" secondAttribute="leading" id="yLZ-rx-0yq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vDR-I8-VPp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPh-Ir-6ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,6 +296,6 @@
     </scenes>
     <resources>
         <image name="marketing" width="350" height="350"/>
-        <image name="profile" width="500" height="500"/>
+        <image name="profile" width="600" height="600"/>
     </resources>
 </document>
