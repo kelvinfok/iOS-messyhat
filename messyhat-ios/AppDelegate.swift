@@ -38,6 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("No logged in user :(")
         }
         
+        
+        
+        let post = PFObject(className: "Profile")
+        post["looking_for"] = "Another"
+        post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+        
+        
+        
         return true
     }
 
