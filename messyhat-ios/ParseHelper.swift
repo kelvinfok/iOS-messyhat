@@ -9,14 +9,14 @@
 import Foundation
 import Parse
 
-// 1
+
 class ParseHelper {
+
     
-    // 2
-    static func ProfilesRequestForCurrentCategory(completionBlock: PFQueryArrayResultBlock, category: String) {
+    static func ProfilesRequestForCurrentCategory(categoryName: String, completionBlock: PFQueryArrayResultBlock) {
         
         let profilesCollectionQuery = PFQuery(className: "Profile")
-        profilesCollectionQuery.whereKey("offering", equalTo: category)
+        profilesCollectionQuery.whereKey("offering", equalTo: categoryName)
 
         profilesCollectionQuery.findObjectsInBackgroundWithBlock(completionBlock)
     }

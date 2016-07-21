@@ -126,7 +126,7 @@
                             <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="uUN-Sf-Pd5" customClass="ProfileCollectionViewCell" customModule="messyhat_ios" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="uUN-Sf-Pd5" customClass="ProfileViewCell" customModule="messyhat_ios" customModuleProvider="target">
                                 <rect key="frame" x="8" y="72" width="257" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -180,9 +180,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <outlet property="profileDescription" destination="2JP-Hb-4Z7" id="98W-8e-5Ha"/>
-                                    <outlet property="profileImageView" destination="GrZ-1l-nQA" id="Def-cg-4kM"/>
-                                    <outlet property="profileNameLabel" destination="2C5-wy-LFj" id="eSq-TZ-SsN"/>
+                                    <outlet property="profileImageView" destination="GrZ-1l-nQA" id="LME-Ok-u8k"/>
+                                    <outlet property="profileName" destination="2C5-wy-LFj" id="G0k-ZA-w6H"/>
+                                    <outlet property="profileSummary" destination="2JP-Hb-4Z7" id="qCc-dO-4x3"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -192,12 +192,13 @@
                         </connections>
                     </collectionView>
                     <connections>
+                        <outlet property="collectionView" destination="xKn-dP-w64" id="Oo8-AA-GaC"/>
                         <segue destination="7uW-JD-5RS" kind="show" identifier="showProfile" id="moB-XU-A67"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzD-h8-yH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4942" y="1053"/>
+            <point key="canvasLocation" x="4909" y="1053"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ZKr-lN-Fzo">
