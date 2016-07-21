@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
@@ -39,14 +38,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
+        // MARK: Security
         
-        let post = PFObject(className: "Profile")
-        post["looking_for"] = "Another"
-        post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+        
+        
+        /* Saving object
+         
+        let profile = PFObject(className: "Profile")
+        profile["looking_for"] = "Coding Classes"
+        profile["offering"] = "Sports Classes"
+        profile["summary"] = "I am very proficient."
+        profile["user"] = PFUser.currentUser()
+        profile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                print("Object has been saved.")
+            } else {
+                print(error)
+            }
         }
+        */
+  
+        /* MARK: Querying
         
+        let ProfileQuery = Profile.query()
         
+        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
+        
+        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
+            
+            print(result)
+            print("\n")
+            
+            for summary in result! {
+                print(summary["summary"])
+            }
+        }
+        */
         
         return true
     }

@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import Parse
 
     var category: Category!
-
 
 class ProfilesCollectionViewController: UICollectionViewController {
     
@@ -19,20 +19,26 @@ class ProfilesCollectionViewController: UICollectionViewController {
     var selectedCategory = String()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        print(CGRectGetWidth(collectionView!.frame))
-        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSizeMake(width, width + heightAdjustment)
         self.title = selectedCategory
     }
     
-    
+    func setCollectionViews() {
+        
+        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSizeMake(width, width + heightAdjustment)
+    }
+
+
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        
         return 1
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 5
     }
     
