@@ -18,6 +18,7 @@ class Profile : PFObject, PFSubclassing {
     @NSManaged var summary: String?
     @NSManaged var looking_for: String?
     @NSManaged var offering: String?
+    @NSManaged var first_name: String?
     
     var image: UIImage?
     

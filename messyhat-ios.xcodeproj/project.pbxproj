@@ -138,8 +138,8 @@
 		8D5BDDAF1D3F78D600C2C49E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */,
 				8DCB4A751D3EA4A700EAF970 /* ProfileViewCell.swift */,
+				8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */,
 				8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */,
 			);
 			name = Views;

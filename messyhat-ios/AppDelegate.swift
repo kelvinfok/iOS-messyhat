@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if let currentUser = PFUser.currentUser() {
-            print("\(currentUser.username!) logged in successfully")
+            print("1. \(currentUser.username!) user logged in successfully")
         } else {
             print("No logged in user :(")
         }
@@ -61,22 +61,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         */
   
-        /* MARK: Querying
+       // MARK: Querying
         
-        let ProfileQuery = Profile.query()
-        
-        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
-        
-        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
-            
-            print(result)
-            print("\n")
-            
-            for summary in result! {
-                print(summary["summary"])
-            }
-        }
-        */
+//        let ProfileQuery = Profile.query()
+//        
+//        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
+//        
+//        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
+//            
+//            print(result)
+//            print("\n")
+//            print(PFUser.currentUser())
+//            
+//            for summary in result! {
+//                print("Summary is .. \(summary["summary"])")
+//            }
+//        }
         
         return true
     }

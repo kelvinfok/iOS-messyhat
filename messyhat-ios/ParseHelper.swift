@@ -15,10 +15,21 @@ class ParseHelper {
     
     static func ProfilesRequestForCurrentCategory(categoryName: String, completionBlock: PFQueryArrayResultBlock) {
         
-        let profilesCollectionQuery = PFQuery(className: "Profile")
+        let profilesCollectionQuery = PFQuery(className: Profile.parseClassName())
         profilesCollectionQuery.whereKey("offering", equalTo: categoryName)
-
+        profilesCollectionQuery.includeKey("user")
         profilesCollectionQuery.findObjectsInBackgroundWithBlock(completionBlock)
     }
+    
+    
+    static func SingleProfileRequestForCurrentCategory(categoryName: String, completionBlock: PFQueryArrayResultBlock) {
+        
+        let profilesCollectionQuery = PFQuery(className: Profile.parseClassName())
+        profilesCollectionQuery.whereKey("offering", equalTo: categoryName)
+        
+        profilesCollectionQuery.findObjectsInBackgroundWithBlock(completionBlock)
+    }
+    
+    
     
 }

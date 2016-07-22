@@ -14,6 +14,7 @@ import Parse
 class ProfilesCollectionViewController: UICollectionViewController {
     
     var profiles = [Profile]()
+    var profileIndex = Int()
     
     private let heightAdjustment: CGFloat = 50.0
     private let leftAndRightPaddings: CGFloat = 24.0
@@ -44,8 +45,8 @@ class ProfilesCollectionViewController: UICollectionViewController {
             (result: [PFObject]?, error: NSError?) -> Void in
             
             self.profiles = result as! [Profile]
-            print(self.profiles)
-            print(self.profiles.count)
+            print("3. Profiles Object: \(self.profiles)")
+            print("4. Profiles Count: \(self.profiles.count)")
             self.collectionView?.reloadData()
             
         }
@@ -66,8 +67,7 @@ class ProfilesCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) as! ProfileViewCell
         
-        print("index path: \(indexPath)")
-         cell.profile = self.profiles[indexPath.row]
+        cell.profile = self.profiles[indexPath.row]
         
         return cell
     }
@@ -78,7 +78,20 @@ class ProfilesCollectionViewController: UICollectionViewController {
         
         self.performSegueWithIdentifier("showProfile", sender: cell)
         
-        print("Show Profile")
+        self.profileIndex = indexPath.row
+        print("5. Index Path is: \(self.profileIndex)")
+
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showProfile" {
+            let destinationController = segue.destinationViewController as! ProfileViewController
+            destinationController.profiles = self.profiles[self.profileIndex]
+            
+        }
+    }
+    
+    
 
 }

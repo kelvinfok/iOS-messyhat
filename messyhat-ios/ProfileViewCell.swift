@@ -24,10 +24,9 @@ class ProfileViewCell: UICollectionViewCell {
     
     func updateUI() {
         
-        
         if let profile = profile {
-            self.profileName.text = profile.user?.objectId!
-            self.profileSummary.text = profile.summary!
+            self.profileName.text = profile.user?.email
+            self.profileSummary.text = profile.offering!
             self.layer.masksToBounds = true
             self.layer.cornerRadius = 3.0
         }

@@ -18,7 +18,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Screen Size is \(CGRectGetWidth(collectionView!.frame))")
+        print("2. Screen Size is \(CGRectGetWidth(collectionView!.frame))")
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)

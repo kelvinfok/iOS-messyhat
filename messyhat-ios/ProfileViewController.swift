@@ -10,17 +10,20 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    var profiles = Profile()
+    
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var profileNameLabel: UILabel!
-    
     @IBOutlet weak var profileSelfSummary: UILabel!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "profile"
+        getProfile()
+        title = "\(profiles["summary"])"
+    }
+    
+    func getProfile() {
+        
     }
 
 }
