@@ -74,11 +74,9 @@ class ProfilesCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath) 
-        
-        self.performSegueWithIdentifier("showProfile", sender: cell)
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("profileCell", forIndexPath: indexPath)
         self.profileIndex = indexPath.row
+        self.performSegueWithIdentifier("showProfile", sender: cell)
         print("5. Index Path is: \(self.profileIndex)")
 
     }

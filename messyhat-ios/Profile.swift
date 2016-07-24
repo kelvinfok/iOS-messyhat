@@ -19,6 +19,7 @@ class Profile : PFObject, PFSubclassing {
     @NSManaged var looking_for: String?
     @NSManaged var offering: String?
     @NSManaged var first_name: String?
+    @NSManaged var country: String?
     
     var image: UIImage?
     
@@ -68,4 +69,13 @@ class Profile : PFObject, PFSubclassing {
      
  */
     
+    
+}
+
+extension String {
+    func firstCharacterUpperCase() -> String {
+        let lowercaseString = self.lowercaseString
+        
+        return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
+    }
 }
