@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
     let categories = Categories()
 
@@ -16,15 +17,40 @@ class CategoriesCollectionViewController: UICollectionViewController {
     private let numberOfItemsPerRow: CGFloat = 3.0
     var selectedCategory: String!
     
+    struct StoryBoard {
+        static let showLoginSegue = "showLogin"
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        checkUserLogin()
+        print("Check User Login")
+        setCollectionViewsLayout()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
+    func checkUserLogin() {
+        if PFUser.currentUser() == nil {
+            print(PFUser.currentUser())
+            performSegueWithIdentifier(StoryBoard.showLoginSegue, sender: nil)
+        }
+        print("Current user is .. \(PFUser.currentUser()?.email)")
+    }
+    
+    // MARK: - CollectionViews Layout
+    
+    func setCollectionViewsLayout() {
         print("2. Screen Size is \(CGRectGetWidth(collectionView!.frame))")
         let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)
     }
     
-    // MARK: - UICollectionViewDataSource
+    // MARK: - Mandatory Settings
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -69,6 +95,11 @@ class CategoriesCollectionViewController: UICollectionViewController {
         if segue.identifier == "showProfileCollection" {
             let destinationController = segue.destinationViewController as! ProfilesCollectionViewController
             destinationController.selectedCategory = selectedCategory
+        }
+        else if segue.identifier == StoryBoard.showLoginSegue {
+            let loginSignupVC = segue.destinationViewController as! LogInSignUpViewController
+            loginSignupVC.hidesBottomBarWhenPushed = true
+            loginSignupVC.navigationItem.hidesBackButton = true
         }
     }
     

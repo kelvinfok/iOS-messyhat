@@ -19,7 +19,7 @@
 		8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53456F1D3E0D0E00FCF23D /* Categories.swift */; };
 		8D5BDDAD1D3F78C000C2C49E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDAC1D3F78C000C2C49E /* MyProfileViewController.swift */; };
 		8D5BDDB11D3FC6E200C2C49E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDB01D3FC6E200C2C49E /* Profile.swift */; };
-		8D5BDDB31D3FDB2000C2C49E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDB21D3FDB2000C2C49E /* SignUpViewController.swift */; };
+		8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */; };
 		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
 		8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */; };
 		8DCB4A741D3E907600EAF970 /* ProfilesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */; };
@@ -43,7 +43,7 @@
 		8D53456F1D3E0D0E00FCF23D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		8D5BDDAC1D3F78C000C2C49E /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		8D5BDDB01D3FC6E200C2C49E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		8D5BDDB21D3FDB2000C2C49E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */,
 				8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */,
 				8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */,
-				8D5BDDB21D3FDB2000C2C49E /* SignUpViewController.swift */,
+				8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -277,11 +277,11 @@
 			files = (
 				8D5BDDAD1D3F78C000C2C49E /* MyProfileViewController.swift in Sources */,
 				8D53456B1D3E098B00FCF23D /* CategoriesCollectionViewController.swift in Sources */,
+				8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */,
 				8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */,
 				8DCB4A761D3EA4A700EAF970 /* ProfileViewCell.swift in Sources */,
 				8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */,
 				8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */,
-				8D5BDDB31D3FDB2000C2C49E /* SignUpViewController.swift in Sources */,
 				8D53456E1D3E0C7F00FCF23D /* Category.swift in Sources */,
 				8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */,
 				8D5BDDB11D3FC6E200C2C49E /* Profile.swift in Sources */,

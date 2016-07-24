@@ -25,17 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.initializeWithConfiguration(configuration)
         
-        do {
-            try PFUser.logInWithUsername("test", password: "test")
-        } catch {
-            print("Unable to log in")
+        if PFUser.currentUser() != nil {
+            PFUser.logOut()
         }
         
-        if let currentUser = PFUser.currentUser() {
-            print("1. \(currentUser.username!) user logged in successfully")
-        } else {
-            print("No logged in user :(")
-        }
+//        do {
+//            try PFUser.logInWithUsername("test", password: "test")
+//        } catch {
+//            print("Unable to log in")
+//        }
+//        
+//        if let currentUser = PFUser.currentUser() {
+//            print("1. \(currentUser.username!) user logged in successfully")
+//        } else {
+//            print("No logged in user :(")
+//        }
         
         
         // MARK: Security
