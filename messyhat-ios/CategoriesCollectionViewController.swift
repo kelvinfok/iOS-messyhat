@@ -13,6 +13,11 @@ import Parse
 
 class CategoriesCollectionViewController: UICollectionViewController {
     
+    @IBAction func logout(sender: AnyObject) {
+        PFUser.logOut()
+        self.checkUserLogin()
+    }
+
     private let leftAndRightPaddings: CGFloat = 32.0
     private let numberOfItemsPerRow: CGFloat = 3.0
     var selectedCategory: String!
@@ -31,6 +36,11 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        checkUserLogin()
     }
     
     func checkUserLogin() {

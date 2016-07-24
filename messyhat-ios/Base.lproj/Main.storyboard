@@ -102,7 +102,13 @@
                             <outlet property="delegate" destination="E7b-sh-k4L" id="9zC-33-dYg"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="All Category" id="JKd-eI-jy2"/>
+                    <navigationItem key="navigationItem" title="All Category" id="JKd-eI-jy2">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="dMW-sD-shE">
+                            <connections>
+                                <action selector="logout:" destination="E7b-sh-k4L" id="4Vu-CX-qLH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="HQg-Wo-flm" kind="show" identifier="showProfileCollection" id="5Xu-Tr-r6q"/>
                         <segue destination="KdA-dO-MQi" kind="show" identifier="showLogin" id="XbM-Xa-aKf"/>
