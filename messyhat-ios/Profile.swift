@@ -9,10 +9,9 @@
 import Foundation
 import Parse
 
-// 1
+
 class Profile : PFObject, PFSubclassing {
     
-    // 2
     @NSManaged var imageFile: PFFile?
     @NSManaged var user: PFUser?
     @NSManaged var summary: String?
@@ -20,17 +19,13 @@ class Profile : PFObject, PFSubclassing {
     @NSManaged var offering: String?
     @NSManaged var first_name: String?
     @NSManaged var country: String?
+    @NSManaged var profileCompleted: Bool
     
-    var image: UIImage?
     
-    //MARK: PFSubclassing Protocol
-    
-    // 3
     static func parseClassName() -> String {
         return "Profile"
     }
     
-    // 4
     override init () {
         super.init()
     }
@@ -42,32 +37,6 @@ class Profile : PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
-    
-    func uploadPost() {
-        if let image = image {
-            // 1
-            let imageData = UIImageJPEGRepresentation(image, 0.8)!
-            let imageFile = PFFile(name: "image.jpg", data: imageData)!
-            
-            // 2
-            self.imageFile = imageFile
-            saveInBackground()
-        }
-    }
-    
-    
-    /*
-    
-    func takePhoto() {
-        // instantiate photo taking class, provide callback for when photo is selected
-        photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image: UIImage?) in
-            let post = Post()
-            post.image = image
-            post.uploadPost()
-        }
-    }
-     
- */
     
     
 }

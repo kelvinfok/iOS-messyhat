@@ -18,12 +18,12 @@ class CategoriesCollectionViewController: UICollectionViewController {
         self.checkUserLogin()
     }
 
-    private let leftAndRightPaddings: CGFloat = 32.0
-    private let numberOfItemsPerRow: CGFloat = 3.0
     var selectedCategory: String!
     
     struct StoryBoard {
         static let showLoginSegue = "showLogin"
+        static let leftAndRightPaddings: CGFloat = 32.0
+        static let numberOfItemsPerRow: CGFloat = 3.0
     }
     
     override func viewDidLoad() {
@@ -55,7 +55,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     func setCollectionViewsLayout() {
         print("2. Screen Size is \(CGRectGetWidth(collectionView!.frame))")
-        let width = (CGRectGetWidth(collectionView!.frame) - leftAndRightPaddings) / numberOfItemsPerRow
+        let width = (CGRectGetWidth(collectionView!.frame) - StoryBoard.leftAndRightPaddings) / StoryBoard.numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)
     }

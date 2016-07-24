@@ -12,6 +12,10 @@ import ParseUI
 import Bolts
 
 class LogInSignUpViewController: PFLogInViewController {
+    
+    struct StoryBoard {
+    static let completeProfile = "completeProfile"
+    }
 
     override func viewDidLoad() {
         
@@ -27,6 +31,24 @@ class LogInSignUpViewController: PFLogInViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
         print("Show Category")
     }
+    
+    func checkProfileIsCompleted() {
+        
+        print(PFUser.currentUser())
+        
+        let ProfileQuery = Profile.query()
+        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
+        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
+            if result!.count == 0 {
+                self.performSegueWithIdentifier(StoryBoard.completeProfile, sender: self)
+                print("User has not completed Profile. Hence directing to CompleteProfileVC")
+            }
+            else {
+                print("User has completed Profile. Redirect to CategoriesVC")
+                self.showCategoryVC()
+            }
+        }
+    }
 }
 
 extension LogInSignUpViewController : PFSignUpViewControllerDelegate {
@@ -34,7 +56,7 @@ extension LogInSignUpViewController : PFSignUpViewControllerDelegate {
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         dismissViewControllerAnimated(true, completion: nil)
         print("Sign Up success!")
-        showCategoryVC()
+        checkProfileIsCompleted()
     }
 }
 
@@ -42,7 +64,7 @@ extension LogInSignUpViewController : PFSignUpViewControllerDelegate {
 extension LogInSignUpViewController : PFLogInViewControllerDelegate {
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) -> Void{
-        showCategoryVC()
+        checkProfileIsCompleted()
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {

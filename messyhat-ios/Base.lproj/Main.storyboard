@@ -208,6 +208,41 @@
             </objects>
             <point key="canvasLocation" x="4901" y="1121"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="31w-hg-8j5">
+            <objects>
+                <viewController id="B8g-8y-fWi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q9x-wE-u1M"/>
+                        <viewControllerLayoutGuide type="bottom" id="4uV-br-Im9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="otz-Py-9aa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-gi-lv6">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RCT-AK-Jzz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="CE2-gi-lv6" secondAttribute="trailing" id="7xn-qB-hMr"/>
+                            <constraint firstItem="CE2-gi-lv6" firstAttribute="leading" secondItem="otz-Py-9aa" secondAttribute="leadingMargin" id="8Fi-X6-2Pt"/>
+                            <constraint firstItem="CE2-gi-lv6" firstAttribute="top" secondItem="q9x-wE-u1M" secondAttribute="bottom" id="ZNY-hU-LGd"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEO-PR-jZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4781" y="2011"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="oW9-q6-FK9">
             <objects>
@@ -369,6 +404,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="QzH-fQ-AuZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="B8g-8y-fWi" kind="show" identifier="completeProfile" id="L1r-gW-RgP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -420,6 +458,6 @@
         <image name="tabBarMyProfile" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XbM-Xa-aKf"/>
+        <segue reference="89L-vd-4c8"/>
     </inferredMetricsTieBreakers>
 </document>
