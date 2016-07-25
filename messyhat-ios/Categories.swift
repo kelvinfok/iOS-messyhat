@@ -15,6 +15,17 @@ class Categories
     private var immutableCategories = [Category]()
     private var sections = [String]()
     
+    static var subCategories =
+        ["Code - Web Development", "Code - Mobile Development", "Code - Game Design",
+         "Design - UI/UX", "Design - Game", "Design - Photo/Video",
+         "Marketing - SEO", "Marketing - Social Media",
+         "Data - Machine Learning"]
+    
+    
+    
+    
+    
+    
     // MARK: - Public
     
     var numberOfCategories: Int {

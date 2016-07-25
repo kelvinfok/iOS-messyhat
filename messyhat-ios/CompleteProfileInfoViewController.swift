@@ -9,16 +9,20 @@
 import UIKit
 import Parse
 
-class CompleteProfileInfoViewController: UIViewController  {
+class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    @IBAction func buttonContinue(sender: AnyObject) {
-        saveDetails()
-    }
-    var pickerOptions = ["A", "B", "C"]
+
+    var lookingForPickerOptions = ["A", "B", "C"]
+    var offeringPickerOptions = ["V", "W", "X", "Y", "Z"]
     
     var lookingForValue: String?
     var offeringValue: String?
     
+    struct StoryBoard {
+        static let segueToExchangeRegistration = "completeExchangeRegistration"
+    }
+    
+    var pickerView = UIPickerView()
 
     @IBOutlet weak var countryTextField: UITextField!
     
@@ -36,8 +40,18 @@ class CompleteProfileInfoViewController: UIViewController  {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
     }
 
+    
+    @IBAction func continueBasicRegistration(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: category)
+    }
+    
+    
     
     func saveDetails() {
         
@@ -59,34 +73,30 @@ class CompleteProfileInfoViewController: UIViewController  {
     }
     
     
-    
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return Categories.subCategories.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView.tag == 1) {
+            lookingForValue = Categories.subCategories[row]
+        }
+        else if (pickerView.tag == 2) {
+            offeringValue = Categories.subCategories[row]
+        }
+    }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
 }

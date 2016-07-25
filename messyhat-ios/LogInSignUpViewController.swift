@@ -14,7 +14,7 @@ import Bolts
 class LogInSignUpViewController: PFLogInViewController {
     
     struct StoryBoard {
-        static let completeProfile = "completeBasicProfile"
+        static let completeProfile = "completeBasicRegistration"
         static let title = "MessyHat"
     }
 

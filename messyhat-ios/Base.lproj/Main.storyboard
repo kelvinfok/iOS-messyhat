@@ -310,7 +310,7 @@
                                 </constraints>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-                                    <action selector="buttonContinue:" destination="B8g-8y-fWi" eventType="touchUpInside" id="tG2-IB-Ywh"/>
+                                    <action selector="continueBasicRegistration:" destination="B8g-8y-fWi" eventType="touchUpInside" id="5wD-vG-Ehg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -350,17 +350,17 @@
                         <outlet property="lastNameTextField" destination="RG8-0E-6MJ" id="QFc-9h-gaM"/>
                         <outlet property="monthOfBirth" destination="Ymd-H8-uCf" id="BoA-O2-CJ1"/>
                         <outlet property="yearOfBirth" destination="5FF-Xg-MrR" id="mYP-u4-Wt1"/>
-                        <segue destination="Hqb-eg-bal" kind="show" id="i6n-8K-O8X"/>
+                        <segue destination="Hqb-eg-bal" kind="show" identifier="completeExchangeRegistration" id="i6n-8K-O8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEO-PR-jZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1866.5" y="-829.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete Profile Info View Controller-->
         <scene sceneID="I7n-De-DQ5">
             <objects>
-                <viewController id="Hqb-eg-bal" sceneMemberID="viewController">
+                <viewController id="Hqb-eg-bal" customClass="CompleteProfileInfoViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tPt-hv-Wta"/>
                         <viewControllerLayoutGuide type="bottom" id="bMj-tt-bCf"/>
@@ -368,7 +368,79 @@
                     <view key="view" contentMode="scaleToFill" id="EFF-qe-f3T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-FZ-OYK">
+                                <rect key="frame" x="16" y="74" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UzV-ND-rpx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What skills do you wish to learn from others?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Va1-lg-DAr">
+                                <rect key="frame" x="16" y="114" width="343" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.1149790475" blue="0.38209007369999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXX-1U-yIF">
+                                <rect key="frame" x="16" y="111" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hqb-eg-bal" id="4JB-a1-P9i"/>
+                                    <outlet property="delegate" destination="Hqb-eg-bal" id="3eL-ag-ati"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What skills can you offer to teach?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-Eo-q34">
+                                <rect key="frame" x="16" y="312" width="343" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="1" green="0.1149790475" blue="0.38209007369999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lob-rx-hIl">
+                                <rect key="frame" x="16" y="309" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hqb-eg-bal" id="7Wn-Ta-FrK"/>
+                                    <outlet property="delegate" destination="Hqb-eg-bal" id="gQO-lX-CbF"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f42-XH-AG5">
+                                <rect key="frame" x="16" y="505" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gxk-Qs-kg3"/>
+                                </constraints>
+                                <state key="normal" title="Continue"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fXX-1U-yIF" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="7HY-l6-eFC"/>
+                            <constraint firstItem="XMA-Eo-q34" firstAttribute="top" secondItem="fXX-1U-yIF" secondAttribute="bottom" constant="-15" id="A0J-b2-SQa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XMA-Eo-q34" secondAttribute="trailing" id="Abr-mK-FwT"/>
+                            <constraint firstItem="f42-XH-AG5" firstAttribute="top" secondItem="fXX-1U-yIF" secondAttribute="bottom" constant="20" id="CIU-Mh-26W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1dM-FZ-OYK" secondAttribute="trailing" id="DU6-2R-ICh"/>
+                            <constraint firstItem="Lob-rx-hIl" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="JTQ-qg-qNS"/>
+                            <constraint firstItem="Va1-lg-DAr" firstAttribute="top" secondItem="1dM-FZ-OYK" secondAttribute="bottom" id="MLK-zL-mQT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f42-XH-AG5" secondAttribute="trailing" id="Ngg-eK-mWt"/>
+                            <constraint firstItem="1dM-FZ-OYK" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="QGQ-KA-fnL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lob-rx-hIl" secondAttribute="trailing" id="Ubk-dK-4BO"/>
+                            <constraint firstItem="Va1-lg-DAr" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="W43-do-AU0"/>
+                            <constraint firstItem="1dM-FZ-OYK" firstAttribute="top" secondItem="tPt-hv-Wta" secondAttribute="bottom" constant="10" id="cnA-WO-q0p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Va1-lg-DAr" secondAttribute="trailing" id="hxD-Zn-Ia7"/>
+                            <constraint firstItem="f42-XH-AG5" firstAttribute="top" secondItem="Lob-rx-hIl" secondAttribute="bottom" constant="-20" id="iMB-gs-4nL"/>
+                            <constraint firstItem="Lob-rx-hIl" firstAttribute="top" secondItem="XMA-Eo-q34" secondAttribute="bottom" constant="-15" id="rY1-hY-RUq"/>
+                            <constraint firstItem="f42-XH-AG5" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="rma-1T-c6X"/>
+                            <constraint firstItem="XMA-Eo-q34" firstAttribute="leading" secondItem="EFF-qe-f3T" secondAttribute="leadingMargin" id="shn-Qa-JUh"/>
+                            <constraint firstItem="XMA-Eo-q34" firstAttribute="top" secondItem="Va1-lg-DAr" secondAttribute="bottom" constant="-20" id="xWd-pE-89S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fXX-1U-yIF" secondAttribute="trailing" id="xpa-Bm-7zp"/>
+                            <constraint firstItem="fXX-1U-yIF" firstAttribute="top" secondItem="Va1-lg-DAr" secondAttribute="bottom" constant="-15" id="zJl-Rc-khX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xWd-pE-89S"/>
+                                <exclude reference="CIU-Mh-26W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -538,7 +610,7 @@
                     <navigationItem key="navigationItem" id="QzH-fQ-AuZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <segue destination="B8g-8y-fWi" kind="show" identifier="completeBasicProfile" id="L1r-gW-RgP"/>
+                        <segue destination="B8g-8y-fWi" kind="show" identifier="completeBasicRegistration" id="L1r-gW-RgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
