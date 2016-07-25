@@ -14,13 +14,14 @@ import Bolts
 class LogInSignUpViewController: PFLogInViewController {
     
     struct StoryBoard {
-    static let completeProfile = "completeProfile"
+        static let completeProfile = "completeBasicProfile"
+        static let title = "MessyHat"
     }
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        title = "MessyHat"
+        title = StoryBoard.title
         let signUpVC = PFSignUpViewController()
         signUpVC.delegate = self
         self.delegate = self
