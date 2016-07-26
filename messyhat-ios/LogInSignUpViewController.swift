@@ -17,6 +17,8 @@ class LogInSignUpViewController: PFLogInViewController {
         static let completeProfile = "segueToBasicRegistration"
         static let title = "MessyHat"
     }
+    
+    var profile = [Profile]()
 
     override func viewDidLoad() {
         
@@ -45,7 +47,7 @@ class LogInSignUpViewController: PFLogInViewController {
                 print("User has not completed Profile. Hence directing to CompleteProfileVC")
             }
             else {
-                print("User has completed Profile. Redirect to CategoriesVC")
+                print("User has completed Profile. Redirect to CategoriesVC")                
                 self.showCategoryVC()
             }
         }

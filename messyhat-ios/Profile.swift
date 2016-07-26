@@ -23,7 +23,6 @@ class Profile : PFObject, PFSubclassing {
     @NSManaged var country: String?
     @NSManaged var profileCompleted: Bool
     
-    
     static func parseClassName() -> String {
         return "Profile"
     }

@@ -26,10 +26,8 @@ class ParseHelper {
         
         let profilesCollectionQuery = PFQuery(className: Profile.parseClassName())
         profilesCollectionQuery.whereKey("offering", equalTo: categoryName)
-        
         profilesCollectionQuery.findObjectsInBackgroundWithBlock(completionBlock)
     }
-    
     
     
 }
