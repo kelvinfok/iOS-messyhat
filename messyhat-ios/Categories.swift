@@ -21,11 +21,6 @@ class Categories
          "Marketing - SEO", "Marketing - Social Media",
          "Data - Machine Learning"]
     
-    
-    
-    
-    
-    
     // MARK: - Public
     
     var numberOfCategories: Int {

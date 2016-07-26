@@ -11,16 +11,7 @@ import Parse
 
 class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    var lookingForValue: String?
-    var offeringValue: String?
-    var firstNameValue: String?
-    var lastNameValue: String?
-    var countryValue: String?
-    var dayOfBirthValue: String?
-    var monthOfBirthValue: String?
-    var yearOfBirthValue: String?
-    
-    var profile = Profile()
+    var newProfile = Profile()
     
     struct StoryBoard {
         static let segueToExchangeRegistration = "segueToExchangeRegistration"
@@ -41,6 +32,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     @IBOutlet weak var yearOfBirth: UITextField!
     
+    @IBOutlet weak var summaryTextView: UITextView!
     
     override func viewDidLoad() {
         
@@ -48,33 +40,22 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        if summaryTextView != nil {
+            self.summaryTextView.layer.cornerRadius = 10
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
-        print("first name is .....\(firstNameValue)")
-        print("first name is .....\(lastNameValue)")
+        super.viewDidAppear(true)
+        print("View Did Appear")
+        print(newProfile)
     }
-
     
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
-
-        profile.first_name = firstNameTextField.text
-        lastNameValue = lastNameTextField.text
-        countryValue = countryTextField.text
-        dayOfBirthValue = dayOfBirth.text
-        monthOfBirthValue = monthOfBirth.text
-        yearOfBirthValue = yearOfBirth.text
-        
-        print("First Name: \(firstNameValue)")
-        print("Last Name: \(lastNameValue)")
-        print("Country: \(countryValue)")
-        print("Day Of Birth: \(dayOfBirthValue)")
-        print("Month Of Birth: \(monthOfBirthValue)")
-        print("Year Of Birth: \(yearOfBirthValue)")
-        print("\n")
-        print("\n")
-        print("\n")
+        newProfile.first_name = firstNameTextField.text
+        newProfile.last_name = lastNameTextField.text
+        newProfile.country = countryTextField.text
         
         self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: self)
     }
@@ -86,24 +67,16 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     
-    func saveDetails() {
+    @IBAction func saveProfile(sender: AnyObject) {
         
-
-//        let profile = PFObject(className: "Profile")
-//        profile["first_name"] = firstNameTextField.text
-//        profile["last_name"] = lastNameTextField.text
-//        profile["country"] = countryTextField.text
-//        profile["user"] = PFUser.currentUser()
-//        // profile["date_of_birth"] = "07/07/1985"
-//        profile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            if success == true {
-//                print("Object has been saved.")
-//            } else {
-//                print(error)
-//            }
-//        }
-        
+        newProfile.summary = summaryTextView.text
+        newProfile.user = PFUser.currentUser()
+        newProfile.saveProfile()
+        print("Profile saved!")
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
+
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -123,12 +96,12 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1) {
-            lookingForValue = Categories.subCategories[row]
-            print(lookingForValue)
+            newProfile.looking_for = Categories.subCategories[row]
+            print(newProfile.looking_for)
         }
         else if (pickerView.tag == 2) {
-            offeringValue = Categories.subCategories[row]
-            print(offeringValue)
+            newProfile.offering = Categories.subCategories[row]
+            print(newProfile.offering)
         }
     }
     
@@ -138,5 +111,9 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
 
 
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
+        destinationController.newProfile = newProfile
+    }
 }
