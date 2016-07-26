@@ -10,16 +10,21 @@ import UIKit
 import Parse
 
 class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
-
-    var lookingForPickerOptions = ["A", "B", "C"]
-    var offeringPickerOptions = ["V", "W", "X", "Y", "Z"]
     
     var lookingForValue: String?
     var offeringValue: String?
+    var firstNameValue: String?
+    var lastNameValue: String?
+    var countryValue: String?
+    var dayOfBirthValue: String?
+    var monthOfBirthValue: String?
+    var yearOfBirthValue: String?
+    
+    var profile = Profile()
     
     struct StoryBoard {
-        static let segueToExchangeRegistration = "completeExchangeRegistration"
+        static let segueToExchangeRegistration = "segueToExchangeRegistration"
+        static let segueToSummaryRegistration = "segueToSummaryRegistration"
     }
     
     var pickerView = UIPickerView()
@@ -44,13 +49,41 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         pickerView.dataSource = self
         
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("first name is .....\(firstNameValue)")
+        print("first name is .....\(lastNameValue)")
+    }
 
     
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
-        self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: category)
+
+        profile.first_name = firstNameTextField.text
+        lastNameValue = lastNameTextField.text
+        countryValue = countryTextField.text
+        dayOfBirthValue = dayOfBirth.text
+        monthOfBirthValue = monthOfBirth.text
+        yearOfBirthValue = yearOfBirth.text
+        
+        print("First Name: \(firstNameValue)")
+        print("Last Name: \(lastNameValue)")
+        print("Country: \(countryValue)")
+        print("Day Of Birth: \(dayOfBirthValue)")
+        print("Month Of Birth: \(monthOfBirthValue)")
+        print("Year Of Birth: \(yearOfBirthValue)")
+        print("\n")
+        print("\n")
+        print("\n")
+        
+        self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: self)
     }
     
+    
+    @IBAction func continueExchangeRegistration(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier(StoryBoard.segueToSummaryRegistration, sender: self)
+    }
     
     
     func saveDetails() {
@@ -91,10 +124,17 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1) {
             lookingForValue = Categories.subCategories[row]
+            print(lookingForValue)
         }
         else if (pickerView.tag == 2) {
             offeringValue = Categories.subCategories[row]
+            print(offeringValue)
         }
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        return Categories.subCategories[row]
     }
 
 

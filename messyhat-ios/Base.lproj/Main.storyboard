@@ -241,7 +241,7 @@
                                     <constraint firstAttribute="height" constant="35" id="Rv5-1H-l5E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RG8-0E-6MJ">
                                 <rect key="frame" x="16" y="186" width="343" height="35"/>
@@ -249,7 +249,7 @@
                                     <constraint firstAttribute="height" constant="35" id="aWh-kx-aQi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPD-BU-mDf">
                                 <rect key="frame" x="16" y="231" width="343" height="35"/>
@@ -257,7 +257,7 @@
                                     <constraint firstAttribute="height" constant="35" id="hY9-hz-rOc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icr-Je-jat">
                                 <rect key="frame" x="16" y="276" width="343" height="40"/>
@@ -350,7 +350,7 @@
                         <outlet property="lastNameTextField" destination="RG8-0E-6MJ" id="QFc-9h-gaM"/>
                         <outlet property="monthOfBirth" destination="Ymd-H8-uCf" id="BoA-O2-CJ1"/>
                         <outlet property="yearOfBirth" destination="5FF-Xg-MrR" id="mYP-u4-Wt1"/>
-                        <segue destination="Hqb-eg-bal" kind="show" identifier="completeExchangeRegistration" id="i6n-8K-O8X"/>
+                        <segue destination="Hqb-eg-bal" kind="show" identifier="segueToExchangeRegistration" id="i6n-8K-O8X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEO-PR-jZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -410,6 +410,9 @@
                                     <constraint firstAttribute="height" constant="40" id="gxk-Qs-kg3"/>
                                 </constraints>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <action selector="continueExchangeRegistration:" destination="Hqb-eg-bal" eventType="touchUpInside" id="ZMy-QA-E6h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -443,10 +446,76 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="hJZ-jc-e3g" kind="show" identifier="segueToSummaryRegistration" id="vN0-hI-glw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYf-qt-zSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2385.5" y="-829.5"/>
+        </scene>
+        <!--Complete Profile Info View Controller-->
+        <scene sceneID="gOd-pR-BlT">
+            <objects>
+                <viewController id="hJZ-jc-e3g" customClass="CompleteProfileInfoViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Okd-2T-C8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="fT7-14-4St"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mH0-fk-k85">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-VK-raq">
+                                <rect key="frame" x="16" y="74" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MN4-AT-HQD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1N-Gs-fRb">
+                                <rect key="frame" x="16" y="114" width="343" height="24"/>
+                                <string key="text">Describe yourself and the skills that you possess. Talk about the skills that you wish to learn and what you can teach in return.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9K-c7-R6o">
+                                <rect key="frame" x="16" y="148" width="343" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Yej-O2-leZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAH-Bf-kKO">
+                                <rect key="frame" x="16" y="458" width="343" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9K-c7-R6o" firstAttribute="leading" secondItem="mH0-fk-k85" secondAttribute="leadingMargin" id="1e2-PN-RzN"/>
+                            <constraint firstItem="hAH-Bf-kKO" firstAttribute="leading" secondItem="mH0-fk-k85" secondAttribute="leadingMargin" id="5dk-oK-oWo"/>
+                            <constraint firstItem="H9K-c7-R6o" firstAttribute="top" secondItem="a1N-Gs-fRb" secondAttribute="bottom" constant="10" id="7KJ-3b-Dad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gkG-VK-raq" secondAttribute="trailing" id="Dwt-PG-fdK"/>
+                            <constraint firstItem="hAH-Bf-kKO" firstAttribute="top" secondItem="H9K-c7-R6o" secondAttribute="bottom" constant="10" id="JFw-1v-5G8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hAH-Bf-kKO" secondAttribute="trailing" id="M0S-Kq-WHE"/>
+                            <constraint firstItem="gkG-VK-raq" firstAttribute="leading" secondItem="mH0-fk-k85" secondAttribute="leadingMargin" id="QoG-eZ-PDk"/>
+                            <constraint firstItem="a1N-Gs-fRb" firstAttribute="leading" secondItem="mH0-fk-k85" secondAttribute="leadingMargin" id="Wgg-io-P4U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9K-c7-R6o" secondAttribute="trailing" id="fvd-Rp-Zcm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a1N-Gs-fRb" secondAttribute="trailing" id="kbd-k3-qYd"/>
+                            <constraint firstItem="gkG-VK-raq" firstAttribute="top" secondItem="Okd-2T-C8J" secondAttribute="bottom" constant="10" id="mab-ae-33Y"/>
+                            <constraint firstItem="a1N-Gs-fRb" firstAttribute="top" secondItem="gkG-VK-raq" secondAttribute="bottom" id="qkQ-yC-36w"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNe-Ck-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940.5" y="-829.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="oW9-q6-FK9">
@@ -610,7 +679,7 @@
                     <navigationItem key="navigationItem" id="QzH-fQ-AuZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <segue destination="B8g-8y-fWi" kind="show" identifier="completeBasicRegistration" id="L1r-gW-RgP"/>
+                        <segue destination="B8g-8y-fWi" kind="show" identifier="segueToBasicRegistration" id="L1r-gW-RgP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>

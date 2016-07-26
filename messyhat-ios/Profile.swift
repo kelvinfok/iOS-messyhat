@@ -18,6 +18,8 @@ class Profile : PFObject, PFSubclassing {
     @NSManaged var looking_for: String?
     @NSManaged var offering: String?
     @NSManaged var first_name: String?
+    @NSManaged var last_name: String?
+    @NSManaged var date_of_birth: NSDate?
     @NSManaged var country: String?
     @NSManaged var profileCompleted: Bool
     
@@ -38,6 +40,16 @@ class Profile : PFObject, PFSubclassing {
         }
     }
     
+    func saveProfile(){
+
+        self.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                print("Object has been saved.")
+            } else {
+                print(error)
+            }
+        }
+    }
     
 }
 
