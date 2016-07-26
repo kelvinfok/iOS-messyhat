@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MyProfileViewController: UIViewController, UITableViewDelegate {
+class MyProfileViewController: UIViewController{
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     var newProfile = Profile()
     
@@ -25,10 +25,6 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     @IBOutlet weak var lastNameTextField: UITextField!
     
     @IBOutlet weak var firstNameTextField: UITextField!
-    
-    @IBOutlet weak var dayOfBirth: UITextField!
-    
-    @IBOutlet weak var monthOfBirth: UITextField!
     
     @IBOutlet weak var yearOfBirth: UITextField!
     
@@ -116,4 +112,18 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
         destinationController.newProfile = newProfile
     }
+    
+    
+    // MARK: Keyboard Control
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 }
