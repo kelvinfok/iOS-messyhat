@@ -9,9 +9,13 @@
 import UIKit
 import Parse
 
-class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var newProfile = Profile()
+    var countrySelected: String?
+    var dateOfBirthSelected: NSDate?
+    
+    var countryOptions = ["Singapore", "Malaysia", "Indonesia", "Vietnam", "Thailand", "Philippines"]
     
     struct StoryBoard {
         static let segueToExchangeRegistration = "segueToExchangeRegistration"
@@ -19,26 +23,42 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     var pickerView = UIPickerView()
+    
 
-    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var uploadPreviewImage: UIImageView!
+    
+    @IBOutlet weak var dateOfBirthDatePicker: UIDatePicker!
     
     @IBOutlet weak var lastNameTextField: UITextField!
     
     @IBOutlet weak var firstNameTextField: UITextField!
     
-    @IBOutlet weak var yearOfBirth: UITextField!
+    @IBOutlet weak var countryPickerView: UIPickerView!
     
     @IBOutlet weak var summaryTextView: UITextView!
+    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        if dateOfBirthDatePicker != nil {
+            
+            dateOfBirthDatePicker.addTarget(self, action: #selector(CompleteProfileInfoViewController.selectDate(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        }
         
         if summaryTextView != nil {
             self.summaryTextView.layer.cornerRadius = 10
         }
+    }
+    
+    func selectDate(dateOfBirthDatePicker: UIDatePicker) {
+        dateOfBirthSelected = dateOfBirthDatePicker.date
+        print("\(dateOfBirthDatePicker.date)")
+        print("DOB IS: \(dateOfBirthSelected)")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,11 +67,28 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         print(newProfile)
     }
     
+    // MARK: Actions
+    
+    
+    
+    @IBAction func addProfilePicture(sender: AnyObject) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.allowsEditing = false
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
         newProfile.first_name = firstNameTextField.text
         newProfile.last_name = lastNameTextField.text
-        newProfile.country = countryTextField.text
+        //newProfile.country = countrySelected
+        //newProfile.date_of_birth = dateOfBirthSelected!
         
         self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: self)
     }
@@ -62,6 +99,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         self.performSegueWithIdentifier(StoryBoard.segueToSummaryRegistration, sender: self)
     }
     
+    // MARK: Saving Of Data
     
     @IBAction func saveProfile(sender: AnyObject) {
         
@@ -77,21 +115,31 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Picker View Settings
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        return Categories.subCategories.count
+        var arrayCountPlacer = []
+        if (pickerView.tag == 0) {
+            arrayCountPlacer = countryOptions
+        }
+        else {
+            arrayCountPlacer = Categories.subCategories
+        }
+        return arrayCountPlacer.count
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerView.tag == 1) {
+        if (pickerView.tag == 0) {
+            countrySelected = countryOptions[row]
+            print(countryOptions[row])
+        }
+        else if (pickerView.tag == 1) {
             newProfile.looking_for = Categories.subCategories[row]
             print(newProfile.looking_for)
         }
@@ -103,8 +151,18 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return Categories.subCategories[row]
+        var arrayOptionsPlacer = []
+        
+        if (pickerView.tag == 0) {
+            arrayOptionsPlacer =  self.countryOptions
+        }
+        else {
+            arrayOptionsPlacer = Categories.subCategories
+        }
+        return (arrayOptionsPlacer[row] as! String)
     }
+    
+    // MARK: Segue
 
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
