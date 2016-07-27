@@ -79,10 +79,6 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    
-    
-    
-    
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
         newProfile.first_name = firstNameTextField.text
@@ -115,6 +111,14 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Image Picker Controls
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        uploadPreviewImage.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: Picker View Settings
