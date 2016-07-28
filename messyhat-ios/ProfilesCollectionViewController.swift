@@ -41,7 +41,7 @@ class ProfilesCollectionViewController: UICollectionViewController {
     }
     
     func getNumberofProfiles() {
-        ParseHelper.ProfilesRequestForCurrentCategory(selectedCategory.lowercaseString) {
+        ParseHelper.ProfilesRequestForCurrentCategory(selectedCategory) {
             (result: [PFObject]?, error: NSError?) -> Void in
             
             self.profiles = result as! [Profile]

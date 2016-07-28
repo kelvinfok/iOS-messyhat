@@ -25,8 +25,24 @@ class ProfileViewCell: UICollectionViewCell {
     func updateUI() {
         
         if let profile = profile {
-            self.profileName.text = profile.user?.email
-            self.profileSummary.text = profile.offering!
+            self.profileName.text = "\(profile.first_name!) \(profile.last_name!)"
+            self.profileSummary.text = "Singapore"
+            
+            
+            
+            let userImageFile = profile.imageFile
+            
+            userImageFile!.getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let image = UIImage(data: imageData!) {
+                        self.profileImageView.image = image
+                        
+                    }
+                }
+            }
+            
+            
+            
             self.layer.masksToBounds = true
             self.layer.cornerRadius = 3.0
         }
