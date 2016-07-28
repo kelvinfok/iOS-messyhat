@@ -140,7 +140,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="257" height="321"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-1l-nQA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GrZ-1l-nQA">
                                             <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="GrZ-1l-nQA" secondAttribute="height" multiplier="1:1" id="khk-CJ-rjw"/>
@@ -783,7 +783,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-1R-KcM">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="863"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5It-WY-bIg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5It-WY-bIg">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="5It-WY-bIg" secondAttribute="height" multiplier="1:1" id="FUc-Zi-52y"/>
