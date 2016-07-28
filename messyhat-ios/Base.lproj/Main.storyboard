@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="skG-Lp-UM2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="skG-Lp-UM2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -692,10 +692,11 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yos-BG-p0W">
-                                                <rect key="frame" x="0.0" y="489" width="359" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yos-BG-p0W">
+                                                <rect key="frame" x="16" y="444" width="351" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="3pn-1o-cJL"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="URP-iB-k6A"/>
                                                     <constraint firstAttribute="height" constant="40" id="fie-BV-mKF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -705,6 +706,9 @@
                                                         <exclude reference="3pn-1o-cJL"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="saveProfile:" destination="hJZ-jc-e3g" eventType="touchUpInside" id="VfP-UZ-ey8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -712,6 +716,7 @@
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="trailing" secondItem="elt-zF-mHG" secondAttribute="trailingMargin" id="0gf-UN-MEd"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" id="CDO-4d-poN"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7bE-wG-r4R" secondAttribute="trailing" id="KSY-wD-Xcf"/>
+                                            <constraint firstItem="yos-BG-p0W" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="40" id="MO8-RI-hc7"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" constant="8" id="Miv-KL-JEE"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="top" secondItem="7bE-wG-r4R" secondAttribute="bottom" constant="20" id="RnJ-SV-ppz"/>
                                             <constraint firstAttribute="height" constant="128" id="Y5E-oN-Yov"/>
@@ -720,7 +725,9 @@
                                             <constraint firstItem="xmf-24-bC3" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leading" id="gO2-VA-rnu"/>
                                             <constraint firstItem="xmf-24-bC3" firstAttribute="top" secondItem="elt-zF-mHG" secondAttribute="top" constant="20" id="jRY-f1-xwR"/>
                                             <constraint firstItem="7bE-wG-r4R" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" id="kv5-Xf-YnV"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="yos-BG-p0W" secondAttribute="trailing" id="ldJ-P7-68q"/>
                                             <constraint firstAttribute="trailing" secondItem="xmf-24-bC3" secondAttribute="trailing" id="pVj-xT-aUq"/>
+                                            <constraint firstItem="yos-BG-p0W" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="8" id="ukR-Gy-eHb"/>
                                             <constraint firstItem="7bE-wG-r4R" firstAttribute="top" secondItem="xmf-24-bC3" secondAttribute="bottom" constant="8" id="vLK-TZ-GHE"/>
                                         </constraints>
                                         <variation key="default">
@@ -750,6 +757,9 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1067"/>
+                    <connections>
+                        <outlet property="summaryTextView" destination="58V-cy-jmr" id="cf5-JU-1OE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNe-Ck-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

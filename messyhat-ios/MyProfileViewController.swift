@@ -30,10 +30,22 @@ class MyProfileViewController: UIViewController{
     }
     
     func getCurrentProfile() {
-        
+
         let ProfileQuery = Profile.query()
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
+
+        
+        let userImageFile = result![0]["imageFile"] as! PFFile
+        
+            userImageFile.getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
+                if error == nil {
+                    if let image = UIImage(data: imageData!) {
+                        self.profileImageView.image = image
+                        
+                    }
+                }
+            }
             
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
         self.countryLabel.text = "\(result![0]["country"])"

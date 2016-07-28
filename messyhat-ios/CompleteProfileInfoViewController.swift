@@ -74,6 +74,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     @IBAction func addProfilePicture(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.allowsEditing = false
         self.presentViewController(imagePicker, animated: true, completion: nil)
@@ -90,14 +91,18 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         let parseImageFile = PFFile(name: "upload_image.png", data: imageData!)
         newProfile.imageFile = parseImageFile
         
-        //newProfile.country = countrySelected
-        //newProfile.date_of_birth = dateOfBirthSelected!
-        
         self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: self)
     }
     
     
     @IBAction func continueExchangeRegistration(sender: AnyObject) {
+        
+        if (newProfile.looking_for == nil) {
+            newProfile.looking_for = Categories.subCategories[0]
+        }
+        if (newProfile.offering == nil) {
+            newProfile.offering = Categories.subCategories[0]
+        }
         
         self.performSegueWithIdentifier(StoryBoard.segueToSummaryRegistration, sender: self)
     }
@@ -169,6 +174,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         }
         return (arrayOptionsPlacer[row] as! String)
     }
+    
     
     // MARK: Segue
 
