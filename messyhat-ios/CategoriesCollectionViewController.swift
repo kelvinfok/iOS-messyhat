@@ -54,13 +54,12 @@ class CategoriesCollectionViewController: UICollectionViewController {
     // MARK: - CollectionViews Layout
     
     func setCollectionViewsLayout() {
-        print("2. Screen Size is \(CGRectGetWidth(collectionView!.frame))")
         let width = (CGRectGetWidth(collectionView!.frame) - StoryBoard.leftAndRightPaddings) / StoryBoard.numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)
     }
     
-    // MARK: - Mandatory Settings
+    // MARK: - CollectionView Settings
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -68,6 +67,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return categories.numberOfCategoriesInSection(section)
     }
     
@@ -98,10 +98,12 @@ class CategoriesCollectionViewController: UICollectionViewController {
         let category = categories.categoryForItemAtIndexPath(indexPath)
         selectedCategory = category!.title
         self.performSegueWithIdentifier("showProfileCollection", sender: category)
-        
     }
     
+    // MARK: Segues
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "showProfileCollection" {
             let destinationController = segue.destinationViewController as! ProfilesCollectionViewController
             destinationController.selectedCategory = selectedCategory
