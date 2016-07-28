@@ -77,12 +77,19 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.allowsEditing = false
         self.presentViewController(imagePicker, animated: true, completion: nil)
+
     }
+    
+    // MARK: Continue Button
     
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
         newProfile.first_name = firstNameTextField.text
         newProfile.last_name = lastNameTextField.text
+        let imageData = UIImagePNGRepresentation(self.uploadPreviewImage.image!)
+        let parseImageFile = PFFile(name: "upload_image.png", data: imageData!)
+        newProfile.imageFile = parseImageFile
+        
         //newProfile.country = countrySelected
         //newProfile.date_of_birth = dateOfBirthSelected!
         
@@ -105,9 +112,6 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         print("Profile saved!")
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
-
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
