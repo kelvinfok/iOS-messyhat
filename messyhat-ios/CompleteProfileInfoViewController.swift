@@ -27,13 +27,13 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
 
     @IBOutlet weak var uploadPreviewImage: UIImageView!
     
-    @IBOutlet weak var dateOfBirthDatePicker: UIDatePicker!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var lastNameTextField: UITextField!
     
     @IBOutlet weak var firstNameTextField: UITextField!
-    
-    @IBOutlet weak var countryPickerView: UIPickerView!
     
     @IBOutlet weak var summaryTextView: UITextView!
     
@@ -44,21 +44,17 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         
         pickerView.delegate = self
         pickerView.dataSource = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
         
-        if dateOfBirthDatePicker != nil {
-            
-            dateOfBirthDatePicker.addTarget(self, action: #selector(CompleteProfileInfoViewController.selectDate(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CompleteProfileInfoViewController.tap(_:)))
+        view.addGestureRecognizer(tapGesture)
+        
+        // self.hideKeyboard()
         
         if summaryTextView != nil {
             self.summaryTextView.layer.cornerRadius = 10
         }
-    }
-    
-    func selectDate(dateOfBirthDatePicker: UIDatePicker) {
-        dateOfBirthSelected = dateOfBirthDatePicker.date
-        print("\(dateOfBirthDatePicker.date)")
-        print("DOB IS: \(dateOfBirthSelected)")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -188,14 +184,45 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     // MARK: Keyboard Control
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if textField == firstNameTextField || textField == lastNameTextField {
+            scrollView.setContentOffset(CGPointMake(0, 300), animated: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
+    func tap(gesture: UITapGestureRecognizer) {
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+    }
+    
     
 }
+
+
+//extension UIViewController
+//{
+//    func hideKeyboard()
+//    {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+//            target: self,
+//            action: #selector(UIViewController.dismissKeyboard))
+//        
+//        view.addGestureRecognizer(tap)
+//    }
+//    
+//    func dismissKeyboard()
+//    {
+//        view.endEditing(true)
+//    }
+//}

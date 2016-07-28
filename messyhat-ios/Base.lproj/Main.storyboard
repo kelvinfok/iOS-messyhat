@@ -246,7 +246,7 @@
                                 <rect key="frame" x="0.0" y="64" width="374" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-7a-lmX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="757"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="807"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tI-wH-Ito">
                                                 <rect key="frame" x="8" y="434" width="359" height="40"/>
@@ -255,6 +255,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="B8g-8y-fWi" id="FBD-mG-UVU"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-ls-KO6">
                                                 <rect key="frame" x="8" y="489" width="359" height="40"/>
@@ -263,6 +266,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="B8g-8y-fWi" id="Tvf-AP-DVz"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account to start using Messyhat today!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptF-tz-Ymr">
                                                 <rect key="frame" x="8" y="53" width="359" height="15"/>
@@ -361,7 +367,7 @@
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="top" secondItem="1Fc-iG-fiF" secondAttribute="bottom" constant="106" id="Ade-3u-NfX"/>
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="top" secondItem="ptF-tz-Ymr" secondAttribute="bottom" constant="20" id="FFQ-fF-gTG"/>
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="top" secondItem="0da-0c-2p1" secondAttribute="bottom" constant="18" id="KXb-dP-NZF"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="bVO-Uv-jhG" secondAttribute="bottom" constant="50" id="NNw-Mg-WiW"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="bVO-Uv-jhG" secondAttribute="bottom" constant="100" id="NNw-Mg-WiW"/>
                                             <constraint firstItem="0da-0c-2p1" firstAttribute="top" secondItem="Aw8-7a-lmX" secondAttribute="top" constant="15" id="OmX-u2-FZc"/>
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="top" secondItem="GBm-In-Nzz" secondAttribute="bottom" constant="15" id="RJU-0k-2KQ"/>
                                             <constraint firstItem="bVO-Uv-jhG" firstAttribute="leading" secondItem="Aw8-7a-lmX" secondAttribute="leadingMargin" id="TBB-an-dQr"/>
@@ -425,8 +431,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1067"/>
                     <connections>
+                        <outlet property="contentView" destination="Aw8-7a-lmX" id="0oN-NW-VjD"/>
                         <outlet property="firstNameTextField" destination="4tI-wH-Ito" id="wU1-ji-EEt"/>
-                        <outlet property="lastNameTextField" destination="4dT-ls-KO6" id="nLL-eh-4i6"/>
+                        <outlet property="lastNameTextField" destination="4dT-ls-KO6" id="jIc-BW-NJp"/>
+                        <outlet property="scrollView" destination="brB-MS-14h" id="hKt-8r-a6D"/>
                         <outlet property="uploadPreviewImage" destination="1Fc-iG-fiF" id="xBL-2y-db5"/>
                         <segue destination="Hqb-eg-bal" kind="show" identifier="segueToExchangeRegistration" id="i6n-8K-O8X"/>
                     </connections>
