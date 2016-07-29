@@ -22,11 +22,12 @@ class MyProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCurrentProfile()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        getCurrentProfile()
+        
     }
     
     func getCurrentProfile() {
@@ -38,11 +39,11 @@ class MyProfileViewController: UIViewController{
         
         let userImageFile = result![0]["imageFile"] as! PFFile
         
-            userImageFile.getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
+            userImageFile.getDataInBackgroundWithBlock{
+                (imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     if let image = UIImage(data: imageData!) {
                         self.profileImageView.image = image
-                        
                     }
                 }
             }

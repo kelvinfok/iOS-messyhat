@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "messyhat-ios/CompleteProfileInfoViewController.swift"
-            timestampString = "491420088.107522"
+            timestampString = "491461312.967171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "CompleteProfileInfoViewController"
             landmarkType = "3">
          </BreakpointContent>

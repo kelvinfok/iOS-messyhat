@@ -44,8 +44,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         
         pickerView.delegate = self
         pickerView.dataSource = self
-        firstNameTextField.delegate = self
-        lastNameTextField.delegate = self
+
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CompleteProfileInfoViewController.tap(_:)))
         view.addGestureRecognizer(tapGesture)
@@ -202,27 +201,17 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     func tap(gesture: UITapGestureRecognizer) {
-        firstNameTextField.resignFirstResponder()
-        lastNameTextField.resignFirstResponder()
+        
+        if self.firstNameTextField != nil {
+            firstNameTextField.resignFirstResponder()
+        }
+        if self.lastNameTextField != nil {
+            lastNameTextField.resignFirstResponder()
+        }
+        if self.summaryTextView != nil {
+            summaryTextView.resignFirstResponder()
+        }
     }
     
     
 }
-
-
-//extension UIViewController
-//{
-//    func hideKeyboard()
-//    {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-//            target: self,
-//            action: #selector(UIViewController.dismissKeyboard))
-//        
-//        view.addGestureRecognizer(tap)
-//    }
-//    
-//    func dismissKeyboard()
-//    {
-//        view.endEditing(true)
-//    }
-//}
