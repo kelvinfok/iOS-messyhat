@@ -9,17 +9,19 @@
 import UIKit
 import Parse
 
-class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     var newProfile = Profile()
     var countrySelected: String?
     var dateOfBirthSelected: NSDate?
+    var currentUserEmail: String?
     
     var countryOptions = ["Singapore", "Malaysia", "Indonesia", "Vietnam", "Thailand", "Philippines"]
     
     struct StoryBoard {
         static let segueToExchangeRegistration = "segueToExchangeRegistration"
         static let segueToSummaryRegistration = "segueToSummaryRegistration"
+        static let segueToTerms = "segueToTerms"
     }
     
     var pickerView = UIPickerView()
@@ -37,6 +39,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     @IBOutlet weak var summaryTextView: UITextView!
     
+    @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
         
@@ -44,7 +47,10 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         
         pickerView.delegate = self
         pickerView.dataSource = self
-
+        
+        if emailTextField != nil {
+            emailTextField.text = currentUserEmail!
+        }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CompleteProfileInfoViewController.tap(_:)))
         view.addGestureRecognizer(tapGesture)
@@ -175,9 +181,10 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
 
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
-        destinationController.newProfile = newProfile
+        if segue.identifier != StoryBoard.segueToTerms {
+            let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
+            destinationController.newProfile = newProfile
+        }
     }
     
     
@@ -185,7 +192,6 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         return true
     }
@@ -197,6 +203,14 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        scrollView.setContentOffset(CGPointMake(0, 300), animated: true)
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
         scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     

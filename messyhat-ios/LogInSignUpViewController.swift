@@ -52,6 +52,13 @@ class LogInSignUpViewController: PFLogInViewController {
             }
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segueToBasicRegistration" {
+            let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
+            destinationController.currentUserEmail = "\(PFUser.currentUser()!.email!)"
+        }
+    }
 }
 
 extension LogInSignUpViewController : PFSignUpViewControllerDelegate {
