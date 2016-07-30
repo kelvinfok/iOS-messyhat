@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		500009086A792AD217675E97 /* Pods_messyhat_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */; };
 		8D28746D1D40AD16009E7048 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28746C1D40AD16009E7048 /* ParseHelper.swift */; };
+		8D3D31981D4C853300A2952A /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */; };
 		8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */; };
 		8D5345551D3DC74300FCF23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5345541D3DC74300FCF23D /* AppDelegate.swift */; };
 		8D53455A1D3DC74300FCF23D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5345581D3DC74300FCF23D /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_messyhat_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D17B843D8F8BF66B5CE3259 /* Pods-messyhat-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messyhat-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messyhat-ios/Pods-messyhat-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		8D28746C1D40AD16009E7048 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8D5345511D3DC74300FCF23D /* messyhat-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "messyhat-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5345541D3DC74300FCF23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		8D3D31961D4C850E00A2952A /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */,
+			);
+			name = PageView;
+			sourceTree = "<group>";
+		};
 		8D5345481D3DC74300FCF23D = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		8D5345531D3DC74300FCF23D /* messyhat-ios */ = {
 			isa = PBXGroup;
 			children = (
+				8D3D31961D4C850E00A2952A /* PageView */,
 				8D28746B1D40ACE2009E7048 /* Helper */,
 				8D5BDDAF1D3F78D600C2C49E /* Views */,
 				8D5BDDAE1D3F78CE00C2C49E /* Controller */,
@@ -278,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3D31981D4C853300A2952A /* WalkThroughViewController.swift in Sources */,
 				8D5BDDAD1D3F78C000C2C49E /* MyProfileViewController.swift in Sources */,
 				8D53456B1D3E098B00FCF23D /* CategoriesCollectionViewController.swift in Sources */,
 				8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */,
