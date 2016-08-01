@@ -10,11 +10,12 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    var pageHeaders = ["What is MessyHat?", "How to use this app?", "Initiate and collaborate"]
+    var pageHeaders = ["Welcome aboard!", "How to use this app?", "Initiate and collaborate"]
     var pageImages = ["app1", "app2", "app3"]
-    var pageDescriptions = ["MessyHat is a barter network for members to trade and learn new skillsets without money.",
-                            "Create a profile, browse through members profiles, arrange a meetup and exchange skillsets.", "Start your projects with quality team members in the network"]
+    var pageDescriptions = ["MessyHat is a barter network for members to trade and learn new skills without using money.",
+                            "Create a profile, browse through members profiles, arrange meetups and exchange skills.", ""]
     
+
     
     
     override func viewDidLoad() {
@@ -24,6 +25,17 @@ class PageViewController: UIPageViewController {
         if let startWalkThroughVC = self.viewControllerAtIndex(0) {
             setViewControllers([startWalkThroughVC], direction: .Forward, animated: true, completion: nil)
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+        self.tabBarController?.tabBar.hidden = true
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     func nextPageWithIndex(index: Int) {

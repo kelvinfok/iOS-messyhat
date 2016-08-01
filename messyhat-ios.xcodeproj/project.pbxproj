@@ -21,6 +21,7 @@
 		8D5BDDAD1D3F78C000C2C49E /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDAC1D3F78C000C2C49E /* MyProfileViewController.swift */; };
 		8D5BDDB11D3FC6E200C2C49E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDB01D3FC6E200C2C49E /* Profile.swift */; };
 		8D602DE91D4F0F5C00402D19 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DE81D4F0F5C00402D19 /* PageViewController.swift */; };
+		8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DEB1D4F732E00402D19 /* Code Bank.swift */; };
 		8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */; };
 		8DC951501D45CB5500971EC2 /* CompleteProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */; };
 		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
@@ -48,6 +49,7 @@
 		8D5BDDAC1D3F78C000C2C49E /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		8D5BDDB01D3FC6E200C2C49E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8D602DE81D4F0F5C00402D19 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8D602DEB1D4F732E00402D19 /* Code Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Code Bank.swift"; sourceTree = "<group>"; };
 		8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteProfileInfoViewController.swift; sourceTree = "<group>"; };
 		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		8D5345531D3DC74300FCF23D /* messyhat-ios */ = {
 			isa = PBXGroup;
 			children = (
+				8D602DEA1D4F730100402D19 /* Repo */,
 				8D3D31961D4C850E00A2952A /* PageView */,
 				8D28746B1D40ACE2009E7048 /* Helper */,
 				8D5BDDAF1D3F78D600C2C49E /* Views */,
@@ -142,10 +145,10 @@
 		8D5BDDAE1D3F78CE00C2C49E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */,
 				8D5BDDAC1D3F78C000C2C49E /* MyProfileViewController.swift */,
 				8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */,
 				8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */,
-				8D53456A1D3E098B00FCF23D /* CategoriesCollectionViewController.swift */,
 				8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */,
 				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
 			);
@@ -160,6 +163,14 @@
 				8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8D602DEA1D4F730100402D19 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				8D602DEB1D4F732E00402D19 /* Code Bank.swift */,
+			);
+			name = Repo;
 			sourceTree = "<group>";
 		};
 		A7325D6E119B29A398F39BE1 /* Frameworks */ = {
@@ -299,6 +310,7 @@
 				8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */,
 				8DCB4A761D3EA4A700EAF970 /* ProfileViewCell.swift in Sources */,
 				8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */,
+				8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */,
 				8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */,
 				8D53456E1D3E0C7F00FCF23D /* Category.swift in Sources */,
 				8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */,

@@ -17,17 +17,10 @@ class WalkThroughViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
-    
     var index = 0
     var headerText = ""
     var imageName = ""
     var descriptionText = ""
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle
-    {
-        return .LightContent
-    }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,16 +46,6 @@ class WalkThroughViewController: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setBool(true, forKey: "DisplayedWalkthrough")
         
-        
-        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
-        print(displayedWalkthroughs)
-        
-        
-        
-        
-        
-        
-        
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -70,18 +53,4 @@ class WalkThroughViewController: UIViewController {
         let pageViewController = self.parentViewController as! PageViewController
         pageViewController.nextPageWithIndex(index)
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
 }

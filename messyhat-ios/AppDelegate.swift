@@ -17,81 +17,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        return true
+    }
+    
+    func setUpParseSDK() {
         
-        // Set up the Parse SDK
         let configuration = ParseClientConfiguration {
             $0.applicationId = "messyhat"
             $0.server = "https://messyhat-backend.herokuapp.com/parse"
         }
         
         Parse.initializeWithConfiguration(configuration)
-        
+    }
+    
+    func logOutAllUsers() {
         if PFUser.currentUser() != nil {
             PFUser.logOut()
         }
+    }
+    
+    func setSecurity() {
+        
+        let acl = PFACL()
+        acl.publicReadAccess = true
+        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
+    }
+    
+    func loadMixPanel() {
         
         let token = "df6aafe694fe5073348357a9a34e9ebd"
         Mixpanel.sharedInstanceWithToken(token)
         let mixpanel: Mixpanel = Mixpanel.sharedInstance()
         mixpanel.track("App launched")
-        
-        
-        
-        
-//        do {
-//            try PFUser.logInWithUsername("test", password: "test")
-//        } catch {
-//            print("Unable to log in")
-//        }
-//        
-//        if let currentUser = PFUser.currentUser() {
-//            print("1. \(currentUser.username!) user logged in successfully")
-//        } else {
-//            print("No logged in user :(")
-//        }
-        
-        
-        // MARK: Security
-        
-        let acl = PFACL()
-        acl.publicReadAccess = true
-        PFACL.setDefaultACL(acl, withAccessForCurrentUser: true)
-        
-        
-        /* Saving object
-         
-        let profile = PFObject(className: "Profile")
-        profile["looking_for"] = "Coding Classes"
-        profile["offering"] = "Sports Classes"
-        profile["summary"] = "I am very proficient."
-        profile["user"] = PFUser.currentUser()
-        profile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if success == true {
-                print("Object has been saved.")
-            } else {
-                print(error)
-            }
-        }
-        */
-  
-       // MARK: Querying
-        
-//        let ProfileQuery = Profile.query()
-//        
-//        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
-//        
-//        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
-//            
-//            print(result)
-//            print("\n")
-//            print(PFUser.currentUser())
-//            
-//            for summary in result! {
-//                print("Summary is .. \(summary["summary"])")
-//            }
-//        }
-        
-        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

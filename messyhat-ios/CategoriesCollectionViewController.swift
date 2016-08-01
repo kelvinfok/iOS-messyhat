@@ -29,19 +29,31 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        displayWalkthroughs()
-       // checkUserLogin()
-        print("Check User Login")
-        setCollectionViewsLayout()
+
+        checkFirstTimer()
+        // checkUserLogin()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+    func checkFirstTimer() {
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
+        
+        if displayedWalkthroughs == true {
+            print("Proceed to collectViews")
+            showCollectionViewsLayout()
+        }
+        else {
+            print("Show walk-through")
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
+            self.presentViewController(pageViewController, animated: false, completion: nil)
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        checkUserLogin()
+        // checkUserLogin()
     }
     
     // MARK: - Check Login
@@ -54,23 +66,9 @@ class CategoriesCollectionViewController: UICollectionViewController {
         print("Current user is .. \(PFUser.currentUser()?.email)")
     }
     
-    // MARK: - Walk Through
-    
-    func displayWalkthroughs() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
-        print(displayedWalkthroughs)
-        
-        if !displayedWalkthroughs {
-            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
-                self.presentViewController(pageViewController, animated: true, completion: nil)
-            }
-        }
-    }
-    
     // MARK: - CollectionViews Layout
     
-    func setCollectionViewsLayout() {
+    func showCollectionViewsLayout() {
         let width = (CGRectGetWidth(collectionView!.frame) - StoryBoard.leftAndRightPaddings) / StoryBoard.numberOfItemsPerRow
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSizeMake(width, width)

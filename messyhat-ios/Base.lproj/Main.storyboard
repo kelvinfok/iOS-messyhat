@@ -1139,7 +1139,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-kH-gPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="1156"/>
+            <point key="canvasLocation" x="1922.5" y="-3020.5"/>
         </scene>
         <!--Walk Through View Controller-->
         <scene sceneID="oB6-85-xFd">
@@ -1169,7 +1169,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CS4-Ux-rxV">
-                                            <rect key="frame" x="168" y="196" width="39" height="37"/>
+                                            <rect key="frame" x="168" y="191" width="39" height="37"/>
                                             <color key="currentPageIndicatorTintColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </pageControl>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao3-Vu-TDi" userLabel="Description Label">
@@ -1194,7 +1194,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                         <constraint firstItem="Ao3-Vu-TDi" firstAttribute="leading" secondItem="vUg-93-3bn" secondAttribute="leading" constant="20" id="5Ed-4V-lo5"/>
                                         <constraint firstAttribute="trailing" secondItem="Ao3-Vu-TDi" secondAttribute="trailing" constant="20" id="9oo-J0-dJ7"/>
                                         <constraint firstItem="CS4-Ux-rxV" firstAttribute="centerX" secondItem="vUg-93-3bn" secondAttribute="centerX" id="9wb-LM-Iug"/>
-                                        <constraint firstAttribute="bottom" secondItem="CS4-Ux-rxV" secondAttribute="bottom" id="ECz-87-fYW"/>
+                                        <constraint firstAttribute="bottom" secondItem="CS4-Ux-rxV" secondAttribute="bottom" constant="5" id="ECz-87-fYW"/>
                                         <constraint firstAttribute="trailing" secondItem="fVV-Za-s2V" secondAttribute="trailing" constant="20" id="Jb8-gt-Jnp"/>
                                         <constraint firstItem="fVV-Za-s2V" firstAttribute="top" secondItem="Ao3-Vu-TDi" secondAttribute="bottom" constant="20" id="oXb-6j-IRo"/>
                                         <constraint firstItem="fVV-Za-s2V" firstAttribute="leading" secondItem="vUg-93-3bn" secondAttribute="leading" constant="20" id="pbU-yY-lED"/>
@@ -1253,7 +1253,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4C-hf-iBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212.5" y="1155.5"/>
+            <point key="canvasLocation" x="2444.5" y="-3028.5"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="uQJ-IX-kUF">
