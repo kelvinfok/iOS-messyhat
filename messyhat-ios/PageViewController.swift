@@ -10,10 +10,10 @@ import UIKit
 
 class PageViewController: UIPageViewController {
     
-    var pageHeaders = ["What is MessyHat?", "How to use this app?", "Initiate projects with Messyhat"]
+    var pageHeaders = ["What is MessyHat?", "How to use this app?", "Initiate and collaborate"]
     var pageImages = ["app1", "app2", "app3"]
-    var pageDescriptions = ["Messyhat is a barter network for members to trade skillsets without money.",
-                            "Create a profile and talk to members to exchange skillsets.", "Start your projects with members in the network"]
+    var pageDescriptions = ["MessyHat is a barter network for members to trade and learn new skillsets without money.",
+                            "Create a profile, browse through members profiles, arrange a meetup and exchange skillsets.", "Start your projects with quality team members in the network"]
     
     
     
@@ -27,7 +27,9 @@ class PageViewController: UIPageViewController {
     }
     
     func nextPageWithIndex(index: Int) {
-        
+        if let nextWalkthroughVC = self.viewControllerAtIndex(index + 1) {
+            setViewControllers([nextWalkthroughVC], direction: .Forward, animated: true, completion: nil)
+        }
     }
     
     func viewControllerAtIndex(index: Int) -> WalkThroughViewController? {
@@ -75,27 +77,3 @@ extension PageViewController: UIPageViewControllerDataSource {
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

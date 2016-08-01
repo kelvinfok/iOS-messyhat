@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Mixpanel
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if PFUser.currentUser() != nil {
             PFUser.logOut()
         }
+        
+        let token = "df6aafe694fe5073348357a9a34e9ebd"
+        Mixpanel.sharedInstanceWithToken(token)
+        let mixpanel: Mixpanel = Mixpanel.sharedInstance()
+        mixpanel.track("App launched")
+        
+        
+        
         
 //        do {
 //            try PFUser.logInWithUsername("test", password: "test")

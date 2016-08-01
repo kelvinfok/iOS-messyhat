@@ -15,19 +15,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     @IBAction func logout(sender: AnyObject) {
         PFUser.logOut()
-        displayWalkthroughs()
         self.checkUserLogin()
-    }
-    
-    func displayWalkthroughs() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
-        
-        if !displayedWalkthroughs {
-            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
-                self.presentViewController(pageViewController, animated: true, completion: nil)
-            }
-        }
     }
 
     var selectedCategory: String!
@@ -41,7 +29,8 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        checkUserLogin()
+        displayWalkthroughs()
+       // checkUserLogin()
         print("Check User Login")
         setCollectionViewsLayout()
     }
@@ -55,12 +44,28 @@ class CategoriesCollectionViewController: UICollectionViewController {
         checkUserLogin()
     }
     
+    // MARK: - Check Login
+    
     func checkUserLogin() {
         if PFUser.currentUser() == nil {
             print(PFUser.currentUser())
             performSegueWithIdentifier(StoryBoard.showLoginSegue, sender: nil)
         }
         print("Current user is .. \(PFUser.currentUser()?.email)")
+    }
+    
+    // MARK: - Walk Through
+    
+    func displayWalkthroughs() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
+        print(displayedWalkthroughs)
+        
+        if !displayedWalkthroughs {
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
+                self.presentViewController(pageViewController, animated: true, completion: nil)
+            }
+        }
     }
     
     // MARK: - CollectionViews Layout

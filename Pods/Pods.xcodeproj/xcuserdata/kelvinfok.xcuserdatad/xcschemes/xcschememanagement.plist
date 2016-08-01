@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Mixpanel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,11 +82,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58C5AC1B4061A47CF784B27B25546C0F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
 		<dict>
 			<key>primary</key>
@@ -97,7 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8EFE724FDDAA2478F44F082C05BA272C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BA0ED018954B2E035A694BF72506145C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C040C1274F181E26484E9B97BF0993BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

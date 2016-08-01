@@ -10,5 +10,6 @@ pod "ConvenienceKit"
 pod 'Parse'
 pod 'ParseFacebookUtilsV4'
 pod 'ParseUI'
+pod 'Mixpanel'
 
 end

@@ -23,10 +23,11 @@ class WalkThroughViewController: UIViewController {
     var imageName = ""
     var descriptionText = ""
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    override func preferredStatusBarStyle() -> UIStatusBarStyle
+    {
         return .LightContent
     }
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,10 @@ class WalkThroughViewController: UIViewController {
         headerLabel.text = headerText
         descriptionLabel.text = descriptionText
         imageView.image = UIImage(named: imageName)
+        pageControl.currentPage = index
         
-        startButton.hidden = (index == 3) ? false : true
-        nextButton.hidden = (index == 3) ? true : false
+        startButton.hidden = (index == 2) ? false : true
+        nextButton.hidden = (index == 2) ? true : false
         startButton.layer.cornerRadius = 5.0
         startButton.layer.masksToBounds = true
     }
@@ -49,9 +51,24 @@ class WalkThroughViewController: UIViewController {
     @IBAction func startClicked(sender: AnyObject) {
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setBool(true, forKey: "DisplayedWalkThrough")
+        userDefaults.setBool(true, forKey: "DisplayedWalkthrough")
+        
+        
+        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
+        print(displayedWalkthroughs)
+        
+        
+        
+        
+        
+        
         
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func nextClicked(sender: AnyObject) {
+        let pageViewController = self.parentViewController as! PageViewController
+        pageViewController.nextPageWithIndex(index)
     }
 
     
