@@ -30,9 +30,23 @@ class CategoriesCollectionViewController: UICollectionViewController {
         
         super.viewDidLoad()
 
-        checkFirstTimer()
+        showCollectionViewsLayout()
         // checkUserLogin()
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        checkFirstTimer()
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        // checkUserLogin()
+    }
+    
+    
     
     func checkFirstTimer() {
         
@@ -41,20 +55,17 @@ class CategoriesCollectionViewController: UICollectionViewController {
         
         if displayedWalkthroughs == true {
             print("Proceed to collectViews")
-            showCollectionViewsLayout()
+            
         }
         else {
             print("Show walk-through")
             if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
-            self.presentViewController(pageViewController, animated: false, completion: nil)
+            self.presentViewController(pageViewController, animated: true, completion: nil)
             }
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(true)
-        // checkUserLogin()
-    }
+
     
     // MARK: - Check Login
     

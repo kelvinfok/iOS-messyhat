@@ -11,6 +11,8 @@ import Parse
 
 class MyProfileViewController: UIViewController{
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,11 +24,19 @@ class MyProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.hidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        getCurrentProfile()
+        
+        if PFUser.currentUser() != nil {
+            getCurrentProfile()
+        }
+        else {
+
+        }
+        
     }
     
     func getCurrentProfile() {
