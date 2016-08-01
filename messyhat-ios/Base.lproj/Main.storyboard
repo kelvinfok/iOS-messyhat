@@ -1134,7 +1134,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <!--Page View Controller-->
         <scene sceneID="ypB-df-Ydc">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="N1u-RD-GUh" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="N1u-RD-GUh" customClass="PageViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94m-kH-gPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1144,7 +1144,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <!--Walk Through View Controller-->
         <scene sceneID="oB6-85-xFd">
             <objects>
-                <viewController id="mx1-7n-sgp" userLabel="Walk Through View Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walkthroughViewController" id="mx1-7n-sgp" userLabel="Walk Through View Controller" customClass="WalkThroughViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vag-8g-Wu7"/>
                         <viewControllerLayoutGuide type="bottom" id="e3n-mJ-3re"/>
@@ -1153,12 +1153,6 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-17-9m9">
-                                <rect key="frame" x="323" y="28" width="32" height="30"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code-game" translatesAutoresizingMaskIntoConstraints="NO" id="exf-S2-Fda">
                                 <rect key="frame" x="-1" y="20" width="376" height="434"/>
                             </imageView>
@@ -1167,9 +1161,55 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vUg-93-3bn">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-ib-AUv" userLabel="Header Label">
+                                            <rect key="frame" x="8" y="32" width="359" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CS4-Ux-rxV">
+                                            <rect key="frame" x="168" y="196" width="39" height="37"/>
+                                            <color key="currentPageIndicatorTintColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </pageControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao3-Vu-TDi" userLabel="Description Label">
+                                            <rect key="frame" x="20" y="70" width="335" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-Za-s2V" userLabel="Start Button">
+                                            <rect key="frame" x="20" y="111" width="335" height="35"/>
+                                            <color key="backgroundColor" red="0.9882352941176471" green="0.28235294117647058" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <state key="normal" title="Get Started">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Ao3-Vu-TDi" firstAttribute="leading" secondItem="vUg-93-3bn" secondAttribute="leading" constant="20" id="5Ed-4V-lo5"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ao3-Vu-TDi" secondAttribute="trailing" constant="20" id="9oo-J0-dJ7"/>
+                                        <constraint firstItem="CS4-Ux-rxV" firstAttribute="centerX" secondItem="vUg-93-3bn" secondAttribute="centerX" id="9wb-LM-Iug"/>
+                                        <constraint firstAttribute="bottom" secondItem="CS4-Ux-rxV" secondAttribute="bottom" id="ECz-87-fYW"/>
+                                        <constraint firstAttribute="trailing" secondItem="fVV-Za-s2V" secondAttribute="trailing" constant="20" id="Jb8-gt-Jnp"/>
+                                        <constraint firstItem="fVV-Za-s2V" firstAttribute="top" secondItem="Ao3-Vu-TDi" secondAttribute="bottom" constant="20" id="oXb-6j-IRo"/>
+                                        <constraint firstItem="fVV-Za-s2V" firstAttribute="leading" secondItem="vUg-93-3bn" secondAttribute="leading" constant="20" id="pbU-yY-lED"/>
+                                        <constraint firstItem="aLw-ib-AUv" firstAttribute="top" secondItem="vUg-93-3bn" secondAttribute="topMargin" constant="24" id="syy-hJ-uNG"/>
+                                        <constraint firstItem="Ao3-Vu-TDi" firstAttribute="top" secondItem="aLw-ib-AUv" secondAttribute="bottom" constant="8" id="uhl-UI-lky"/>
+                                        <constraint firstItem="aLw-ib-AUv" firstAttribute="leading" secondItem="vUg-93-3bn" secondAttribute="leadingMargin" id="w9P-VQ-cfQ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aLw-ib-AUv" secondAttribute="trailing" id="zH5-mJ-Smn"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-17-9m9">
+                                <rect key="frame" x="323" y="28" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.25490196078431371" blue="0.3411764705882353" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1192,6 +1232,14 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Ao3-Vu-TDi" id="u1J-va-ERm"/>
+                        <outlet property="headerLabel" destination="aLw-ib-AUv" id="o30-Z6-f5p"/>
+                        <outlet property="imageView" destination="exf-S2-Fda" id="Fgg-gx-nr2"/>
+                        <outlet property="nextButton" destination="WF7-17-9m9" id="4Vi-Oj-mfd"/>
+                        <outlet property="pageControl" destination="CS4-Ux-rxV" id="UI5-Pm-pYW"/>
+                        <outlet property="startButton" destination="fVV-Za-s2V" id="LyL-dc-iL9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4C-hf-iBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

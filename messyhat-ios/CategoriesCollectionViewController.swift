@@ -15,7 +15,19 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     @IBAction func logout(sender: AnyObject) {
         PFUser.logOut()
+        displayWalkthroughs()
         self.checkUserLogin()
+    }
+    
+    func displayWalkthroughs() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
+        
+        if !displayedWalkthroughs {
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
+                self.presentViewController(pageViewController, animated: true, completion: nil)
+            }
+        }
     }
 
     var selectedCategory: String!

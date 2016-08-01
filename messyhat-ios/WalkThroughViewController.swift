@@ -9,11 +9,36 @@
 import UIKit
 
 class WalkThroughViewController: UIViewController {
+    
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    
+    
+    var index = 0
+    var headerText = ""
+    var imageName = ""
+    var descriptionText = ""
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        headerLabel.text = headerText
+        descriptionLabel.text = descriptionText
+        imageView.image = UIImage(named: imageName)
+        
+        startButton.hidden = (index == 3) ? false : true
+        nextButton.hidden = (index == 3) ? true : false
+        startButton.layer.cornerRadius = 5.0
+        startButton.layer.masksToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +46,25 @@ class WalkThroughViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func startClicked(sender: AnyObject) {
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setBool(true, forKey: "DisplayedWalkThrough")
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 }
