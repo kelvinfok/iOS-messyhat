@@ -11,7 +11,7 @@ import Parse
 import ParseUI
 import Bolts
 
-class LogInSignUpViewController: PFLogInViewController {
+class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     struct StoryBoard {
         static let completeProfile = "segueToBasicRegistration"
@@ -23,13 +23,20 @@ class LogInSignUpViewController: PFLogInViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        setUI()
+        setParse()
+    }
+    
+    func setUI() {
         self.tabBarController?.tabBar.hidden = true
         title = StoryBoard.title
-        let signUpVC = PFSignUpViewController()
-        signUpVC.delegate = self
+    }
+    
+    func setParse() {
+        let signUpViewController = PFSignUpViewController()
+        signUpViewController.delegate = self
         self.delegate = self
-        self.signUpController = signUpVC
+        self.signUpController = signUpViewController
     }
     
     func showCategoryVC() {
@@ -61,19 +68,12 @@ class LogInSignUpViewController: PFLogInViewController {
             destinationController.currentUserEmail = "\(PFUser.currentUser()!.email!)"
         }
     }
-}
-
-extension LogInSignUpViewController : PFSignUpViewControllerDelegate {
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         dismissViewControllerAnimated(true, completion: nil)
         print("Sign Up success!")
         checkProfileIsCompleted()
     }
-}
-
-
-extension LogInSignUpViewController : PFLogInViewControllerDelegate {
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) -> Void{
         checkProfileIsCompleted()
@@ -82,4 +82,6 @@ extension LogInSignUpViewController : PFLogInViewControllerDelegate {
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
         print(error)
     }
+    
 }
+

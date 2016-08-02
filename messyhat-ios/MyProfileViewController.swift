@@ -89,15 +89,18 @@ class MyProfileViewController: UIViewController{
 
     @IBAction func loginCreateAction(sender: AnyObject) {
         performSegueWithIdentifier(StoryBoard.segueToLoginSignUp, sender: nil)
-        
-        
     }
     
     
+    @IBAction func signOutButton(sender: AnyObject) {
+        if PFUser.currentUser() != nil {
+            PFUser.logOut()
+            
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
 
