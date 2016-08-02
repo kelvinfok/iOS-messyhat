@@ -29,9 +29,11 @@ class MyProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBarController?.tabBar.hidden = false
-        
+        updateUI()
+    }
+    
+    
+    func updateUI() {
         loginCreateAccountButton.layer.cornerRadius = 5.0
         loginCreateAccountButton.layer.masksToBounds = true
     }
@@ -39,13 +41,21 @@ class MyProfileViewController: UIViewController{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if PFUser.currentUser() != nil {
+        self.tabBarController?.tabBar.hidden = false
+        
+        if currentUserLoggedIn() {
             getCurrentProfile()
+        }
+    }
+    
+    func currentUserLoggedIn() -> Bool {
+        if PFUser.currentUser() != nil {
+            return true
         }
         else {
             scrollView.hidden = true
+            return false
         }
-        
     }
     
     func getCurrentProfile() {
@@ -53,7 +63,6 @@ class MyProfileViewController: UIViewController{
         let ProfileQuery = Profile.query()
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
-
         
         let userImageFile = result![0]["imageFile"] as! PFFile
         
@@ -71,6 +80,7 @@ class MyProfileViewController: UIViewController{
         self.lookingForLabel.text = "\(result![0]["looking_for"])"
         self.offeringLabel.text = "\(result![0]["offering"])"
         self.summaryLabel.text = "\(result![0]["summary"])"
+        self.scrollView.hidden = false
         }
     }
     

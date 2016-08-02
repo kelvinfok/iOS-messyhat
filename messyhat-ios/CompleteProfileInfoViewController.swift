@@ -28,6 +28,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     var pickerView = UIPickerView()
     
+    @IBOutlet weak var completeButton: UIButton!
 
     @IBOutlet weak var uploadPreviewImage: UIImageView!
     
@@ -50,6 +51,11 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        if (completeButton != nil) {
+            completeButton.layer.cornerRadius = 5.0
+            completeButton.layer.masksToBounds = true
+        }
+
         if emailTextField != nil {
             emailTextField.text = currentUserEmail!
         }
@@ -119,9 +125,18 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         
         newProfile.summary = summaryTextView.text
         newProfile.user = PFUser.currentUser()
-        newProfile.saveProfile()
-        print("Profile saved!")
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+        newProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if success == true {
+                print("Object has been saved.")
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
+            else {
+                print(error)
+            }
+        }
+     
+        
     }
     
     override func didReceiveMemoryWarning() {
