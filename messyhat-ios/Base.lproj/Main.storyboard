@@ -103,13 +103,7 @@
                             <outlet property="delegate" destination="E7b-sh-k4L" id="9zC-33-dYg"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="All Category" id="JKd-eI-jy2">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="dMW-sD-shE">
-                            <connections>
-                                <action selector="logout:" destination="E7b-sh-k4L" id="4Vu-CX-qLH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="All Category" id="JKd-eI-jy2"/>
                     <connections>
                         <segue destination="HQg-Wo-flm" kind="show" identifier="showProfileCollection" id="5Xu-Tr-r6q"/>
                     </connections>
@@ -243,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brB-MS-14h">
-                                <rect key="frame" x="0.0" y="64" width="374" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="374" height="1047"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-7a-lmX">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="909"/>
@@ -358,6 +352,7 @@
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JhC-sv-7oz">
                                                 <rect key="frame" x="8" y="544" width="359" height="40"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Enn-xP-Ted"/>
                                                 </constraints>
@@ -637,7 +632,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prQ-JG-BsE">
-                                <rect key="frame" x="0.0" y="64" width="375" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1047"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTu-F3-Mhy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="663"/>
@@ -820,7 +815,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzE-ch-D4e">
-                                <rect key="frame" x="0.0" y="64" width="375" height="954"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1047"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elt-zF-mHG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="884"/>
@@ -873,7 +868,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="58V-cy-jmr">
-                                                <rect key="frame" x="8" y="154" width="359" height="250"/>
+                                                <rect key="frame" x="23" y="154" width="329" height="250"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.30075431034482758" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="C2h-Om-8eC"/>
@@ -907,10 +902,10 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstAttribute="bottom" secondItem="yos-BG-p0W" secondAttribute="bottom" constant="400" id="KHj-IR-Mb1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7bE-wG-r4R" secondAttribute="trailing" id="KSY-wD-Xcf"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="40" id="MO8-RI-hc7"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" id="Miv-KL-JEE"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" constant="15" id="Miv-KL-JEE"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="top" secondItem="7bE-wG-r4R" secondAttribute="bottom" constant="20" id="RnJ-SV-ppz"/>
                                             <constraint firstAttribute="height" constant="128" id="Y5E-oN-Yov"/>
-                                            <constraint firstItem="58V-cy-jmr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" id="Yub-uB-xD5"/>
+                                            <constraint firstItem="58V-cy-jmr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="15" id="Yub-uB-xD5"/>
                                             <constraint firstItem="58V-cy-jmr" firstAttribute="top" secondItem="KIf-PW-YDr" secondAttribute="bottom" constant="18" id="c9D-cr-B2G"/>
                                             <constraint firstItem="xmf-24-bC3" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leading" id="gO2-VA-rnu"/>
                                             <constraint firstItem="xmf-24-bC3" firstAttribute="top" secondItem="elt-zF-mHG" secondAttribute="top" constant="20" id="jRY-f1-xwR"/>
@@ -949,6 +944,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                     <size key="freeformSize" width="375" height="1067"/>
                     <connections>
                         <outlet property="summaryTextView" destination="58V-cy-jmr" id="cf5-JU-1OE"/>
+                        <segue destination="KdA-dO-MQi" kind="show" identifier="segueToMyProfile" id="ML4-AS-vst"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNe-Ck-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1292,7 +1288,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-wE-xGO">
-                                <rect key="frame" x="0.0" y="64" width="414" height="923"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="1016"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btl-UT-hoX" userLabel="Profile View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="735"/>
@@ -1428,7 +1424,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                             <constraint firstAttribute="trailing" secondItem="QsA-wE-xGO" secondAttribute="trailing" id="tCL-ka-aiE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Profile" id="QzH-fQ-AuZ"/>
+                    <navigationItem key="navigationItem" title="My Profile" id="up6-Fe-T72"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1036"/>
                     <connections>
@@ -1493,4 +1489,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <image name="tabBarHome" width="38" height="36"/>
         <image name="tabBarMyProfile" width="42" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ML4-AS-vst"/>
+    </inferredMetricsTieBreakers>
 </document>

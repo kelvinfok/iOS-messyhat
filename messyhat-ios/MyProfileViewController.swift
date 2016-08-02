@@ -30,6 +30,8 @@ class MyProfileViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tabBarController?.tabBar.hidden = false
+        
         loginCreateAccountButton.layer.cornerRadius = 5.0
         loginCreateAccountButton.layer.masksToBounds = true
     }

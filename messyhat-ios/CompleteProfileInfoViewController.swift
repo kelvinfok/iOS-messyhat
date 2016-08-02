@@ -23,6 +23,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         static let segueToSummaryRegistration = "segueToSummaryRegistration"
         static let segueToTerms = "segueToTerms"
         static let segueToAgreement = "segueToAgreement"
+        static let segueToMyProfile = "segueToMyProfile"
     }
     
     var pickerView = UIPickerView()
