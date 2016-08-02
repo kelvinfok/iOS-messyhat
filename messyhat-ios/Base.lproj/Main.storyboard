@@ -205,16 +205,34 @@
         <!--Log In Sign Up View Controller-->
         <scene sceneID="9bY-7m-3bi">
             <objects>
-                <viewController storyboardIdentifier="logInSignUpViewController" id="c5h-3r-Wfc" customClass="LogInSignUpViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInSignUpViewController" automaticallyAdjustsScrollViewInsets="NO" id="c5h-3r-Wfc" customClass="LogInSignUpViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNg-0H-t4u"/>
                         <viewControllerLayoutGuide type="bottom" id="z7z-vQ-Pf9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rob-GF-XLB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people" translatesAutoresizingMaskIntoConstraints="NO" id="Zta-bL-IWn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zta-bL-IWn" firstAttribute="top" secondItem="RNg-0H-t4u" secondAttribute="bottom" id="EeI-kg-MQq"/>
+                            <constraint firstItem="Zta-bL-IWn" firstAttribute="leading" secondItem="rob-GF-XLB" secondAttribute="leading" id="GiT-Yt-o12"/>
+                            <constraint firstItem="Zta-bL-IWn" firstAttribute="bottom" secondItem="z7z-vQ-Pf9" secondAttribute="top" id="QyK-h6-E6K"/>
+                            <constraint firstItem="Zta-bL-IWn" firstAttribute="top" secondItem="RNg-0H-t4u" secondAttribute="bottom" id="vLY-fv-ywG"/>
+                            <constraint firstAttribute="trailing" secondItem="Zta-bL-IWn" secondAttribute="trailing" id="w1Z-x6-FuQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EeI-kg-MQq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="B8g-8y-fWi" kind="show" identifier="segueToBasicRegistration" id="rCZ-6L-FvE"/>

@@ -13,6 +13,8 @@ import Bolts
 
 class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
+    var backgroundImage : UIImageView!
+    
     struct StoryBoard {
         static let completeProfile = "segueToBasicRegistration"
         static let title = "MessyHat"
@@ -23,9 +25,56 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         setUI()
         setParse()
+        setBG()
+        setLogo()
+        
+        
+        logInView?.logInButton?.setBackgroundImage(nil, forState: .Normal)
+        logInView?.logInButton?.backgroundColor = UIColor(red: 52/255, green: 191/255, blue: 73/255, alpha: 0.95)
+        logInView?.passwordForgottenButton?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        customizeButton(logInView?.signUpButton!)
     }
+    
+    
+    func customizeButton(button: UIButton!) {
+        button.setBackgroundImage(nil, forState: .Normal)
+        button.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.whiteColor().CGColor
+    }
+    
+    
+    func setBG() {
+        
+        backgroundImage = UIImageView(image: UIImage(named: "work"))
+        backgroundImage.contentMode = UIViewContentMode.ScaleAspectFill
+        self.logInView!.insertSubview(backgroundImage, atIndex: 0)
+    }
+    
+    func setLogo() {
+        
+        let logo = UILabel()
+        logo.text = "MessyHat"
+        logo.textColor = UIColor.whiteColor()
+        logo.font = UIFont.systemFontOfSize(50)
+        logInView?.logo = logo
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    
+        backgroundImage.frame = CGRectMake( 0,  0,  self.logInView!.frame.width,  self.logInView!.frame.height)
+        
+        logInView!.logo!.sizeToFit()
+        let logoFrame = logInView!.logo!.frame
+        logInView!.logo!.frame = CGRectMake(logoFrame.origin.x, logInView!.usernameField!.frame.origin.y - logoFrame.height - 16, logInView!.frame.width,  logoFrame.height)
+    }
+    
     
     func setUI() {
         self.tabBarController?.tabBar.hidden = true
