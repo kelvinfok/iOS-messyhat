@@ -10,9 +10,10 @@ import UIKit
 import Parse
 
 class MyProfileViewController: UIViewController{
-    
-    @IBOutlet weak var scrollView: UIScrollView!
+
+    @IBOutlet weak var loginCreateAccountButton: UIButton!
     @IBOutlet weak var profileView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,7 +25,10 @@ class MyProfileViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.hidden = true
+        
+        loginCreateAccountButton.layer.cornerRadius = 5.0
+        loginCreateAccountButton.layer.masksToBounds = true
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -34,7 +38,7 @@ class MyProfileViewController: UIViewController{
             getCurrentProfile()
         }
         else {
-
+            scrollView.hidden = true
         }
         
     }
@@ -66,6 +70,12 @@ class MyProfileViewController: UIViewController{
         }
     }
     
+    @IBAction func loginCreateAccount(sender: AnyObject) {
+        if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("logInSignUpViewController") {
+            self.presentViewController(pageViewController, animated: true, completion: nil)
+        }
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

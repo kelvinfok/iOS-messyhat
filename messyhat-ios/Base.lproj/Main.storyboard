@@ -212,7 +212,7 @@
         <!--Log In Sign Up View Controller-->
         <scene sceneID="9bY-7m-3bi">
             <objects>
-                <viewController id="c5h-3r-Wfc" customClass="LogInSignUpViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInSignUpViewController" id="c5h-3r-Wfc" customClass="LogInSignUpViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNg-0H-t4u"/>
                         <viewControllerLayoutGuide type="bottom" id="z7z-vQ-Pf9"/>
@@ -247,7 +247,7 @@
                                 <rect key="frame" x="0.0" y="64" width="374" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-7a-lmX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="906"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="909"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tI-wH-Ito">
                                                 <rect key="frame" x="8" y="434" width="359" height="40"/>
@@ -346,7 +346,7 @@
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-Uv-jhG">
-                                                <rect key="frame" x="8" y="758" width="359" height="40"/>
+                                                <rect key="frame" x="8" y="761" width="359" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="a4Z-Bf-AYI"/>
                                                     <constraint firstAttribute="height" constant="40" id="aeI-4N-SvM"/>
@@ -369,13 +369,13 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6F-pi-euc">
-                                                <rect key="frame" x="8" y="684" width="359" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                <rect key="frame" x="8" y="684" width="359" height="27"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <state key="normal" title="Read More">
                                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="GxZ-EX-LH0" kind="show" identifier="segueToTerms" id="nPV-iq-YVX"/>
+                                                    <segue destination="6HD-WV-isT" kind="show" identifier="segueToTerms" id="nPV-iq-YVX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -476,7 +476,7 @@
             </objects>
             <point key="canvasLocation" x="2061.5" y="-347.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Agreement-->
         <scene sceneID="FMB-9b-qkJ">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="GxZ-EX-LH0" sceneMemberID="viewController">
@@ -498,7 +498,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdg-OO-h2Y">
-                                <rect key="frame" x="0.0" y="104" width="375" height="1814"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="1819"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcW-Gg-IOv" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1654"/>
@@ -607,12 +607,22 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                             <constraint firstItem="ux2-8d-Szy" firstAttribute="top" secondItem="nAN-a8-ld3" secondAttribute="bottom" id="w1Y-n2-bXn"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Agreement" id="q4a-tw-F18">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="rra-MK-l31">
+                            <connections>
+                                <segue destination="4UK-3Q-4y8" kind="unwind" unwindAction="unwindToCompleteProfileInfoViewController:" id="Lg1-nF-bnr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1967"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X91-IR-H3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4UK-3Q-4y8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2061.5" y="1308.5"/>
+            <point key="canvasLocation" x="2648.5" y="1308.5"/>
         </scene>
         <!--Complete Profile Info View Controller-->
         <scene sceneID="I7n-De-DQ5">
@@ -1267,23 +1277,23 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have not created an account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxg-8W-4MC">
-                                <rect key="frame" x="82" y="508" width="251" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="guZ-YA-r5F"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="guZ-YA-r5F"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hello" translatesAutoresizingMaskIntoConstraints="NO" id="MrO-6W-Mvn">
-                                <rect key="frame" x="30" y="74" width="374" height="429"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="V4P-5t-MoA">
+                                <rect key="frame" x="0.0" y="64" width="414" height="923"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-Pp-5i1">
+                                <rect key="frame" x="40" y="498" width="334" height="40"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k7g-PR-uQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Log In / Create account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginCreateAccount:" destination="KdA-dO-MQi" eventType="touchUpInside" id="js1-e9-rMb"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-wE-xGO">
                                 <rect key="frame" x="0.0" y="64" width="414" height="923"/>
                                 <subviews>
@@ -1409,55 +1419,34 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rkC-Pp-5i1" secondAttribute="trailing" constant="20" id="00n-DB-kvq"/>
+                            <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="V4P-5t-MoA" secondAttribute="bottom" id="7P2-Va-Q2f"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="Br8-1h-AFf"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="J5s-Uu-HxI"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="JED-CQ-oFu"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="trailing" secondItem="7Fk-H1-gtg" secondAttribute="trailingMargin" constant="10" id="Jr2-wA-asJ"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" constant="10" id="ONd-cw-veY"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="PfO-bx-ztr"/>
+                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="J7P-Js-DEk"/>
+                            <constraint firstAttribute="trailing" secondItem="V4P-5t-MoA" secondAttribute="trailing" id="LrT-2R-5he"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="width" secondItem="7Fk-H1-gtg" secondAttribute="width" id="RAj-KJ-l1Y"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="20" id="T71-Ot-U9F"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="UTb-nh-T0B"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="top" secondItem="MrO-6W-Mvn" secondAttribute="bottom" constant="5" id="UuI-KG-qP2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nxg-8W-4MC" secondAttribute="trailing" constant="20" id="WJ0-WT-jVe"/>
+                            <constraint firstItem="V4P-5t-MoA" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="RND-fz-c1K"/>
+                            <constraint firstItem="V4P-5t-MoA" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="VXF-Ci-I8B"/>
+                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="aUx-dK-IMV"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="height" secondItem="7Fk-H1-gtg" secondAttribute="height" priority="250" id="b6h-A7-uDV"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="10" id="d4n-uI-bMh"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="centerX" secondItem="nxg-8W-4MC" secondAttribute="centerX" id="eTr-Xx-CFc"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="QsA-wE-xGO" secondAttribute="bottom" id="feE-lu-kSH"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="gvX-43-4KG"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="top" secondItem="MrO-6W-Mvn" secondAttribute="bottom" constant="8" symbolic="YES" id="ini-7q-67R"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MrO-6W-Mvn" secondAttribute="trailing" id="nCV-wQ-dc3"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="top" secondItem="MrO-6W-Mvn" secondAttribute="bottom" constant="10" id="nkZ-AR-ip7"/>
-                            <constraint firstItem="nxg-8W-4MC" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="sqT-Xb-E7K"/>
+                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="20" id="kLN-ma-386"/>
                             <constraint firstAttribute="trailing" secondItem="QsA-wE-xGO" secondAttribute="trailing" id="tCL-ka-aiE"/>
-                            <constraint firstItem="MrO-6W-Mvn" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" id="v2i-4M-bt0"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JED-CQ-oFu"/>
-                                <exclude reference="eTr-Xx-CFc"/>
-                                <exclude reference="nCV-wQ-dc3"/>
-                                <exclude reference="v2i-4M-bt0"/>
-                                <exclude reference="T71-Ot-U9F"/>
-                                <exclude reference="UTb-nh-T0B"/>
-                                <exclude reference="WJ0-WT-jVe"/>
-                                <exclude reference="ini-7q-67R"/>
-                                <exclude reference="nkZ-AR-ip7"/>
-                                <exclude reference="sqT-Xb-E7K"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="QzH-fQ-AuZ"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1036"/>
                     <connections>
                         <outlet property="countryLabel" destination="Y2h-WA-Ykx" id="yCB-RW-mXs"/>
+                        <outlet property="loginCreateAccountButton" destination="rkC-Pp-5i1" id="tWc-7r-4xW"/>
                         <outlet property="lookingForLabel" destination="aR9-0c-ff2" id="1f3-22-ba5"/>
                         <outlet property="nameLabel" destination="AQD-jQ-WHQ" id="l5a-dH-G6c"/>
                         <outlet property="offeringLabel" destination="GMT-e9-cFm" id="982-TC-e7a"/>
                         <outlet property="profileImageView" destination="dFW-Mg-Xe6" id="N3z-e0-9aQ"/>
                         <outlet property="profileView" destination="Btl-UT-hoX" id="LG1-hK-VQk"/>
-                        <outlet property="scrollView" destination="QsA-wE-xGO" id="Mpa-UN-6ZD"/>
+                        <outlet property="scrollView" destination="QsA-wE-xGO" id="QeU-NP-fZs"/>
                         <outlet property="summaryLabel" destination="y6i-Ra-g6l" id="ysW-mz-5XB"/>
                     </connections>
                 </viewController>
@@ -1502,10 +1491,28 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
             </objects>
             <point key="canvasLocation" x="546" y="-897"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V7x-zA-11j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6HD-WV-isT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L02-RU-lR7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GxZ-EX-LH0" kind="relationship" relationship="rootViewController" id="MI2-H6-aKe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJ1-qD-3DL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5" y="1308.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="app1" width="805" height="1691"/>
-        <image name="hello" width="417" height="279"/>
+        <image name="bg" width="797" height="797"/>
         <image name="marketing" width="350" height="350"/>
         <image name="simpsons" width="350" height="350"/>
         <image name="tabBarHome" width="38" height="36"/>

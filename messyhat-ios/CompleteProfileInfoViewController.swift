@@ -187,6 +187,8 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         }
     }
     
+    @IBAction func unwindToCompleteProfileInfoViewController(segue: UIStoryboardSegue) {
+    }
     
     // MARK: Keyboard Control
     
