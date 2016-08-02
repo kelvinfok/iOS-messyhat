@@ -22,6 +22,8 @@
 		8D5BDDB11D3FC6E200C2C49E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5BDDB01D3FC6E200C2C49E /* Profile.swift */; };
 		8D602DE91D4F0F5C00402D19 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DE81D4F0F5C00402D19 /* PageViewController.swift */; };
 		8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DEB1D4F732E00402D19 /* Code Bank.swift */; };
+		8D92E4F11D51247D00F298F2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */; };
+		8D92E4F91D51303400F298F2 /* kreon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D92E4F81D51303400F298F2 /* kreon.ttf */; };
 		8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */; };
 		8DC951501D45CB5500971EC2 /* CompleteProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */; };
 		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
@@ -50,6 +52,8 @@
 		8D5BDDB01D3FC6E200C2C49E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8D602DE81D4F0F5C00402D19 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8D602DEB1D4F732E00402D19 /* Code Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Code Bank.swift"; sourceTree = "<group>"; };
+		8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8D92E4F81D51303400F298F2 /* kreon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreon.ttf; sourceTree = "<group>"; };
 		8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteProfileInfoViewController.swift; sourceTree = "<group>"; };
 		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				8D5BDDAF1D3F78D600C2C49E /* Views */,
 				8D5BDDAE1D3F78CE00C2C49E /* Controller */,
 				8D5345541D3DC74300FCF23D /* AppDelegate.swift */,
+				8D92E4F81D51303400F298F2 /* kreon.ttf */,
 				8D5345581D3DC74300FCF23D /* Main.storyboard */,
 				8D53456C1D3E0A5A00FCF23D /* Models */,
 				8D53455B1D3DC74300FCF23D /* Assets.xcassets */,
@@ -151,6 +156,7 @@
 				8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */,
 				8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */,
 				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
+				8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 			files = (
 				8D53455F1D3DC74300FCF23D /* LaunchScreen.storyboard in Resources */,
 				8D53455C1D3DC74300FCF23D /* Assets.xcassets in Resources */,
+				8D92E4F91D51303400F298F2 /* kreon.ttf in Resources */,
 				8D53455A1D3DC74300FCF23D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +316,7 @@
 				8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */,
 				8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */,
 				8DCB4A761D3EA4A700EAF970 /* ProfileViewCell.swift in Sources */,
+				8D92E4F11D51247D00F298F2 /* SignUpViewController.swift in Sources */,
 				8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */,
 				8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */,
 				8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */,

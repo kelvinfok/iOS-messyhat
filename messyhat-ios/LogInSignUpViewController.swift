@@ -14,6 +14,8 @@ import Bolts
 class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     var backgroundImage : UIImageView!
+    var viewsToAnimate: [UIView!]!
+    var viewsFinalYPosition : [CGFloat]!
     
     struct StoryBoard {
         static let completeProfile = "segueToBasicRegistration"
@@ -30,7 +32,11 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         setParse()
         setBG()
         setLogo()
-        
+        setButton()
+        self.signUpController = SignUpViewController()
+    }
+    
+    func setButton() {
         
         logInView?.logInButton?.setBackgroundImage(nil, forState: .Normal)
         logInView?.logInButton?.backgroundColor = UIColor(red: 52/255, green: 191/255, blue: 73/255, alpha: 0.95)
@@ -40,6 +46,7 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
     
     
     func customizeButton(button: UIButton!) {
+        
         button.setBackgroundImage(nil, forState: .Normal)
         button.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
         button.layer.cornerRadius = 5
@@ -60,6 +67,7 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         let logo = UILabel()
         logo.text = "MessyHat"
         logo.textColor = UIColor.whiteColor()
+        // logo.font = UIFont(name: "kreon.ttf", size: 70)
         logo.font = UIFont.systemFontOfSize(50)
         logInView?.logo = logo
     }
