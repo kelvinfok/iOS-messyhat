@@ -23,6 +23,8 @@ class LogInSignUpViewController: PFLogInViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.hidden = true
         title = StoryBoard.title
         let signUpVC = PFSignUpViewController()
         signUpVC.delegate = self

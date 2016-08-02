@@ -22,6 +22,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         static let segueToExchangeRegistration = "segueToExchangeRegistration"
         static let segueToSummaryRegistration = "segueToSummaryRegistration"
         static let segueToTerms = "segueToTerms"
+        static let segueToAgreement = "segueToAgreement"
     }
     
     var pickerView = UIPickerView()
@@ -71,6 +72,9 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     // MARK: Actions
     
     
+    @IBAction func readMoreButton(sender: AnyObject) {
+        self.performSegueWithIdentifier(StoryBoard.segueToAgreement, sender: self)
+    }
     
     @IBAction func addProfilePicture(sender: AnyObject) {
         let imagePicker = UIImagePickerController()
@@ -181,7 +185,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
 
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier != StoryBoard.segueToTerms {
+        if segue.identifier != StoryBoard.segueToAgreement {
             let destinationController = segue.destinationViewController as! CompleteProfileInfoViewController
             destinationController.newProfile = newProfile
         }

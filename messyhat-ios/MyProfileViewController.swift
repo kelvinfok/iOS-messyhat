@@ -23,12 +23,15 @@ class MyProfileViewController: UIViewController{
 
     var profiles = Profile()
     
+    struct StoryBoard {
+        static var segueToLoginSignUp = "segueToLoginSignUp"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loginCreateAccountButton.layer.cornerRadius = 5.0
         loginCreateAccountButton.layer.masksToBounds = true
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -57,7 +60,6 @@ class MyProfileViewController: UIViewController{
                 if error == nil {
                     if let image = UIImage(data: imageData!) {
                         self.profileImageView.image = image
-
                     }
                 }
             }
@@ -70,12 +72,16 @@ class MyProfileViewController: UIViewController{
         }
     }
     
-    @IBAction func loginCreateAccount(sender: AnyObject) {
-        if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("logInSignUpViewController") {
-            self.presentViewController(pageViewController, animated: true, completion: nil)
-        }
+    // MARK: - Actions
+    
 
+    @IBAction func loginCreateAction(sender: AnyObject) {
+        performSegueWithIdentifier(StoryBoard.segueToLoginSignUp, sender: nil)
+        
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -112,7 +112,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="HQg-Wo-flm" kind="show" identifier="showProfileCollection" id="5Xu-Tr-r6q"/>
-                        <segue destination="c5h-3r-Wfc" kind="show" identifier="showLogin" id="WU7-kq-k4H"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8Q-dk-yxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -229,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5M-co-a1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292.5" y="-829.5"/>
+            <point key="canvasLocation" x="1164.5" y="-72.5"/>
         </scene>
         <!--Complete Profile Info View Controller-->
         <scene sceneID="31w-hg-8j5">
@@ -375,7 +374,7 @@
                                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="6HD-WV-isT" kind="show" identifier="segueToTerms" id="nPV-iq-YVX"/>
+                                                    <action selector="readMoreButton:" destination="B8g-8y-fWi" eventType="touchUpInside" id="qUa-r7-r9O"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -470,6 +469,7 @@
                         <outlet property="scrollView" destination="brB-MS-14h" id="hKt-8r-a6D"/>
                         <outlet property="uploadPreviewImage" destination="1Fc-iG-fiF" id="xBL-2y-db5"/>
                         <segue destination="Hqb-eg-bal" kind="show" identifier="segueToExchangeRegistration" id="i6n-8K-O8X"/>
+                        <segue destination="GxZ-EX-LH0" kind="show" identifier="segueToAgreement" id="fI7-Yq-9vX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEO-PR-jZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,7 +622,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X91-IR-H3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="4UK-3Q-4y8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2648.5" y="1308.5"/>
+            <point key="canvasLocation" x="2061.5" y="1306.5"/>
         </scene>
         <!--Complete Profile Info View Controller-->
         <scene sceneID="I7n-De-DQ5">
@@ -1277,9 +1277,6 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="V4P-5t-MoA">
-                                <rect key="frame" x="0.0" y="64" width="414" height="923"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-Pp-5i1">
                                 <rect key="frame" x="40" y="498" width="334" height="40"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -1291,7 +1288,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginCreateAccount:" destination="KdA-dO-MQi" eventType="touchUpInside" id="js1-e9-rMb"/>
+                                    <action selector="loginCreateAction:" destination="KdA-dO-MQi" eventType="touchUpInside" id="HNf-Tu-lSW"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-wE-xGO">
@@ -1420,13 +1417,9 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rkC-Pp-5i1" secondAttribute="trailing" constant="20" id="00n-DB-kvq"/>
-                            <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="V4P-5t-MoA" secondAttribute="bottom" id="7P2-Va-Q2f"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="Br8-1h-AFf"/>
                             <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="J7P-Js-DEk"/>
-                            <constraint firstAttribute="trailing" secondItem="V4P-5t-MoA" secondAttribute="trailing" id="LrT-2R-5he"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="width" secondItem="7Fk-H1-gtg" secondAttribute="width" id="RAj-KJ-l1Y"/>
-                            <constraint firstItem="V4P-5t-MoA" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="RND-fz-c1K"/>
-                            <constraint firstItem="V4P-5t-MoA" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="VXF-Ci-I8B"/>
                             <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="aUx-dK-IMV"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="height" secondItem="7Fk-H1-gtg" secondAttribute="height" priority="250" id="b6h-A7-uDV"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="QsA-wE-xGO" secondAttribute="bottom" id="feE-lu-kSH"/>
@@ -1440,7 +1433,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                     <size key="freeformSize" width="414" height="1036"/>
                     <connections>
                         <outlet property="countryLabel" destination="Y2h-WA-Ykx" id="yCB-RW-mXs"/>
-                        <outlet property="loginCreateAccountButton" destination="rkC-Pp-5i1" id="tWc-7r-4xW"/>
+                        <outlet property="loginCreateAccountButton" destination="rkC-Pp-5i1" id="3gF-zR-Mb2"/>
                         <outlet property="lookingForLabel" destination="aR9-0c-ff2" id="1f3-22-ba5"/>
                         <outlet property="nameLabel" destination="AQD-jQ-WHQ" id="l5a-dH-G6c"/>
                         <outlet property="offeringLabel" destination="GMT-e9-cFm" id="982-TC-e7a"/>
@@ -1448,6 +1441,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <outlet property="profileView" destination="Btl-UT-hoX" id="LG1-hK-VQk"/>
                         <outlet property="scrollView" destination="QsA-wE-xGO" id="QeU-NP-fZs"/>
                         <outlet property="summaryLabel" destination="y6i-Ra-g6l" id="ysW-mz-5XB"/>
+                        <segue destination="c5h-3r-Wfc" kind="show" identifier="segueToLoginSignUp" id="0E2-da-ynq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1491,28 +1485,9 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
             </objects>
             <point key="canvasLocation" x="546" y="-897"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="V7x-zA-11j">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6HD-WV-isT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L02-RU-lR7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GxZ-EX-LH0" kind="relationship" relationship="rootViewController" id="MI2-H6-aKe"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yJ1-qD-3DL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2061.5" y="1308.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="app1" width="805" height="1691"/>
-        <image name="bg" width="797" height="797"/>
         <image name="marketing" width="350" height="350"/>
         <image name="simpsons" width="350" height="350"/>
         <image name="tabBarHome" width="38" height="36"/>

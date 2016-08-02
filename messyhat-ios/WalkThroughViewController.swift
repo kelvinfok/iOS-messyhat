@@ -43,8 +43,8 @@ class WalkThroughViewController: UIViewController {
     
     @IBAction func startClicked(sender: AnyObject) {
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setBool(true, forKey: "DisplayedWalkthrough")
+       let userDefaults = NSUserDefaults.standardUserDefaults()
+       userDefaults.setBool(true, forKey: "DisplayedWalkthrough")
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
