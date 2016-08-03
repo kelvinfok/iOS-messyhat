@@ -26,8 +26,7 @@ class SignUpViewController: PFSignUpViewController {
         let logo = UILabel()
         logo.text = "MessyHat"
         logo.textColor = UIColor.whiteColor()
-        // logo.font = UIFont(name: "kreon", size: 70)
-        logo.font = UIFont.systemFontOfSize(50)
+        logo.font = UIFont(name: "Lato", size: 65)
         signUpView?.logo = logo
         
         // make the background of the sign up button pop more

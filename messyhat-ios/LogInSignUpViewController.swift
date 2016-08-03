@@ -67,8 +67,7 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         let logo = UILabel()
         logo.text = "MessyHat"
         logo.textColor = UIColor.whiteColor()
-        // logo.font = UIFont(name: "kreon.ttf", size: 70)
-        logo.font = UIFont.systemFontOfSize(50)
+        logo.font = UIFont(name: "Lato", size: 65)
         logInView?.logo = logo
     }
     

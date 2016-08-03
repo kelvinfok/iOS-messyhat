@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		500009086A792AD217675E97 /* Pods_messyhat_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */; };
+		8D07D6E61D51A925002DC192 /* Lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D07D6E51D51A925002DC192 /* Lato.ttf */; };
 		8D28746D1D40AD16009E7048 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28746C1D40AD16009E7048 /* ParseHelper.swift */; };
 		8D3D31981D4C853300A2952A /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */; };
 		8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */; };
@@ -23,7 +24,6 @@
 		8D602DE91D4F0F5C00402D19 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DE81D4F0F5C00402D19 /* PageViewController.swift */; };
 		8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DEB1D4F732E00402D19 /* Code Bank.swift */; };
 		8D92E4F11D51247D00F298F2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */; };
-		8D92E4F91D51303400F298F2 /* kreon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D92E4F81D51303400F298F2 /* kreon.ttf */; };
 		8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */; };
 		8DC951501D45CB5500971EC2 /* CompleteProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */; };
 		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
@@ -36,6 +36,7 @@
 		67C0C8DCB6E74F4710DB2F2F /* Pods-messyhat-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messyhat-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-messyhat-ios/Pods-messyhat-ios.release.xcconfig"; sourceTree = "<group>"; };
 		7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_messyhat_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D17B843D8F8BF66B5CE3259 /* Pods-messyhat-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messyhat-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messyhat-ios/Pods-messyhat-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		8D07D6E51D51A925002DC192 /* Lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lato.ttf; path = Assets/Lato.ttf; sourceTree = "<group>"; };
 		8D28746C1D40AD16009E7048 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		8D602DE81D4F0F5C00402D19 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8D602DEB1D4F732E00402D19 /* Code Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Code Bank.swift"; sourceTree = "<group>"; };
 		8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		8D92E4F81D51303400F298F2 /* kreon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = kreon.ttf; sourceTree = "<group>"; };
 		8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteProfileInfoViewController.swift; sourceTree = "<group>"; };
 		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				8D5BDDAF1D3F78D600C2C49E /* Views */,
 				8D5BDDAE1D3F78CE00C2C49E /* Controller */,
 				8D5345541D3DC74300FCF23D /* AppDelegate.swift */,
-				8D92E4F81D51303400F298F2 /* kreon.ttf */,
 				8D5345581D3DC74300FCF23D /* Main.storyboard */,
+				8D07D6E51D51A925002DC192 /* Lato.ttf */,
 				8D53456C1D3E0A5A00FCF23D /* Models */,
 				8D53455B1D3DC74300FCF23D /* Assets.xcassets */,
 				8D53455D1D3DC74300FCF23D /* LaunchScreen.storyboard */,
@@ -248,9 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D07D6E61D51A925002DC192 /* Lato.ttf in Resources */,
 				8D53455F1D3DC74300FCF23D /* LaunchScreen.storyboard in Resources */,
 				8D53455C1D3DC74300FCF23D /* Assets.xcassets in Resources */,
-				8D92E4F91D51303400F298F2 /* kreon.ttf in Resources */,
 				8D53455A1D3DC74300FCF23D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
