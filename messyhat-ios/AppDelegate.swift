@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpParseSDK()
         setSecurity()
         loadMixPanel()
-        
+
         return true
     }
     
@@ -36,9 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func logOutAllUsers() {
-        if PFUser.currentUser() != nil {
-            PFUser.logOut()
-        }
+        
+        PFUser.logOut()
     }
     
     func setSecurity() {

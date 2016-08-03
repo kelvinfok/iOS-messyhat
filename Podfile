@@ -11,5 +11,6 @@ pod 'Parse'
 pod 'ParseFacebookUtilsV4'
 pod 'ParseUI'
 pod 'Mixpanel'
+pod 'Canvas'
 
 end

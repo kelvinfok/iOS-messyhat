@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Canvas
 
 class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -29,20 +30,15 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     var pickerView = UIPickerView()
     
     @IBOutlet weak var completeButton: UIButton!
-
     @IBOutlet weak var uploadPreviewImage: UIImageView!
-    
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    @IBOutlet weak var animateView: CSAnimationView!
     @IBOutlet weak var contentView: UIView!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var summaryTextView: UITextView!
-    
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         
@@ -58,6 +54,10 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
 
         if emailTextField != nil {
             emailTextField.text = currentUserEmail!
+        }
+        
+        if activityIndicator != nil {
+            activityIndicator.hidden = true
         }
         
         setProfileAvatarGesture()
@@ -79,23 +79,23 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     func setProfileAvatarGesture() {
+        
+        if uploadPreviewImage != nil {
+            
         let tapAvatarGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(CompleteProfileInfoViewController.avatarTapped))
-        uploadPreviewImage.userInteractionEnabled = true
-        uploadPreviewImage.addGestureRecognizer(tapAvatarGestureRecognizer)
+            uploadPreviewImage.userInteractionEnabled = true
+            uploadPreviewImage.addGestureRecognizer(tapAvatarGestureRecognizer)
+        }
     }
     
     func avatarTapped() {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.allowsEditing = false
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    func openImagePicker() {
-
-    }
     // MARK: Actions
     
     
@@ -103,22 +103,24 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         self.performSegueWithIdentifier(StoryBoard.segueToAgreement, sender: self)
     }
     
-    @IBAction func addProfilePicture(sender: AnyObject) {
-
-
-    }
-    
     // MARK: Continue Button
     
     @IBAction func continueBasicRegistration(sender: AnyObject) {
         
-        newProfile.first_name = firstNameTextField.text
-        newProfile.last_name = lastNameTextField.text
+        animateView.startCanvasAnimation()
+        
+        newProfile.first_name = firstNameTextField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        newProfile.last_name = lastNameTextField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+
         let imageData = UIImagePNGRepresentation(self.uploadPreviewImage.image!)
         let parseImageFile = PFFile(name: "upload_image.png", data: imageData!)
         newProfile.imageFile = parseImageFile
+        print(newProfile)
         
         self.performSegueWithIdentifier(StoryBoard.segueToExchangeRegistration, sender: self)
+        
+        
     }
     
     
@@ -132,18 +134,28 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         }
         
         self.performSegueWithIdentifier(StoryBoard.segueToSummaryRegistration, sender: self)
+        print("segue performed")
     }
     
     // MARK: Saving Of Data
     
     @IBAction func saveProfile(sender: AnyObject) {
         
+        summaryTextView.userInteractionEnabled = false
+        completeButton.userInteractionEnabled = false
+        self.activityIndicator.hidden = false
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        activityIndicator.color = UIColor.darkGrayColor()
+        activityIndicator.startAnimating()
+        
         newProfile.summary = summaryTextView.text
         newProfile.user = PFUser.currentUser()
         
         newProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success == true {
+                
                 print("Object has been saved.")
+                self.activityIndicator.stopAnimating()
                 self.navigationController?.popToRootViewControllerAnimated(true)
             }
             else {

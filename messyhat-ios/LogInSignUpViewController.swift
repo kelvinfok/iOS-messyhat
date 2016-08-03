@@ -33,7 +33,7 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         setBG()
         setLogo()
         setButton()
-        // self.signUpController = SignUpViewController()
+        self.signUpController = SignUpViewController()
     }
     
     func setParse() {
