@@ -155,8 +155,8 @@
 				8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */,
 				8DCB4A731D3E907600EAF970 /* ProfilesCollectionViewController.swift */,
 				8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */,
-				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
 				8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */,
+				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

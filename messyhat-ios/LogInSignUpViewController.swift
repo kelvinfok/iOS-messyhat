@@ -21,7 +21,7 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         static let completeProfile = "segueToBasicRegistration"
         static let title = "MessyHat"
     }
-    
+
     var profile = [Profile]()
 
     override func viewDidLoad() {
@@ -34,13 +34,14 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         setLogo()
         setButton()
         self.signUpController = SignUpViewController()
+        self.signUpController?.delegate = self
     }
-    
+
     func setParse() {
-        let signUpViewController = PFSignUpViewController()
-        signUpViewController.delegate = self
+//        let signUpViewController = PFSignUpViewController()
+//        signUpViewController.delegate = self
         self.delegate = self
-        self.signUpController = signUpViewController
+//        self.signUpController = signUpViewController
     }
     
     func setButton() {
