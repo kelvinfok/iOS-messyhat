@@ -15,7 +15,7 @@ class Categories
     private var immutableCategories = [Category]()
     private var sections = [String]()
     
-    static var subCategories = ["Startup - Early Stage", "Startup - Ecommerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Code - Ruby on Rails", "Code - Javascript", "Code - ASP.NET",
+    static var subCategories = ["Startup - Early Stage", "Startup - E-commerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Code - Ruby on Rails", "Code - Javascript", "Code - ASP.NET",
                                 "Code - Django", "Code - PHP", "Code - Java", "Code - Swift", "Code - Haskell"]
     
     // MARK: - Public
@@ -32,7 +32,7 @@ class Categories
     {
         categories = createCategories()
         immutableCategories = categories
-        sections = ["Startups", "Code"]
+        sections = ["Startup", "Code"]
     }
     
     func deleteItemsAtIndexPaths(indexPaths: [NSIndexPath])
@@ -111,7 +111,7 @@ class Categories
     private func createCategories() -> [Category]
     {
         var newCategories = [Category]()
-        newCategories += Startups.categories()
+        newCategories += Startup.categories()
         newCategories += Code.categories()
 
 
@@ -139,26 +139,26 @@ class Categories
 }
 
 
-class Startups
+class Startup
 {
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "Early Stage", image: UIImage(named: "startups-earlystage")!, section: "Startups"))
-        categories.append(Category(title: "E-commerce", image: UIImage(named: "startups-ecommerce")!, section: "Startups"))
-        categories.append(Category(title: "Fintech", image: UIImage(named: "startups-finance")!, section: "Startups"))
-        categories.append(Category(title: "Biotech", image: UIImage(named: "startups-biotech")!, section: "Startups"))
-        categories.append(Category(title: "IOT", image: UIImage(named: "startups-iot")!, section: "Startups"))
-        categories.append(Category(title: "Health Care", image: UIImage(named: "startups-healthcare")!, section: "Startups"))
-        categories.append(Category(title: "Security", image: UIImage(named: "startups-security")!, section: "Startups"))
-        categories.append(Category(title: "Logistics", image: UIImage(named: "startups-logistics")!, section: "Startups"))
-        categories.append(Category(title: "Virtual Reality", image: UIImage(named: "startups-virtualreality")!, section: "Startups"))
-        categories.append(Category(title: "Energy", image: UIImage(named: "startups-cleantech")!, section: "Startups"))
-        categories.append(Category(title: "Legal", image: UIImage(named: "startups-legal")!, section: "Startups"))
-        categories.append(Category(title: "Social Media", image: UIImage(named: "startups-socialmedia")!, section: "Startups"))
-        categories.append(Category(title: "Data", image: UIImage(named: "startups-data")!, section: "Startups"))
-        categories.append(Category(title: "Marketing", image: UIImage(named: "startups-marketing")!, section: "Startups"))
-        categories.append(Category(title: "Travel", image: UIImage(named: "startups-travel")!, section: "Startups"))
+        categories.append(Category(title: "Early Stage", image: UIImage(named: "startups-earlystage")!, section: "Startup"))
+        categories.append(Category(title: "E-commerce", image: UIImage(named: "startups-ecommerce")!, section: "Startup"))
+        categories.append(Category(title: "Finance", image: UIImage(named: "startups-finance")!, section: "Startup"))
+        categories.append(Category(title: "Biotech", image: UIImage(named: "startups-biotech")!, section: "Startup"))
+        categories.append(Category(title: "IOT", image: UIImage(named: "startups-iot")!, section: "Startup"))
+        categories.append(Category(title: "Health Care", image: UIImage(named: "startups-healthcare")!, section: "Startup"))
+        categories.append(Category(title: "Security", image: UIImage(named: "startups-security")!, section: "Startup"))
+        categories.append(Category(title: "Logistics", image: UIImage(named: "startups-logistics")!, section: "Startup"))
+        categories.append(Category(title: "Virtual Reality", image: UIImage(named: "startups-virtualreality")!, section: "Startup"))
+        categories.append(Category(title: "Clean Tech", image: UIImage(named: "startups-cleantech")!, section: "Startup"))
+        categories.append(Category(title: "Legal", image: UIImage(named: "startups-legal")!, section: "Startup"))
+        categories.append(Category(title: "Social Media", image: UIImage(named: "startups-socialmedia")!, section: "Startup"))
+        categories.append(Category(title: "Data", image: UIImage(named: "startups-data")!, section: "Startup"))
+        categories.append(Category(title: "Marketing", image: UIImage(named: "startups-marketing")!, section: "Startup"))
+        categories.append(Category(title: "Travel", image: UIImage(named: "startups-travel")!, section: "Startup"))
 
         return categories
     }

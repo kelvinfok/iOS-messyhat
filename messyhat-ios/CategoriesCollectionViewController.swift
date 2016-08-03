@@ -112,6 +112,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showProfileCollection" {
+            print(selectedCategory)
             let destinationController = segue.destinationViewController as! ProfilesCollectionViewController
             destinationController.selectedCategory = selectedCategory
         }
