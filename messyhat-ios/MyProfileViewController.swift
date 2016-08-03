@@ -19,7 +19,7 @@ class MyProfileViewController: UIViewController{
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lookingForLabel: UILabel!
     @IBOutlet weak var offeringLabel: UILabel!
@@ -30,6 +30,7 @@ class MyProfileViewController: UIViewController{
     struct StoryBoard {
         static var segueToLoginSignUp = "segueToLoginSignUp"
         static var segueToCategoryViewController = "segueToCategoryViewController"
+        static var segueToWebView = "segueToWebView"
     }
     
     override func viewDidLoad() {
@@ -102,7 +103,7 @@ class MyProfileViewController: UIViewController{
 //            self.activityIndicator.hidden = true
    
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
-        self.websiteLabel.text = "\(result![0]["website"])"
+        self.websiteButton.setTitle("\(result![0]["website"])", forState: .Normal)
         self.lookingForLabel.text = "\(result![0]["looking_for"])"
         self.offeringLabel.text = "\(result![0]["offering"])"
         self.summaryLabel.text = "\(result![0]["summary"])"
@@ -115,6 +116,14 @@ class MyProfileViewController: UIViewController{
     // MARK: - Actions
     
 
+    @IBAction func visitURL(sender: AnyObject) {
+        self.performSegueWithIdentifier(StoryBoard.segueToWebView, sender: self)
+    }
+    
+    
+    
+    
+    
     @IBAction func loginCreateAction(sender: AnyObject) {
         performSegueWithIdentifier(StoryBoard.segueToLoginSignUp, sender: nil)
     }

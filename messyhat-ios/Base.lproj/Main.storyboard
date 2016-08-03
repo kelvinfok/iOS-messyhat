@@ -243,6 +243,37 @@
             </objects>
             <point key="canvasLocation" x="1164.5" y="-72.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iPX-Kl-BLK">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="67o-BH-VW7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5BJ-DQ-tcF"/>
+                        <viewControllerLayoutGuide type="bottom" id="SNV-iv-T5E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hve-L6-rAy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-lK-cRx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SNV-iv-T5E" firstAttribute="top" secondItem="0BM-lK-cRx" secondAttribute="bottom" id="PZ7-Tt-nUY"/>
+                            <constraint firstItem="0BM-lK-cRx" firstAttribute="leading" secondItem="hve-L6-rAy" secondAttribute="leading" id="cHG-hd-TP9"/>
+                            <constraint firstItem="0BM-lK-cRx" firstAttribute="top" secondItem="5BJ-DQ-tcF" secondAttribute="bottom" id="elD-eL-URV"/>
+                            <constraint firstAttribute="trailing" secondItem="0BM-lK-cRx" secondAttribute="trailing" id="sFn-46-NOd"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYL-jY-7CY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5" y="673.5"/>
+        </scene>
         <!--Complete Profile Info View Controller-->
         <scene sceneID="31w-hg-8j5">
             <objects>
@@ -1463,7 +1494,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 <rect key="frame" x="0.0" y="64" width="414" height="923"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btl-UT-hoX" userLabel="Profile View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="854"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="849"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFW-Mg-Xe6">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
@@ -1471,32 +1502,26 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     <constraint firstAttribute="width" secondItem="dFW-Mg-Xe6" secondAttribute="height" multiplier="1:1" id="iMc-0S-pSV"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-WA-Ykx" userLabel="Website Label">
-                                                <rect key="frame" x="0.0" y="455" width="414" height="16"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seeking to learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-0c-ff2">
-                                                <rect key="frame" x="0.0" y="521" width="414" height="17"/>
+                                                <rect key="frame" x="0.0" y="516" width="414" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will teach " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMT-e9-cFm">
-                                                <rect key="frame" x="0.0" y="583" width="414" height="17"/>
+                                                <rect key="frame" x="0.0" y="578" width="414" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyp-oH-g6c">
-                                                <rect key="frame" x="0.0" y="630" width="414" height="17"/>
+                                                <rect key="frame" x="0.0" y="625" width="414" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="summary" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-Ra-g6l">
-                                                <rect key="frame" x="8" y="652" width="398" height="33"/>
+                                                <rect key="frame" x="8" y="647" width="398" height="33"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <inset key="scrollIndicatorInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1512,7 +1537,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I wish to learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWQ-UK-gAH">
-                                                <rect key="frame" x="8" y="486" width="398" height="25"/>
+                                                <rect key="frame" x="8" y="481" width="398" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="Ana-98-uDt"/>
                                                 </constraints>
@@ -1521,7 +1546,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can teach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCM-bw-lSn">
-                                                <rect key="frame" x="8" y="548" width="398" height="25"/>
+                                                <rect key="frame" x="8" y="543" width="398" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="Snx-tz-hmi"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="d2o-cG-39Y"/>
@@ -1531,14 +1556,25 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-l9-9E1">
-                                                <rect key="frame" x="8" y="736" width="398" height="30"/>
+                                                <rect key="frame" x="8" y="731" width="398" height="30"/>
                                                 <state key="normal" title="Edit Profile"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58l-fz-q94">
-                                                <rect key="frame" x="8" y="774" width="398" height="30"/>
+                                                <rect key="frame" x="8" y="769" width="398" height="30"/>
                                                 <state key="normal" title="Sign Out"/>
                                                 <connections>
                                                     <action selector="signOutButton:" destination="KdA-dO-MQi" eventType="touchUpInside" id="WRq-nW-RA2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yO-Vl-8iD">
+                                                <rect key="frame" x="8" y="448" width="398" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="E40-Ly-KgX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <state key="normal" title="website"/>
+                                                <connections>
+                                                    <action selector="visitURL:" destination="KdA-dO-MQi" eventType="touchUpInside" id="brK-rA-sdy"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1553,19 +1589,18 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="AQD-jQ-WHQ" firstAttribute="top" secondItem="dFW-Mg-Xe6" secondAttribute="bottom" id="6D7-No-06B"/>
                                             <constraint firstItem="dFW-Mg-Xe6" firstAttribute="top" secondItem="Btl-UT-hoX" secondAttribute="top" id="71H-3V-kWI"/>
                                             <constraint firstItem="58l-fz-q94" firstAttribute="centerX" secondItem="Btl-UT-hoX" secondAttribute="centerX" id="7Ub-9Q-7Nf"/>
-                                            <constraint firstItem="Y2h-WA-Ykx" firstAttribute="top" secondItem="AQD-jQ-WHQ" secondAttribute="bottom" constant="3" id="AGi-8f-zMs"/>
+                                            <constraint firstItem="8yO-Vl-8iD" firstAttribute="top" secondItem="AQD-jQ-WHQ" secondAttribute="bottom" constant="-4" id="7bc-Uv-adG"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="58l-fz-q94" secondAttribute="trailing" id="AxO-Ia-aHI"/>
                                             <constraint firstAttribute="bottom" secondItem="y6i-Ra-g6l" secondAttribute="bottom" constant="50" id="FGC-al-iH9"/>
                                             <constraint firstItem="OCM-bw-lSn" firstAttribute="top" secondItem="aR9-0c-ff2" secondAttribute="bottom" constant="10" id="Gai-XY-drQ"/>
-                                            <constraint firstItem="aR9-0c-ff2" firstAttribute="top" secondItem="Y2h-WA-Ykx" secondAttribute="bottom" constant="15" id="KTh-3C-quX"/>
                                             <constraint firstAttribute="trailing" secondItem="AQD-jQ-WHQ" secondAttribute="trailing" id="L4T-Qf-PYA"/>
                                             <constraint firstAttribute="trailing" secondItem="aR9-0c-ff2" secondAttribute="trailing" id="LhE-Cs-xuD"/>
                                             <constraint firstItem="aR9-0c-ff2" firstAttribute="top" secondItem="SWQ-UK-gAH" secondAttribute="bottom" constant="10" id="M9R-Ik-Cyr"/>
+                                            <constraint firstItem="SWQ-UK-gAH" firstAttribute="top" secondItem="8yO-Vl-8iD" secondAttribute="bottom" constant="8" id="SUU-1f-Uf1"/>
                                             <constraint firstItem="dFW-Mg-Xe6" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leading" id="TAk-hV-RU8"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="y6i-Ra-g6l" secondAttribute="trailing" id="YLY-en-b3f"/>
                                             <constraint firstItem="SWQ-UK-gAH" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leadingMargin" id="ZL9-nX-5b4"/>
                                             <constraint firstItem="Yyp-oH-g6c" firstAttribute="top" secondItem="GMT-e9-cFm" secondAttribute="bottom" constant="30" id="aiU-tJ-Zw7"/>
-                                            <constraint firstItem="Y2h-WA-Ykx" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leading" id="cOn-bF-Iol"/>
                                             <constraint firstItem="AQD-jQ-WHQ" firstAttribute="top" secondItem="dFW-Mg-Xe6" secondAttribute="bottom" constant="8" id="ccD-yk-1Wv"/>
                                             <constraint firstAttribute="trailing" secondItem="GMT-e9-cFm" secondAttribute="trailing" id="cml-5Y-sIL"/>
                                             <constraint firstItem="OCM-bw-lSn" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leadingMargin" id="cpr-5c-JZ3"/>
@@ -1573,14 +1608,14 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="GMT-e9-cFm" firstAttribute="top" secondItem="aR9-0c-ff2" secondAttribute="bottom" constant="8" id="f7j-Ap-tgW"/>
                                             <constraint firstItem="y6i-Ra-g6l" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leadingMargin" id="fU3-So-9fh"/>
                                             <constraint firstAttribute="bottom" secondItem="58l-fz-q94" secondAttribute="bottom" constant="50" id="hxo-m6-nm6"/>
+                                            <constraint firstItem="8yO-Vl-8iD" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leadingMargin" id="jUn-1u-M6T"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="8yO-Vl-8iD" secondAttribute="trailing" id="k5S-xd-9CE"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="SWQ-UK-gAH" secondAttribute="trailing" id="lny-tY-5iD"/>
                                             <constraint firstAttribute="trailing" secondItem="Yyp-oH-g6c" secondAttribute="trailing" id="ovv-xQ-pcs"/>
                                             <constraint firstItem="tqa-l9-9E1" firstAttribute="centerX" secondItem="Btl-UT-hoX" secondAttribute="centerX" id="pGI-Sx-Fg3"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="tqa-l9-9E1" secondAttribute="trailing" id="qGU-Y0-swg"/>
-                                            <constraint firstItem="SWQ-UK-gAH" firstAttribute="top" secondItem="Y2h-WA-Ykx" secondAttribute="bottom" constant="15" id="qkT-uv-XUf"/>
                                             <constraint firstItem="aR9-0c-ff2" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leading" id="rhx-hs-qpl"/>
                                             <constraint firstAttribute="trailing" secondItem="dFW-Mg-Xe6" secondAttribute="trailing" id="tZv-WN-OQ1"/>
-                                            <constraint firstAttribute="trailing" secondItem="Y2h-WA-Ykx" secondAttribute="trailing" id="v40-hs-lSz"/>
                                             <constraint firstItem="AQD-jQ-WHQ" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leading" id="wL2-uu-OGw"/>
                                             <constraint firstItem="GMT-e9-cFm" firstAttribute="top" secondItem="OCM-bw-lSn" secondAttribute="bottom" constant="10" id="zqD-Fq-CTa"/>
                                             <constraint firstItem="Yyp-oH-g6c" firstAttribute="leading" secondItem="Btl-UT-hoX" secondAttribute="leading" id="zuS-nj-4Sc"/>
@@ -1588,7 +1623,6 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="6D7-No-06B"/>
-                                                <exclude reference="KTh-3C-quX"/>
                                                 <exclude reference="f7j-Ap-tgW"/>
                                                 <exclude reference="FGC-al-iH9"/>
                                                 <exclude reference="pGI-Sx-Fg3"/>
@@ -1663,9 +1697,10 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <outlet property="profileView" destination="Btl-UT-hoX" id="LG1-hK-VQk"/>
                         <outlet property="scrollView" destination="QsA-wE-xGO" id="QeU-NP-fZs"/>
                         <outlet property="summaryLabel" destination="y6i-Ra-g6l" id="ysW-mz-5XB"/>
-                        <outlet property="websiteLabel" destination="Y2h-WA-Ykx" id="FvY-uT-kLT"/>
+                        <outlet property="websiteButton" destination="8yO-Vl-8iD" id="BCM-fk-kxc"/>
                         <segue destination="c5h-3r-Wfc" kind="show" identifier="segueToLoginSignUp" id="0E2-da-ynq"/>
                         <segue destination="E7b-sh-k4L" kind="show" identifier="segueToCategoryViewController" id="Cyr-GX-oaH"/>
+                        <segue destination="67o-BH-VW7" kind="show" identifier="segueToWebView" id="HTD-oz-4yy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
