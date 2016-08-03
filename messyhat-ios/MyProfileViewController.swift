@@ -11,8 +11,10 @@ import Parse
 
 class MyProfileViewController: UIViewController{
 
-    @IBOutlet weak var background: UIImageView!
-    @IBOutlet weak var visualEffects: UIVisualEffectView!
+
+    @IBOutlet weak var backgroundTop: UIImageView!
+    @IBOutlet weak var backgroundBottom: UIImageView!
+    
     @IBOutlet weak var loginCreateAccountButton: UIButton!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -37,14 +39,15 @@ class MyProfileViewController: UIViewController{
     
     
     func updateUI() {
-        loginCreateAccountButton.layer.cornerRadius = 5.0
+        // loginCreateAccountButton.layer.cornerRadius = 5.0
         loginCreateAccountButton.layer.masksToBounds = true
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        background.hidden = true
+        backgroundTop.hidden = true
+        backgroundBottom.hidden = true
         
         self.tabBarController?.tabBar.hidden = false
         
@@ -54,7 +57,9 @@ class MyProfileViewController: UIViewController{
         }
         else {
             // no user logged in
-            background.hidden = false
+            backgroundTop.hidden = false
+            backgroundBottom.hidden = false
+
             //visualEffects.hidden = false
         }
     }
