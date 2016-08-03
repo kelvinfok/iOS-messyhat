@@ -15,7 +15,8 @@ class Categories
     private var immutableCategories = [Category]()
     private var sections = [String]()
     
-    static var subCategories = ["Startup - Early Stage", "Startup - Ecommerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Rails 5", "Node JS", "Angular 2", "PHP", "Swift 3", "Android Java", "React Native"]
+    static var subCategories = ["Startup - Early Stage", "Startup - Ecommerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Code - Ruby on Rails", "Code - Javascript", "Code - ASP.NET",
+                                "Code - Django", "Code - PHP", "Code - Java", "Code - Swift", "Code - Haskell"]
     
     // MARK: - Public
     
@@ -31,7 +32,7 @@ class Categories
     {
         categories = createCategories()
         immutableCategories = categories
-        sections = ["Startups", "Code", "Mobile"]
+        sections = ["Startups", "Code"]
     }
     
     func deleteItemsAtIndexPaths(indexPaths: [NSIndexPath])
@@ -112,7 +113,7 @@ class Categories
         var newCategories = [Category]()
         newCategories += Startups.categories()
         newCategories += Code.categories()
-        newCategories += Mobile.categories()
+
 
         return newCategories
     }
@@ -171,23 +172,14 @@ class Code
         var categories = [Category]()
         categories.append(Category(title: "Ruby on Rails", image: UIImage(named: "code-rails")!, section: "Code"))
         categories.append(Category(title: "Javascript", image: UIImage(named: "code-javascript")!, section: "Code"))
-        categories.append(Category(title: "Node JS", image: UIImage(named: "web-nodejs")!, section: "Web"))
-        categories.append(Category(title: "Angular 2", image: UIImage(named: "web-angular2")!, section: "Web"))
-        categories.append(Category(title: "PHP", image: UIImage(named: "web-php")!, section: "Web"))
-        
+        categories.append(Category(title: "ASP.NET", image: UIImage(named: "code-aspnet")!, section: "Code"))
+        categories.append(Category(title: "Django", image: UIImage(named: "code-django")!, section: "Code"))
+        categories.append(Category(title: "PHP", image: UIImage(named: "code-php")!, section: "Code"))
+        categories.append(Category(title: "Java", image: UIImage(named: "code-java")!, section: "Code"))
+        categories.append(Category(title: "Swift", image: UIImage(named: "code-swift")!, section: "Code"))
+        categories.append(Category(title: "Haskell", image: UIImage(named: "code-haskell")!, section: "Code"))
         return categories
     }
 }
 
-class Mobile
-{
-    class func categories() -> [Category]
-    {
-        var categories = [Category]()
-        categories.append(Category(title: "Swift 3", image: UIImage(named: "mobile-swift")!, section: "Mobile"))
-        categories.append(Category(title: "Android Java", image: UIImage(named: "mobile-androidjava")!, section: "Mobile"))
-        categories.append(Category(title: "React Native", image: UIImage(named: "mobile-reactnative")!, section: "Mobile"))
-        return categories
-    }
-}
 

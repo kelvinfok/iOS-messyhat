@@ -53,16 +53,16 @@ class MyProfileViewController: UIViewController{
         
         if currentUserLoggedIn() {
             // current user is logged in
-            self.activityIndicator.hidden = false
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-            activityIndicator.color = UIColor.darkGrayColor()
-            activityIndicator.startAnimating()
+//            self.activityIndicator.hidden = false
+//            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+//            activityIndicator.color = UIColor.darkGrayColor()
+//            activityIndicator.startAnimating()
             getCurrentProfile()
         }
         else {
             // no user logged in
             background.hidden = false
-            visualEffects.hidden = false
+            //visualEffects.hidden = false
         }
     }
     
@@ -82,8 +82,8 @@ class MyProfileViewController: UIViewController{
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
         
-        self.activityIndicator.stopAnimating()
-        self.activityIndicator.hidden = true
+//        self.activityIndicator.stopAnimating()
+//        self.activityIndicator.hidden = true
             
             let userImageFile = result![0]["imageFile"] as! PFFile
         
@@ -96,8 +96,8 @@ class MyProfileViewController: UIViewController{
                 }
             }
             
-            self.activityIndicator.stopAnimating()
-            self.activityIndicator.hidden = true
+//            self.activityIndicator.stopAnimating()
+//            self.activityIndicator.hidden = true
    
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
         self.countryLabel.text = "\(result![0]["country"])"
