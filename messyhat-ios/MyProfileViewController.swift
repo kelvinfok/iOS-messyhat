@@ -121,7 +121,6 @@ class MyProfileViewController: UIViewController{
     @IBAction func signOutButton(sender: AnyObject) {
 
             PFUser.logOut()
-            //view.setNeedsDisplay()
             self.viewWillAppear(true)
         
     }

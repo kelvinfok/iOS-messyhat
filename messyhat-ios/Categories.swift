@@ -15,7 +15,7 @@ class Categories
     private var immutableCategories = [Category]()
     private var sections = [String]()
     
-    static var subCategories = ["HTML + CSS + JS", "Rails 5", "Node JS", "Angular 2", "PHP", "Swift 3", "Android Java", "React Native"]
+    static var subCategories = ["Startup - Early Stage", "Startup - Ecommerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Rails 5", "Node JS", "Angular 2", "PHP", "Swift 3", "Android Java", "React Native"]
     
     // MARK: - Public
     
@@ -31,7 +31,7 @@ class Categories
     {
         categories = createCategories()
         immutableCategories = categories
-        sections = ["Web", "Mobile"]
+        sections = ["Startups", "Code", "Mobile"]
     }
     
     func deleteItemsAtIndexPaths(indexPaths: [NSIndexPath])
@@ -110,7 +110,8 @@ class Categories
     private func createCategories() -> [Category]
     {
         var newCategories = [Category]()
-        newCategories += Web.categories()
+        newCategories += Startups.categories()
+        newCategories += Code.categories()
         newCategories += Mobile.categories()
 
         return newCategories
@@ -136,13 +137,40 @@ class Categories
     
 }
 
-class Web
+
+class Startups
 {
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "HTML + CSS + JS", image: UIImage(named: "web-htmlcssjs")!, section: "Web"))
-        categories.append(Category(title: "Rails 5", image: UIImage(named: "web-rails")!, section: "Web"))
+        categories.append(Category(title: "Early Stage", image: UIImage(named: "startups-earlystage")!, section: "Startups"))
+        categories.append(Category(title: "E-commerce", image: UIImage(named: "startups-ecommerce")!, section: "Startups"))
+        categories.append(Category(title: "Fintech", image: UIImage(named: "startups-finance")!, section: "Startups"))
+        categories.append(Category(title: "Biotech", image: UIImage(named: "startups-biotech")!, section: "Startups"))
+        categories.append(Category(title: "IOT", image: UIImage(named: "startups-iot")!, section: "Startups"))
+        categories.append(Category(title: "Health Care", image: UIImage(named: "startups-healthcare")!, section: "Startups"))
+        categories.append(Category(title: "Security", image: UIImage(named: "startups-security")!, section: "Startups"))
+        categories.append(Category(title: "Logistics", image: UIImage(named: "startups-logistics")!, section: "Startups"))
+        categories.append(Category(title: "Virtual Reality", image: UIImage(named: "startups-virtualreality")!, section: "Startups"))
+        categories.append(Category(title: "Energy", image: UIImage(named: "startups-cleantech")!, section: "Startups"))
+        categories.append(Category(title: "Legal", image: UIImage(named: "startups-legal")!, section: "Startups"))
+        categories.append(Category(title: "Social Media", image: UIImage(named: "startups-socialmedia")!, section: "Startups"))
+        categories.append(Category(title: "Data", image: UIImage(named: "startups-data")!, section: "Startups"))
+        categories.append(Category(title: "Marketing", image: UIImage(named: "startups-marketing")!, section: "Startups"))
+        categories.append(Category(title: "Travel", image: UIImage(named: "startups-travel")!, section: "Startups"))
+
+        return categories
+    }
+}
+
+
+class Code
+{
+    class func categories() -> [Category]
+    {
+        var categories = [Category]()
+        categories.append(Category(title: "Ruby on Rails", image: UIImage(named: "code-rails")!, section: "Code"))
+        categories.append(Category(title: "Javascript", image: UIImage(named: "code-javascript")!, section: "Code"))
         categories.append(Category(title: "Node JS", image: UIImage(named: "web-nodejs")!, section: "Web"))
         categories.append(Category(title: "Angular 2", image: UIImage(named: "web-angular2")!, section: "Web"))
         categories.append(Category(title: "PHP", image: UIImage(named: "web-php")!, section: "Web"))
