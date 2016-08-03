@@ -17,7 +17,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
     @IBOutlet weak var profileSelfSummary: UITextView!
-    @IBOutlet weak var ageLocation: UILabel!
+    @IBOutlet weak var websiteButton: UIButton!
+    
+    struct StoryBoard {
+        static var segueToWebView = "segueToWebView"
+    }
     
     override func viewDidLoad() {
         
@@ -33,6 +37,10 @@ class ProfileViewController: UIViewController {
     self.profileNameLabel.text = profiles.first_name
     self.offering.text = "\(profiles.offering!)"
     self.looking_for.text = "\(profiles.looking_for!)"
+    self.websiteButton.setTitle("\(profiles.website!)", forState: .Normal)
+        
+        
+        
     
     // Load Images
     
@@ -45,8 +53,22 @@ class ProfileViewController: UIViewController {
             }
         }
     }
-    
-    
     }
+    
+    @IBAction func showURL(sender: AnyObject) {
+        self.performSegueWithIdentifier(StoryBoard.segueToWebView, sender: self)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == StoryBoard.segueToWebView {
+            let destinationController = segue.destinationViewController as! WebViewController
+            destinationController.URLKey = (websiteButton.titleLabel?.text!)!
+        }
+    }
+    
+    
+    
+    
 
 }

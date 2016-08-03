@@ -91,6 +91,7 @@ class MyProfileViewController: UIViewController {
 //        }
 //        
 //        return nil
+        print(PFUser.currentUser())
         
         if PFUser.currentUser() != nil {
             return true
