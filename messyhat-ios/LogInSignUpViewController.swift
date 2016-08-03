@@ -33,7 +33,14 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         setBG()
         setLogo()
         setButton()
-        self.signUpController = SignUpViewController()
+        // self.signUpController = SignUpViewController()
+    }
+    
+    func setParse() {
+        let signUpViewController = PFSignUpViewController()
+        signUpViewController.delegate = self
+        self.delegate = self
+        self.signUpController = signUpViewController
     }
     
     func setButton() {
@@ -88,12 +95,6 @@ class LogInSignUpViewController: PFLogInViewController, PFLogInViewControllerDel
         title = StoryBoard.title
     }
     
-    func setParse() {
-        let signUpViewController = PFSignUpViewController()
-        signUpViewController.delegate = self
-        self.delegate = self
-        self.signUpController = signUpViewController
-    }
     
     func showCategoryVC() {
         self.navigationController?.popToRootViewControllerAnimated(true)

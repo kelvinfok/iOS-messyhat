@@ -60,6 +60,8 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
             emailTextField.text = currentUserEmail!
         }
         
+        setProfileAvatarGesture()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(CompleteProfileInfoViewController.tap(_:)))
         view.addGestureRecognizer(tapGesture)
         
@@ -76,6 +78,24 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         print(newProfile)
     }
     
+    func setProfileAvatarGesture() {
+        let tapAvatarGestureRecognizer = UITapGestureRecognizer(target:self, action: #selector(CompleteProfileInfoViewController.avatarTapped))
+        uploadPreviewImage.userInteractionEnabled = true
+        uploadPreviewImage.addGestureRecognizer(tapAvatarGestureRecognizer)
+    }
+    
+    func avatarTapped() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.allowsEditing = false
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func openImagePicker() {
+
+    }
     // MARK: Actions
     
     
@@ -84,12 +104,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     @IBAction func addProfilePicture(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        imagePicker.allowsEditing = false
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+
 
     }
     
