@@ -14,7 +14,6 @@ class MyProfileViewController: UIViewController {
 
     @IBOutlet weak var backgroundTop: UIImageView!
     @IBOutlet weak var backgroundBottom: UIImageView!
-    
     @IBOutlet weak var loginCreateAccountButton: UIButton!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -40,11 +39,11 @@ class MyProfileViewController: UIViewController {
     
     
     func updateUI() {
-        // loginCreateAccountButton.layer.cornerRadius = 5.0
         loginCreateAccountButton.layer.masksToBounds = true
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         super.viewWillAppear(true)
         
         backgroundTop.hidden = true
@@ -67,13 +66,41 @@ class MyProfileViewController: UIViewController {
     }
     
     func currentUserLoggedIn() -> Bool {
+        
+//        var isLoggedin: Bool?
+//        print(PFUser.currentUser())
+//        if PFUser.currentUser() != nil {
+//        
+//        let ProfileQuery = Profile.query()
+//        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
+//        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Bool
+//            print("result is \(result)")
+//            if result!.count == 0 {
+//                self.scrollView.hidden = true
+//                isLoggedin = false
+//                print("not logged in")
+//            }
+//            else {
+//                return true
+//                print("Logged in")
+//            }
+//        }
+//    }
+//        else {
+//            return false
+//        }
+//        
+//        return nil
+        
         if PFUser.currentUser() != nil {
             return true
         }
         else {
-            scrollView.hidden = true
+            self.scrollView.hidden = true
             return false
         }
+        
+        
     }
     
     func getCurrentProfile() {
@@ -91,6 +118,8 @@ class MyProfileViewController: UIViewController {
                 (imageData: NSData?, error: NSError?) -> Void in
                 if error == nil {
                     if let image = UIImage(data: imageData!) {
+                        
+                        self.profileImageView.contentMode = .ScaleAspectFill
                         self.profileImageView.image = image
                     }
                 }
