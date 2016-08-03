@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		500009086A792AD217675E97 /* Pods_messyhat_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */; };
 		8D07D6E61D51A925002DC192 /* Lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D07D6E51D51A925002DC192 /* Lato.ttf */; };
+		8D1627671D527C53000D229F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1627661D527C53000D229F /* WebViewController.swift */; };
 		8D28746D1D40AD16009E7048 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28746C1D40AD16009E7048 /* ParseHelper.swift */; };
 		8D3D31981D4C853300A2952A /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */; };
 		8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */; };
@@ -38,6 +39,7 @@
 		7C1E5D286C1D2480D0ABFCBE /* Pods_messyhat_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_messyhat_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D17B843D8F8BF66B5CE3259 /* Pods-messyhat-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-messyhat-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-messyhat-ios/Pods-messyhat-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		8D07D6E51D51A925002DC192 /* Lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lato.ttf; path = Assets/Lato.ttf; sourceTree = "<group>"; };
+		8D1627661D527C53000D229F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8D28746C1D40AD16009E7048 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */,
 				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
 				8DBC9EE21D51D83200634392 /* TabBarController.swift */,
+				8D1627661D527C53000D229F /* WebViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				8D3D31981D4C853300A2952A /* WalkThroughViewController.swift in Sources */,
 				8D5BDDAD1D3F78C000C2C49E /* MyProfileViewController.swift in Sources */,
 				8D53456B1D3E098B00FCF23D /* CategoriesCollectionViewController.swift in Sources */,
+				8D1627671D527C53000D229F /* WebViewController.swift in Sources */,
 				8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */,
 				8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */,
 				8DCB4A761D3EA4A700EAF970 /* ProfileViewCell.swift in Sources */,

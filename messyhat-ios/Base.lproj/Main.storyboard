@@ -243,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="1164.5" y="-72.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="iPX-Kl-BLK">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="67o-BH-VW7" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="67o-BH-VW7" customClass="WebViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5BJ-DQ-tcF"/>
                         <viewControllerLayoutGuide type="bottom" id="SNV-iv-T5E"/>
@@ -256,19 +256,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BM-lK-cRx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="67o-BH-VW7" id="PeU-5u-PNc"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-uT-ut4">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5O-J6-Sch">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="4H0-cf-nxf">
+                                        <connections>
+                                            <action selector="goBack" destination="0BM-lK-cRx" id="ANU-JV-cGv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="c8a-Lc-jYh">
+                                        <connections>
+                                            <action selector="goForward" destination="0BM-lK-cRx" id="qwF-HB-c5H"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ef3-SF-O0P"/>
+                                    <barButtonItem systemItem="refresh" id="nHZ-e0-hhM">
+                                        <connections>
+                                            <action selector="reload" destination="0BM-lK-cRx" id="rfN-L7-MuX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="OEb-qL-ESP">
+                                        <connections>
+                                            <action selector="stopLoading" destination="0BM-lK-cRx" id="xPi-kQ-chc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="E5O-J6-Sch" firstAttribute="top" secondItem="0BM-lK-cRx" secondAttribute="bottom" id="Dpv-UR-yxQ"/>
+                            <constraint firstItem="0BM-lK-cRx" firstAttribute="top" secondItem="5BJ-DQ-tcF" secondAttribute="bottom" id="G14-9Z-eUR"/>
+                            <constraint firstItem="SNV-iv-T5E" firstAttribute="top" secondItem="0BM-lK-cRx" secondAttribute="bottom" constant="44" id="NIS-oO-MHm"/>
+                            <constraint firstItem="GWb-uT-ut4" firstAttribute="centerY" secondItem="hve-L6-rAy" secondAttribute="centerY" id="OHa-uX-cVt"/>
                             <constraint firstItem="SNV-iv-T5E" firstAttribute="top" secondItem="0BM-lK-cRx" secondAttribute="bottom" id="PZ7-Tt-nUY"/>
+                            <constraint firstAttribute="trailing" secondItem="E5O-J6-Sch" secondAttribute="trailing" id="QV6-8B-WXb"/>
+                            <constraint firstItem="E5O-J6-Sch" firstAttribute="leading" secondItem="hve-L6-rAy" secondAttribute="leading" id="bx3-4Q-iCA"/>
                             <constraint firstItem="0BM-lK-cRx" firstAttribute="leading" secondItem="hve-L6-rAy" secondAttribute="leading" id="cHG-hd-TP9"/>
                             <constraint firstItem="0BM-lK-cRx" firstAttribute="top" secondItem="5BJ-DQ-tcF" secondAttribute="bottom" id="elD-eL-URV"/>
+                            <constraint firstItem="E5O-J6-Sch" firstAttribute="top" secondItem="0BM-lK-cRx" secondAttribute="bottom" id="kAu-r8-A4h"/>
                             <constraint firstAttribute="trailing" secondItem="0BM-lK-cRx" secondAttribute="trailing" id="sFn-46-NOd"/>
+                            <constraint firstItem="GWb-uT-ut4" firstAttribute="centerX" secondItem="hve-L6-rAy" secondAttribute="centerX" id="uRA-lQ-fyO"/>
+                            <constraint firstItem="SNV-iv-T5E" firstAttribute="top" secondItem="E5O-J6-Sch" secondAttribute="bottom" id="wgr-fU-RkK"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="elD-eL-URV"/>
+                                <exclude reference="kAu-r8-A4h"/>
+                                <exclude reference="NIS-oO-MHm"/>
+                                <exclude reference="PZ7-Tt-nUY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityMonitor" destination="GWb-uT-ut4" id="Ya5-vv-fKM"/>
+                        <outlet property="webView" destination="0BM-lK-cRx" id="P4q-Yp-Trf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYL-jY-7CY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

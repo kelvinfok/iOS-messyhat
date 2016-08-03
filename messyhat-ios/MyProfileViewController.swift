@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MyProfileViewController: UIViewController{
+class MyProfileViewController: UIViewController {
 
 
     @IBOutlet weak var backgroundTop: UIImageView!
@@ -84,9 +84,6 @@ class MyProfileViewController: UIViewController{
         let ProfileQuery = Profile.query()
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
-        
-//        self.activityIndicator.stopAnimating()
-//        self.activityIndicator.hidden = true
             
             let userImageFile = result![0]["imageFile"] as! PFFile
         
@@ -99,11 +96,21 @@ class MyProfileViewController: UIViewController{
                 }
             }
             
-//            self.activityIndicator.stopAnimating()
-//            self.activityIndicator.hidden = true
    
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
-        self.websiteButton.setTitle("\(result![0]["website"])", forState: .Normal)
+            
+            if result![0]["website"] == nil || result![0]["website"] as! String == "" {
+               self.websiteButton.enabled = false
+               self.websiteButton.hidden = true
+               self.websiteButton.userInteractionEnabled = false
+            }
+            else {
+                self.websiteButton.enabled = true
+                self.websiteButton.hidden = false
+                self.websiteButton.userInteractionEnabled = true
+                self.websiteButton.setTitle("\(result![0]["website"])", forState: .Normal)
+            }
+            
         self.lookingForLabel.text = "\(result![0]["looking_for"])"
         self.offeringLabel.text = "\(result![0]["offering"])"
         self.summaryLabel.text = "\(result![0]["summary"])"
@@ -119,21 +126,26 @@ class MyProfileViewController: UIViewController{
     @IBAction func visitURL(sender: AnyObject) {
         self.performSegueWithIdentifier(StoryBoard.segueToWebView, sender: self)
     }
-    
-    
-    
-    
+
     
     @IBAction func loginCreateAction(sender: AnyObject) {
         performSegueWithIdentifier(StoryBoard.segueToLoginSignUp, sender: nil)
     }
     
-    
     @IBAction func signOutButton(sender: AnyObject) {
 
             PFUser.logOut()
             self.viewWillAppear(true)
-        
+    }
+    
+    
+    // MARK: - Segue
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == StoryBoard.segueToWebView {
+            let destinationController = segue.destinationViewController as! WebViewController
+            destinationController.URLKey = (websiteButton.titleLabel?.text)!
+        }
     }
 
     override func didReceiveMemoryWarning() {
