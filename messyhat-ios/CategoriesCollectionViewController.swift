@@ -103,7 +103,7 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         let category = categories.categoryForItemAtIndexPath(indexPath)
-        selectedCategory = category!.title
+        selectedCategory = category!.key
         self.performSegueWithIdentifier("showProfileCollection", sender: category)
     }
     

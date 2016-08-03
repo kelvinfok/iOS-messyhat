@@ -13,16 +13,18 @@ class Category
     var title: String
     var image: UIImage
     var section: String
+    var key: String
     
-    init(title: String, image: UIImage, section: String)
+    init(title: String, key: String, image: UIImage, section: String)
     {
         self.title = title
         self.image = image
         self.section = section
+        self.key = key
     }
     
     convenience init(copies category: Category)
     {
-        self.init(title: category.title, image: category.image, section: category.section)
+        self.init(title: category.title, key: category.key, image: category.image, section: category.section)
     }
 }

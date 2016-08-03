@@ -12,7 +12,7 @@ class PageViewController: UIPageViewController {
     
     var pageHeaders = ["Welcome aboard!", "How to use this app?", "Initiate and collaborate"]
     var pageImages = ["app1", "app2", "app3"]
-    var pageDescriptions = ["MessyHat is a barter network for people to trade and learn new skills without using money.", "Create a profile, browse through members profiles, arrange meetups and exchange skills.", "Find awesome people and start exciting projects together."]
+    var pageDescriptions = ["MessyHat is a barter network for people to trade and learn new skills without using money.", "Create a profile, browse through members profiles, arrange meetups and exchange skills.", "You can also find awesome people and start exciting projects together."]
     
     override func viewDidLoad() {
         super.viewDidLoad()

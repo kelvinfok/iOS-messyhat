@@ -19,7 +19,7 @@ class MyProfileViewController: UIViewController{
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lookingForLabel: UILabel!
     @IBOutlet weak var offeringLabel: UILabel!
@@ -48,12 +48,13 @@ class MyProfileViewController: UIViewController{
         
         backgroundTop.hidden = true
         backgroundBottom.hidden = true
+        scrollView.hidden = true
         
         self.tabBarController?.tabBar.hidden = false
         
         if currentUserLoggedIn() {
             // current user is logged in
-//                       getCurrentProfile()
+            getCurrentProfile()
         }
         else {
             // no user logged in
@@ -75,7 +76,10 @@ class MyProfileViewController: UIViewController{
     }
     
     func getCurrentProfile() {
-
+        
+        self.scrollView.hidden = false
+        self.scrollView.contentOffset = CGPointMake(0, 0)
+        
         let ProfileQuery = Profile.query()
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
@@ -98,7 +102,7 @@ class MyProfileViewController: UIViewController{
 //            self.activityIndicator.hidden = true
    
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
-        self.countryLabel.text = "\(result![0]["country"])"
+        self.websiteLabel.text = "\(result![0]["website"])"
         self.lookingForLabel.text = "\(result![0]["looking_for"])"
         self.offeringLabel.text = "\(result![0]["offering"])"
         self.summaryLabel.text = "\(result![0]["summary"])"

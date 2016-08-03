@@ -259,10 +259,10 @@
                                 <rect key="frame" x="0.0" y="64" width="374" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw8-7a-lmX" customClass="CSAnimationView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="878"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="908"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tI-wH-Ito">
-                                                <rect key="frame" x="18" y="378" width="339" height="40"/>
+                                                <rect key="frame" x="18" y="408" width="339" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="6TC-ru-xY1"/>
                                                 </constraints>
@@ -273,7 +273,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-ls-KO6">
-                                                <rect key="frame" x="18" y="433" width="339" height="40"/>
+                                                <rect key="frame" x="18" y="463" width="339" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wPA-hZ-hd9"/>
                                                 </constraints>
@@ -308,14 +308,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="1Fc-iG-fiF">
-                                                <rect key="frame" x="23" y="93" width="330" height="250"/>
+                                                <rect key="frame" x="23" y="108" width="330" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="74C-LJ-mcU"/>
                                                     <constraint firstAttribute="width" constant="330" id="X7q-He-w8K"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBm-In-Nzz">
-                                                <rect key="frame" x="8" y="353" width="359" height="15"/>
+                                                <rect key="frame" x="8" y="383" width="359" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="Rqr-3S-QlK"/>
                                                     <constraint firstAttribute="height" constant="20" id="dql-YG-FXI"/>
@@ -330,7 +330,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Continue, I agree to the Terms of Use and the Privacy Policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiE-DR-Q70">
-                                                <rect key="frame" x="18" y="613" width="339" height="40"/>
+                                                <rect key="frame" x="18" y="643" width="339" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="cZ9-wU-H7m"/>
                                                     <constraint firstAttribute="height" constant="15" id="i5n-Zr-wRv"/>
@@ -347,7 +347,7 @@
                                                 </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVO-Uv-jhG">
-                                                <rect key="frame" x="8" y="730" width="359" height="40"/>
+                                                <rect key="frame" x="8" y="760" width="359" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="a4Z-Bf-AYI"/>
                                                     <constraint firstAttribute="height" constant="40" id="aeI-4N-SvM"/>
@@ -359,7 +359,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JhC-sv-7oz">
-                                                <rect key="frame" x="18" y="513" width="339" height="40"/>
+                                                <rect key="frame" x="18" y="543" width="339" height="40"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.60183189655172409" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Enn-xP-Ted"/>
@@ -371,7 +371,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6F-pi-euc">
-                                                <rect key="frame" x="8" y="653" width="359" height="27"/>
+                                                <rect key="frame" x="8" y="683" width="359" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <state key="normal" title="Read More">
                                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -381,7 +381,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your email has been set" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bop-bq-iOh">
-                                                <rect key="frame" x="8" y="488" width="359" height="15"/>
+                                                <rect key="frame" x="8" y="518" width="359" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="1iH-hw-Q4L"/>
                                                     <constraint firstAttribute="height" constant="20" id="RNi-yH-afM"/>
@@ -418,7 +418,7 @@
                                             <constraint firstItem="1Fc-iG-fiF" firstAttribute="top" secondItem="ptF-tz-Ymr" secondAttribute="bottom" constant="20" id="32E-AZ-izH"/>
                                             <constraint firstItem="4dT-ls-KO6" firstAttribute="leading" secondItem="Aw8-7a-lmX" secondAttribute="leadingMargin" constant="10" id="5Sp-Ly-01J"/>
                                             <constraint firstItem="bVO-Uv-jhG" firstAttribute="top" secondItem="RiE-DR-Q70" secondAttribute="bottom" constant="30" id="5pN-7i-Xo3"/>
-                                            <constraint firstItem="1Fc-iG-fiF" firstAttribute="top" secondItem="CrN-5R-U0B" secondAttribute="bottom" constant="-10" id="AKc-kO-YIg"/>
+                                            <constraint firstItem="1Fc-iG-fiF" firstAttribute="top" secondItem="CrN-5R-U0B" secondAttribute="bottom" constant="5" id="AKc-kO-YIg"/>
                                             <constraint firstItem="ptF-tz-Ymr" firstAttribute="top" secondItem="0da-0c-2p1" secondAttribute="bottom" constant="8" id="AYT-eO-YU5"/>
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="top" secondItem="1Fc-iG-fiF" secondAttribute="bottom" constant="106" id="Ade-3u-NfX"/>
                                             <constraint firstItem="V6F-pi-euc" firstAttribute="top" secondItem="RiE-DR-Q70" secondAttribute="bottom" id="Ax8-86-Fpe"/>
@@ -456,7 +456,7 @@
                                             <constraint firstItem="RiE-DR-Q70" firstAttribute="leading" secondItem="Aw8-7a-lmX" secondAttribute="leadingMargin" id="fj1-hK-1rY"/>
                                             <constraint firstItem="4dT-ls-KO6" firstAttribute="leading" secondItem="Aw8-7a-lmX" secondAttribute="leading" constant="10" id="frN-Ek-uqk"/>
                                             <constraint firstItem="JhC-sv-7oz" firstAttribute="top" secondItem="4dT-ls-KO6" secondAttribute="bottom" constant="15" id="gEO-YH-eyC"/>
-                                            <constraint firstItem="GBm-In-Nzz" firstAttribute="top" secondItem="1Fc-iG-fiF" secondAttribute="bottom" constant="10" id="gHt-ZX-pyl"/>
+                                            <constraint firstItem="GBm-In-Nzz" firstAttribute="top" secondItem="1Fc-iG-fiF" secondAttribute="bottom" constant="25" id="gHt-ZX-pyl"/>
                                             <constraint firstItem="4dT-ls-KO6" firstAttribute="trailing" secondItem="Aw8-7a-lmX" secondAttribute="trailingMargin" constant="10" id="gV2-6d-JDF"/>
                                             <constraint firstItem="bVO-Uv-jhG" firstAttribute="top" secondItem="V6F-pi-euc" secondAttribute="bottom" constant="50" id="gji-Q0-LcD"/>
                                             <constraint firstItem="4tI-wH-Ito" firstAttribute="leading" secondItem="Aw8-7a-lmX" secondAttribute="leadingMargin" constant="10" id="icL-A8-XdH"/>
@@ -759,7 +759,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07K-uY-BFh">
-                                                <rect key="frame" x="58" y="118" width="259" height="150"/>
+                                                <rect key="frame" x="43" y="118" width="289" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="mbD-Yz-0zp"/>
                                                 </constraints>
@@ -787,7 +787,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r0-6c-vKf">
-                                                <rect key="frame" x="58" y="333" width="259" height="150"/>
+                                                <rect key="frame" x="43" y="333" width="289" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="BEs-gy-hDl"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="OBm-YW-eQ6"/>
@@ -820,7 +820,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="leading" secondItem="h0a-sw-prl" secondAttribute="leading" constant="20" id="1mz-Ud-ZYs"/>
                                             <constraint firstItem="4r0-6c-vKf" firstAttribute="top" secondItem="hbC-IR-BF7" secondAttribute="bottom" constant="10" id="37B-7i-b2n"/>
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="3If-EA-zqo"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4r0-6c-vKf" secondAttribute="trailing" constant="50" id="5Bm-Lp-jCL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4r0-6c-vKf" secondAttribute="trailing" constant="35" id="5Bm-Lp-jCL"/>
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="top" secondItem="07K-uY-BFh" secondAttribute="bottom" constant="40" id="8Jw-qp-qvt"/>
                                             <constraint firstItem="h0a-sw-prl" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="8od-wh-Sxy"/>
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="top" secondItem="h0a-sw-prl" secondAttribute="bottom" constant="20" id="AQe-CA-1Jq"/>
@@ -831,13 +831,13 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="trailing" secondItem="DTu-F3-Mhy" secondAttribute="trailingMargin" id="JoD-qb-8D8"/>
                                             <constraint firstAttribute="bottom" secondItem="ko4-KZ-f9q" secondAttribute="bottom" constant="50" id="MA6-gg-bCf"/>
                                             <constraint firstAttribute="width" constant="240" id="MUI-2b-4RU"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="07K-uY-BFh" secondAttribute="trailing" constant="50" id="PSS-L8-ugj"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="07K-uY-BFh" secondAttribute="trailing" constant="35" id="PSS-L8-ugj"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="h0a-sw-prl" secondAttribute="trailing" id="UBg-oS-Xdu"/>
                                             <constraint firstItem="07K-uY-BFh" firstAttribute="top" secondItem="ub7-Ng-zaF" secondAttribute="bottom" constant="10" id="WiF-NN-Tlj"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ub7-Ng-zaF" secondAttribute="trailing" id="aZp-iO-qa0"/>
                                             <constraint firstItem="h0a-sw-prl" firstAttribute="top" secondItem="Nel-Yw-bZt" secondAttribute="bottom" constant="8" id="byk-aU-naW"/>
-                                            <constraint firstItem="07K-uY-BFh" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="50" id="dMc-b3-3eC"/>
-                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="50" id="eO0-K8-dMv"/>
+                                            <constraint firstItem="07K-uY-BFh" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="35" id="dMc-b3-3eC"/>
+                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="35" id="eO0-K8-dMv"/>
                                             <constraint firstItem="ko4-KZ-f9q" firstAttribute="top" secondItem="4r0-6c-vKf" secondAttribute="bottom" constant="40" id="fJO-cT-19H"/>
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="hlp-FB-hQL"/>
                                             <constraint firstItem="Nel-Yw-bZt" firstAttribute="top" secondItem="DTu-F3-Mhy" secondAttribute="top" constant="20" id="iM5-5G-4dA"/>
@@ -896,7 +896,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 <rect key="frame" x="0.0" y="64" width="375" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elt-zF-mHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmf-24-bC3">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="30"/>
@@ -926,14 +926,15 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIf-PW-YDr">
-                                                <rect key="frame" x="15" y="93" width="345" height="43"/>
+                                                <rect key="frame" x="15" y="93" width="345" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7G1-Ds-7qb"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="7rx-ND-n1h"/>
                                                     <constraint firstAttribute="height" constant="30" id="Fel-kh-Mpv"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="NMr-y9-LPu"/>
                                                 </constraints>
-                                                <string key="text">Describe yourself and the skills that you possess. Discuss what you wish to learn and what you are passionate to teach in return.</string>
+                                                <string key="text">Your self summary
+(Describe yourself and the skills you have)</string>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -946,7 +947,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="58V-cy-jmr">
-                                                <rect key="frame" x="23" y="154" width="329" height="200"/>
+                                                <rect key="frame" x="23" y="140" width="329" height="200"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="C2h-Om-8eC"/>
@@ -955,7 +956,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yos-BG-p0W">
-                                                <rect key="frame" x="23" y="394" width="329" height="40"/>
+                                                <rect key="frame" x="23" y="460" width="329" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="3pn-1o-cJL"/>
@@ -976,27 +977,60 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </connections>
                                             </button>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-1m-Zhx">
-                                                <rect key="frame" x="169" y="269" width="37" height="37"/>
+                                                <rect key="frame" x="169" y="317" width="37" height="37"/>
                                             </activityIndicatorView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-fJ-hoc">
+                                                <rect key="frame" x="23" y="390" width="329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you have a website or portfolio?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpU-kf-n0P">
+                                                <rect key="frame" x="23" y="370" width="329" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="91f-do-zqr"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Yf4-LE-oHU"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="h5f-3E-kE1"/>
+                                                    <constraint firstAttribute="height" constant="30" id="whE-tb-aUM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="h5f-3E-kE1"/>
+                                                        <exclude reference="Yf4-LE-oHU"/>
+                                                        <exclude reference="whE-tb-aUM"/>
+                                                        <exclude reference="91f-do-zqr"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="trailing" secondItem="elt-zF-mHG" secondAttribute="trailingMargin" id="0gf-UN-MEd"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leading" constant="15" id="1T8-BM-Qn8"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="15" id="1fF-tA-7jp"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ccv-fJ-hoc" secondAttribute="trailing" constant="15" id="2zA-gB-j2k"/>
                                             <constraint firstItem="Vyh-1m-Zhx" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leading" constant="113" id="7Tw-i1-e3N"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="trailing" secondItem="elt-zF-mHG" secondAttribute="trailingMargin" constant="15" id="Acd-wq-Gc6"/>
+                                            <constraint firstItem="ccv-fJ-hoc" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="15" id="Ag1-db-plj"/>
                                             <constraint firstItem="Vyh-1m-Zhx" firstAttribute="centerX" secondItem="elt-zF-mHG" secondAttribute="centerX" id="Am0-PP-99U"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" id="CDO-4d-poN"/>
-                                            <constraint firstAttribute="bottom" secondItem="yos-BG-p0W" secondAttribute="bottom" constant="140" id="KHj-IR-Mb1"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="GpU-kf-n0P" secondAttribute="trailing" constant="15" id="F7I-My-V9q"/>
+                                            <constraint firstItem="ccv-fJ-hoc" firstAttribute="top" secondItem="GpU-kf-n0P" secondAttribute="bottom" constant="5" id="ILD-go-dJK"/>
+                                            <constraint firstAttribute="bottom" secondItem="yos-BG-p0W" secondAttribute="bottom" constant="170" id="KHj-IR-Mb1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7bE-wG-r4R" secondAttribute="trailing" id="KSY-wD-Xcf"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="40" id="MO8-RI-hc7"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" constant="15" id="Miv-KL-JEE"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" constant="15" id="OVT-7s-OOj"/>
                                             <constraint firstItem="Vyh-1m-Zhx" firstAttribute="centerY" secondItem="elt-zF-mHG" secondAttribute="centerY" id="PEm-ku-wJM"/>
+                                            <constraint firstItem="GpU-kf-n0P" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="15" id="Q0E-zg-rcN"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="top" secondItem="7bE-wG-r4R" secondAttribute="bottom" constant="20" id="RnJ-SV-ppz"/>
+                                            <constraint firstItem="GpU-kf-n0P" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="30" id="UId-nd-dMh"/>
                                             <constraint firstAttribute="trailing" secondItem="KIf-PW-YDr" secondAttribute="trailing" constant="15" id="VLr-KZ-IkY"/>
+                                            <constraint firstItem="ccv-fJ-hoc" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="20" id="WqM-Q6-lnJ"/>
                                             <constraint firstAttribute="height" constant="128" id="Y5E-oN-Yov"/>
+                                            <constraint firstItem="yos-BG-p0W" firstAttribute="top" secondItem="ccv-fJ-hoc" secondAttribute="bottom" constant="40" id="YON-Pu-xVN"/>
                                             <constraint firstItem="58V-cy-jmr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" constant="15" id="Yub-uB-xD5"/>
                                             <constraint firstItem="58V-cy-jmr" firstAttribute="top" secondItem="KIf-PW-YDr" secondAttribute="bottom" constant="18" id="c9D-cr-B2G"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="trailing" secondItem="elt-zF-mHG" secondAttribute="trailingMargin" constant="15" id="fGJ-zn-o1a"/>
@@ -1022,8 +1056,10 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 <exclude reference="Yub-uB-xD5"/>
                                                 <exclude reference="7Tw-i1-e3N"/>
                                                 <exclude reference="oc4-fy-Vl3"/>
+                                                <exclude reference="WqM-Q6-lnJ"/>
                                                 <exclude reference="1fF-tA-7jp"/>
                                                 <exclude reference="Acd-wq-Gc6"/>
+                                                <exclude reference="MO8-RI-hc7"/>
                                                 <exclude reference="fGJ-zn-o1a"/>
                                                 <exclude reference="kaq-j8-HnZ"/>
                                                 <exclude reference="ldJ-P7-68q"/>
@@ -1056,6 +1092,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <outlet property="activityIndicator" destination="Vyh-1m-Zhx" id="EqL-ka-xOJ"/>
                         <outlet property="completeButton" destination="yos-BG-p0W" id="oG7-0c-Puc"/>
                         <outlet property="summaryTextView" destination="58V-cy-jmr" id="cf5-JU-1OE"/>
+                        <outlet property="websiteTextField" destination="ccv-fJ-hoc" id="Ypk-eS-DYA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNe-Ck-cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1403,10 +1440,10 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people-top" translatesAutoresizingMaskIntoConstraints="NO" id="op9-Hb-c2N">
-                                <rect key="frame" x="0.0" y="72" width="414" height="418"/>
+                                <rect key="frame" x="28" y="72" width="358" height="418"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="people-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="lmY-vg-yPq">
-                                <rect key="frame" x="0.0" y="546" width="414" height="433"/>
+                                <rect key="frame" x="28" y="546" width="358" height="433"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-Pp-5i1">
                                 <rect key="frame" x="0.0" y="498" width="414" height="40"/>
@@ -1434,10 +1471,10 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     <constraint firstAttribute="width" secondItem="dFW-Mg-Xe6" secondAttribute="height" multiplier="1:1" id="iMc-0S-pSV"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singapore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-WA-Ykx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2h-WA-Ykx" userLabel="Website Label">
                                                 <rect key="frame" x="0.0" y="455" width="414" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.4039215686" green="0.39607843139999999" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seeking to learn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR9-0c-ff2">
@@ -1571,13 +1608,19 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="1PZ-3V-qC3"/>
+                            <constraint firstItem="lmY-vg-yPq" firstAttribute="height" secondItem="op9-Hb-c2N" secondAttribute="height" id="2gP-GN-UsD"/>
                             <constraint firstItem="op9-Hb-c2N" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" constant="8" id="3Db-YV-SXm"/>
                             <constraint firstItem="op9-Hb-c2N" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="3w6-Xm-84s"/>
                             <constraint firstAttribute="trailing" secondItem="lmY-vg-yPq" secondAttribute="trailing" id="6WA-ld-VRO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="op9-Hb-c2N" secondAttribute="trailing" constant="8" id="6tE-D6-0aI"/>
                             <constraint firstAttribute="trailing" secondItem="op9-Hb-c2N" secondAttribute="trailing" id="7ak-Tx-mP8"/>
+                            <constraint firstItem="lmY-vg-yPq" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="8" id="8eV-Ex-ZC7"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="Br8-1h-AFf"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="58l-fz-q94" secondAttribute="bottom" constant="119" id="JOI-IJ-xag"/>
                             <constraint firstItem="lmY-vg-yPq" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="JTM-zC-hJ6"/>
+                            <constraint firstItem="op9-Hb-c2N" firstAttribute="height" secondItem="lmY-vg-yPq" secondAttribute="height" priority="750" id="Ngn-Kl-C3c"/>
+                            <constraint firstItem="lmY-vg-yPq" firstAttribute="width" secondItem="op9-Hb-c2N" secondAttribute="width" priority="750" id="Pz6-ap-iP6"/>
+                            <constraint firstItem="op9-Hb-c2N" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="8" id="QCT-I4-GpL"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="width" secondItem="7Fk-H1-gtg" secondAttribute="width" id="RAj-KJ-l1Y"/>
                             <constraint firstItem="lmY-vg-yPq" firstAttribute="top" secondItem="rkC-Pp-5i1" secondAttribute="bottom" constant="8" id="S6Q-MG-hkI"/>
                             <constraint firstAttribute="trailing" secondItem="rkC-Pp-5i1" secondAttribute="trailing" id="UuS-bs-aRu"/>
@@ -1589,10 +1632,18 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="QsA-wE-xGO" secondAttribute="bottom" id="feE-lu-kSH"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="gvX-43-4KG"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="58l-fz-q94" secondAttribute="bottom" constant="50" id="j8f-MN-APe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lmY-vg-yPq" secondAttribute="trailing" constant="8" id="qJp-P2-ic9"/>
+                            <constraint firstItem="op9-Hb-c2N" firstAttribute="width" secondItem="lmY-vg-yPq" secondAttribute="width" priority="750" id="rGz-v7-cxf"/>
                             <constraint firstAttribute="trailing" secondItem="QsA-wE-xGO" secondAttribute="trailing" id="tCL-ka-aiE"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="3w6-Xm-84s"/>
+                                <exclude reference="7ak-Tx-mP8"/>
+                                <exclude reference="2gP-GN-UsD"/>
+                                <exclude reference="6WA-ld-VRO"/>
+                                <exclude reference="JTM-zC-hJ6"/>
+                                <exclude reference="Pz6-ap-iP6"/>
                                 <exclude reference="JOI-IJ-xag"/>
                                 <exclude reference="j8f-MN-APe"/>
                             </mask>
@@ -1604,7 +1655,6 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                     <connections>
                         <outlet property="backgroundBottom" destination="lmY-vg-yPq" id="vKh-Dn-9gi"/>
                         <outlet property="backgroundTop" destination="op9-Hb-c2N" id="E9k-Y3-r6V"/>
-                        <outlet property="countryLabel" destination="Y2h-WA-Ykx" id="yCB-RW-mXs"/>
                         <outlet property="loginCreateAccountButton" destination="rkC-Pp-5i1" id="3gF-zR-Mb2"/>
                         <outlet property="lookingForLabel" destination="aR9-0c-ff2" id="1f3-22-ba5"/>
                         <outlet property="nameLabel" destination="AQD-jQ-WHQ" id="l5a-dH-G6c"/>
@@ -1613,6 +1663,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <outlet property="profileView" destination="Btl-UT-hoX" id="LG1-hK-VQk"/>
                         <outlet property="scrollView" destination="QsA-wE-xGO" id="QeU-NP-fZs"/>
                         <outlet property="summaryLabel" destination="y6i-Ra-g6l" id="ysW-mz-5XB"/>
+                        <outlet property="websiteLabel" destination="Y2h-WA-Ykx" id="FvY-uT-kLT"/>
                         <segue destination="c5h-3r-Wfc" kind="show" identifier="segueToLoginSignUp" id="0E2-da-ynq"/>
                         <segue destination="E7b-sh-k4L" kind="show" identifier="segueToCategoryViewController" id="Cyr-GX-oaH"/>
                     </connections>

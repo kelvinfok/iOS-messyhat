@@ -29,6 +29,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     
     var pickerView = UIPickerView()
     
+    @IBOutlet weak var websiteTextField: UITextField!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var uploadPreviewImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -149,6 +150,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         activityIndicator.startAnimating()
         
         newProfile.summary = summaryTextView.text
+        newProfile.website = websiteTextField.text
         newProfile.user = PFUser.currentUser()
         
         newProfile.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
@@ -273,6 +275,9 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
         }
         if self.summaryTextView != nil {
             summaryTextView.resignFirstResponder()
+        }
+        if self.websiteTextField != nil {
+            websiteTextField.resignFirstResponder()
         }
     }
     

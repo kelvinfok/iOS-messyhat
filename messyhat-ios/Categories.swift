@@ -144,40 +144,39 @@ class Startup
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "Early Stage", image: UIImage(named: "startups-earlystage")!, section: "Startup"))
-        categories.append(Category(title: "E-commerce", image: UIImage(named: "startups-ecommerce")!, section: "Startup"))
-        categories.append(Category(title: "Finance", image: UIImage(named: "startups-finance")!, section: "Startup"))
-        categories.append(Category(title: "Biotech", image: UIImage(named: "startups-biotech")!, section: "Startup"))
-        categories.append(Category(title: "IOT", image: UIImage(named: "startups-iot")!, section: "Startup"))
-        categories.append(Category(title: "Health Care", image: UIImage(named: "startups-healthcare")!, section: "Startup"))
-        categories.append(Category(title: "Security", image: UIImage(named: "startups-security")!, section: "Startup"))
-        categories.append(Category(title: "Logistics", image: UIImage(named: "startups-logistics")!, section: "Startup"))
-        categories.append(Category(title: "Virtual Reality", image: UIImage(named: "startups-virtualreality")!, section: "Startup"))
-        categories.append(Category(title: "Clean Tech", image: UIImage(named: "startups-cleantech")!, section: "Startup"))
-        categories.append(Category(title: "Legal", image: UIImage(named: "startups-legal")!, section: "Startup"))
-        categories.append(Category(title: "Social Media", image: UIImage(named: "startups-socialmedia")!, section: "Startup"))
-        categories.append(Category(title: "Data", image: UIImage(named: "startups-data")!, section: "Startup"))
-        categories.append(Category(title: "Marketing", image: UIImage(named: "startups-marketing")!, section: "Startup"))
-        categories.append(Category(title: "Travel", image: UIImage(named: "startups-travel")!, section: "Startup"))
+        categories.append(Category(title: "Early Stage", key: "Startup - Early Stage", image: UIImage(named: "startups-earlystage")!, section: "Startup"))
+        categories.append(Category(title: "E-commerce", key: "Startup - E-commerce", image: UIImage(named: "startups-ecommerce")!, section: "Startup"))
+        categories.append(Category(title: "Finance", key: "Startup - Finance", image: UIImage(named: "startups-finance")!, section: "Startup"))
+        categories.append(Category(title: "Biotech", key: "Startup - Biotech", image: UIImage(named: "startups-biotech")!, section: "Startup"))
+        categories.append(Category(title: "IOT", key: "Startup - IOT", image: UIImage(named: "startups-iot")!, section: "Startup"))
+        categories.append(Category(title: "Health Care", key: "Startup - Healthcare", image: UIImage(named: "startups-healthcare")!, section: "Startup"))
+        categories.append(Category(title: "Security", key: "Startup - Security", image: UIImage(named: "startups-security")!, section: "Startup"))
+        categories.append(Category(title: "Logistics", key: "Startup - Logistics", image: UIImage(named: "startups-logistics")!, section: "Startup"))
+        categories.append(Category(title: "Virtual Reality", key: "Startup - Virtual Reality", image: UIImage(named: "startups-virtualreality")!, section: "Startup"))
+        categories.append(Category(title: "Clean Tech", key: "Startup - Clean Tech", image: UIImage(named: "startups-cleantech")!, section: "Startup"))
+        categories.append(Category(title: "Legal", key: "Startup - Legal", image: UIImage(named: "startups-legal")!, section: "Startup"))
+        categories.append(Category(title: "Social Media", key: "Startup - Social Media", image: UIImage(named: "startups-socialmedia")!, section: "Startup"))
+        categories.append(Category(title: "Data", key: "Startup - Data", image: UIImage(named: "startups-data")!, section: "Startup"))
+        categories.append(Category(title: "Marketing", key: "Startup - Marketing", image: UIImage(named: "startups-marketing")!, section: "Startup"))
+        categories.append(Category(title: "Travel", key: "Startup - Travel", image: UIImage(named: "startups-travel")!, section: "Startup"))
 
         return categories
     }
 }
-
 
 class Code
 {
     class func categories() -> [Category]
     {
         var categories = [Category]()
-        categories.append(Category(title: "Ruby on Rails", image: UIImage(named: "code-rails")!, section: "Code"))
-        categories.append(Category(title: "Javascript", image: UIImage(named: "code-javascript")!, section: "Code"))
-        categories.append(Category(title: "ASP.NET", image: UIImage(named: "code-aspnet")!, section: "Code"))
-        categories.append(Category(title: "Django", image: UIImage(named: "code-django")!, section: "Code"))
-        categories.append(Category(title: "PHP", image: UIImage(named: "code-php")!, section: "Code"))
-        categories.append(Category(title: "Java", image: UIImage(named: "code-java")!, section: "Code"))
-        categories.append(Category(title: "Swift", image: UIImage(named: "code-swift")!, section: "Code"))
-        categories.append(Category(title: "Haskell", image: UIImage(named: "code-haskell")!, section: "Code"))
+        categories.append(Category(title: "Ruby on Rails", key: "Code - Ruby on Rails", image: UIImage(named: "code-rails")!, section: "Code"))
+        categories.append(Category(title: "Javascript", key: "Code - Javascript", image: UIImage(named: "code-javascript")!, section: "Code"))
+        categories.append(Category(title: "ASP.NET", key: "Code - ASP.NET", image: UIImage(named: "code-aspnet")!, section: "Code"))
+        categories.append(Category(title: "Django", key: "Code - Django", image: UIImage(named: "code-django")!, section: "Code"))
+        categories.append(Category(title: "PHP", key: "Code - PHP", image: UIImage(named: "code-php")!, section: "Code"))
+        categories.append(Category(title: "Java", key: "Code - Java", image: UIImage(named: "code-java")!, section: "Code"))
+        categories.append(Category(title: "Swift", key: "Code - Swift", image: UIImage(named: "code-swift")!, section: "Code"))
+        categories.append(Category(title: "Haskell", key: "Code - Haskell", image: UIImage(named: "code-haskell")!, section: "Code"))
         return categories
     }
 }
