@@ -11,6 +11,9 @@ import Parse
 
 class MyProfileViewController: UIViewController{
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var background: UIImageView!
+    @IBOutlet weak var visualEffects: UIVisualEffectView!
     @IBOutlet weak var loginCreateAccountButton: UIButton!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -25,6 +28,7 @@ class MyProfileViewController: UIViewController{
     
     struct StoryBoard {
         static var segueToLoginSignUp = "segueToLoginSignUp"
+        static var segueToCategoryViewController = "segueToCategoryViewController"
     }
     
     override func viewDidLoad() {
@@ -41,10 +45,24 @@ class MyProfileViewController: UIViewController{
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
+        background.hidden = true
+        visualEffects.hidden = true
+        activityIndicator.hidden = true
+        
         self.tabBarController?.tabBar.hidden = false
         
         if currentUserLoggedIn() {
+            // current user is logged in
+            self.activityIndicator.hidden = false
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+            activityIndicator.color = UIColor.darkGrayColor()
+            activityIndicator.startAnimating()
             getCurrentProfile()
+        }
+        else {
+            // no user logged in
+            background.hidden = false
+            visualEffects.hidden = false
         }
     }
     
@@ -64,7 +82,10 @@ class MyProfileViewController: UIViewController{
         ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
         ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Void in
         
-        let userImageFile = result![0]["imageFile"] as! PFFile
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.hidden = true
+            
+            let userImageFile = result![0]["imageFile"] as! PFFile
         
             userImageFile.getDataInBackgroundWithBlock{
                 (imageData: NSData?, error: NSError?) -> Void in
@@ -75,12 +96,17 @@ class MyProfileViewController: UIViewController{
                 }
             }
             
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+   
         self.nameLabel.text = "\(result![0]["first_name"]) \(result![0]["last_name"])"
         self.countryLabel.text = "\(result![0]["country"])"
         self.lookingForLabel.text = "\(result![0]["looking_for"])"
         self.offeringLabel.text = "\(result![0]["offering"])"
         self.summaryLabel.text = "\(result![0]["summary"])"
         self.scrollView.hidden = false
+            
+            
         }
     }
     
@@ -93,10 +119,11 @@ class MyProfileViewController: UIViewController{
     
     
     @IBAction func signOutButton(sender: AnyObject) {
-        if PFUser.currentUser() != nil {
+
             PFUser.logOut()
-            
-        }
+            //view.setNeedsDisplay()
+            self.viewWillAppear(true)
+        
     }
 
     override func didReceiveMemoryWarning() {

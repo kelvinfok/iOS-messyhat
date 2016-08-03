@@ -13,7 +13,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="CategoryCollectionViewController" title="Category" id="E7b-sh-k4L" customClass="CategoriesCollectionViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Lhm-XE-DTc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="wet-Uz-2lw">
@@ -24,7 +24,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="X1M-Qg-eaa" customClass="CategoryCollectionViewCell" customModule="messyhat_ios" customModuleProvider="target">
-                                <rect key="frame" x="8" y="122" width="250" height="250"/>
+                                <rect key="frame" x="82" y="122" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -78,11 +78,11 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="oEg-Fo-MKN" customClass="SectionHeaderView" customModule="messyhat_ios" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="414" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TECH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvq-YU-A54">
-                                    <rect key="frame" x="8" y="16" width="584" height="18"/>
+                                    <rect key="frame" x="8" y="16" width="398" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
             <objects>
                 <collectionViewController storyboardIdentifier="ProfileCollection" title="ProfilesCollection" id="HQg-Wo-flm" customClass="ProfilesCollectionViewController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xKn-dP-w64">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="twa-tC-0ox">
@@ -128,7 +128,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileCell" id="uUN-Sf-Pd5" customClass="ProfileViewCell" customModule="messyhat_ios" customModuleProvider="target">
-                                <rect key="frame" x="8" y="72" width="257" height="321"/>
+                                <rect key="frame" x="79" y="72" width="257" height="321"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="257" height="321"/>
@@ -692,7 +692,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 <rect key="frame" x="0.0" y="64" width="375" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTu-F3-Mhy">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="613"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nel-Yw-bZt">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="30"/>
@@ -720,7 +720,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose from the list what you like to learn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-Ng-zaF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to learn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-Ng-zaF">
                                                 <rect key="frame" x="8" y="93" width="359" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="IbP-9H-vms"/>
@@ -728,7 +728,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="ne4-6l-lBO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -738,7 +738,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07K-uY-BFh">
-                                                <rect key="frame" x="28" y="128" width="319" height="150"/>
+                                                <rect key="frame" x="58" y="118" width="259" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="mbD-Yz-0zp"/>
                                                 </constraints>
@@ -747,8 +747,8 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     <outlet property="delegate" destination="Hqb-eg-bal" id="w2b-Pt-HzQ"/>
                                                 </connections>
                                             </pickerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose from the list what you offer to teach" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-IR-BF7">
-                                                <rect key="frame" x="8" y="318" width="359" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you offer to teach" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-IR-BF7">
+                                                <rect key="frame" x="8" y="308" width="359" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="g4i-Sx-1fl"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="lmL-rV-vqm"/>
@@ -756,7 +756,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                     <constraint firstAttribute="height" constant="30" id="wcq-2X-MF0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -766,7 +766,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r0-6c-vKf">
-                                                <rect key="frame" x="28" y="373" width="319" height="150"/>
+                                                <rect key="frame" x="58" y="333" width="259" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="BEs-gy-hDl"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="OBm-YW-eQ6"/>
@@ -777,7 +777,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko4-KZ-f9q">
-                                                <rect key="frame" x="8" y="573" width="359" height="40"/>
+                                                <rect key="frame" x="8" y="523" width="359" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8xr-PQ-3Eb"/>
                                                     <constraint firstAttribute="height" constant="40" id="DDs-d7-HTT"/>
@@ -797,9 +797,9 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="leading" secondItem="h0a-sw-prl" secondAttribute="leading" constant="20" id="1mz-Ud-ZYs"/>
-                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="top" secondItem="hbC-IR-BF7" secondAttribute="bottom" constant="40" id="37B-7i-b2n"/>
+                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="top" secondItem="hbC-IR-BF7" secondAttribute="bottom" constant="10" id="37B-7i-b2n"/>
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="3If-EA-zqo"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4r0-6c-vKf" secondAttribute="trailing" constant="20" id="5Bm-Lp-jCL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4r0-6c-vKf" secondAttribute="trailing" constant="50" id="5Bm-Lp-jCL"/>
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="top" secondItem="07K-uY-BFh" secondAttribute="bottom" constant="40" id="8Jw-qp-qvt"/>
                                             <constraint firstItem="h0a-sw-prl" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="8od-wh-Sxy"/>
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="top" secondItem="h0a-sw-prl" secondAttribute="bottom" constant="20" id="AQe-CA-1Jq"/>
@@ -810,14 +810,14 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="hbC-IR-BF7" firstAttribute="trailing" secondItem="DTu-F3-Mhy" secondAttribute="trailingMargin" id="JoD-qb-8D8"/>
                                             <constraint firstAttribute="bottom" secondItem="ko4-KZ-f9q" secondAttribute="bottom" constant="50" id="MA6-gg-bCf"/>
                                             <constraint firstAttribute="width" constant="240" id="MUI-2b-4RU"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="07K-uY-BFh" secondAttribute="trailing" constant="20" id="PSS-L8-ugj"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="07K-uY-BFh" secondAttribute="trailing" constant="50" id="PSS-L8-ugj"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="h0a-sw-prl" secondAttribute="trailing" id="UBg-oS-Xdu"/>
-                                            <constraint firstItem="07K-uY-BFh" firstAttribute="top" secondItem="ub7-Ng-zaF" secondAttribute="bottom" constant="20" id="WiF-NN-Tlj"/>
+                                            <constraint firstItem="07K-uY-BFh" firstAttribute="top" secondItem="ub7-Ng-zaF" secondAttribute="bottom" constant="10" id="WiF-NN-Tlj"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ub7-Ng-zaF" secondAttribute="trailing" id="aZp-iO-qa0"/>
                                             <constraint firstItem="h0a-sw-prl" firstAttribute="top" secondItem="Nel-Yw-bZt" secondAttribute="bottom" constant="8" id="byk-aU-naW"/>
-                                            <constraint firstItem="07K-uY-BFh" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="20" id="dMc-b3-3eC"/>
-                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="20" id="eO0-K8-dMv"/>
-                                            <constraint firstItem="ko4-KZ-f9q" firstAttribute="top" secondItem="4r0-6c-vKf" secondAttribute="bottom" constant="50" id="fJO-cT-19H"/>
+                                            <constraint firstItem="07K-uY-BFh" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="50" id="dMc-b3-3eC"/>
+                                            <constraint firstItem="4r0-6c-vKf" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" constant="50" id="eO0-K8-dMv"/>
+                                            <constraint firstItem="ko4-KZ-f9q" firstAttribute="top" secondItem="4r0-6c-vKf" secondAttribute="bottom" constant="40" id="fJO-cT-19H"/>
                                             <constraint firstItem="ub7-Ng-zaF" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="hlp-FB-hQL"/>
                                             <constraint firstItem="Nel-Yw-bZt" firstAttribute="top" secondItem="DTu-F3-Mhy" secondAttribute="top" constant="20" id="iM5-5G-4dA"/>
                                             <constraint firstItem="ko4-KZ-f9q" firstAttribute="leading" secondItem="DTu-F3-Mhy" secondAttribute="leadingMargin" id="uLM-PM-FiH"/>
@@ -875,7 +875,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                 <rect key="frame" x="0.0" y="64" width="375" height="954"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elt-zF-mHG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="584"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmf-24-bC3">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="30"/>
@@ -925,16 +925,16 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </variation>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="58V-cy-jmr">
-                                                <rect key="frame" x="23" y="154" width="329" height="250"/>
-                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.30075431034482758" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="23" y="154" width="329" height="200"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="C2h-Om-8eC"/>
+                                                    <constraint firstAttribute="height" constant="200" id="C2h-Om-8eC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yos-BG-p0W">
-                                                <rect key="frame" x="23" y="444" width="329" height="40"/>
+                                                <rect key="frame" x="23" y="394" width="329" height="40"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="3pn-1o-cJL"/>
@@ -955,7 +955,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                                 </connections>
                                             </button>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-1m-Zhx">
-                                                <rect key="frame" x="169" y="274" width="37" height="37"/>
+                                                <rect key="frame" x="169" y="269" width="37" height="37"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -967,7 +967,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="trailing" secondItem="elt-zF-mHG" secondAttribute="trailingMargin" constant="15" id="Acd-wq-Gc6"/>
                                             <constraint firstItem="Vyh-1m-Zhx" firstAttribute="centerX" secondItem="elt-zF-mHG" secondAttribute="centerX" id="Am0-PP-99U"/>
                                             <constraint firstItem="KIf-PW-YDr" firstAttribute="leading" secondItem="elt-zF-mHG" secondAttribute="leadingMargin" id="CDO-4d-poN"/>
-                                            <constraint firstAttribute="bottom" secondItem="yos-BG-p0W" secondAttribute="bottom" constant="100" id="KHj-IR-Mb1"/>
+                                            <constraint firstAttribute="bottom" secondItem="yos-BG-p0W" secondAttribute="bottom" constant="140" id="KHj-IR-Mb1"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="7bE-wG-r4R" secondAttribute="trailing" id="KSY-wD-Xcf"/>
                                             <constraint firstItem="yos-BG-p0W" firstAttribute="top" secondItem="58V-cy-jmr" secondAttribute="bottom" constant="40" id="MO8-RI-hc7"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="58V-cy-jmr" secondAttribute="trailing" constant="15" id="Miv-KL-JEE"/>
@@ -1351,6 +1351,24 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
             </objects>
             <point key="canvasLocation" x="2444.5" y="-3028.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zLA-I4-etr">
+            <objects>
+                <viewController id="CWQ-X6-Vi2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eTW-rL-xv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6Z-Lp-lb2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QRa-xa-aCa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoG-ew-mEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-106"/>
+        </scene>
         <!--My Profile-->
         <scene sceneID="uQJ-IX-kUF">
             <objects>
@@ -1373,34 +1391,39 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are not logged in." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHh-EG-fjj">
-                                            <rect key="frame" x="20" y="20" width="374" height="394"/>
+                                            <rect key="frame" x="20" y="20" width="374" height="402"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-Pp-5i1">
+                                            <rect key="frame" x="20" y="442" width="374" height="40"/>
+                                            <color key="backgroundColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="k7g-PR-uQy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <state key="normal" title="Log In / Sign Up">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="loginCreateAction:" destination="KdA-dO-MQi" eventType="touchUpInside" id="HNf-Tu-lSW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="UHh-EG-fjj" firstAttribute="top" secondItem="oLG-XS-h6j" secondAttribute="top" constant="20" id="3j5-cs-9Cd"/>
+                                        <constraint firstItem="rkC-Pp-5i1" firstAttribute="leading" secondItem="oLG-XS-h6j" secondAttribute="leading" constant="20" id="409-yB-fYF"/>
                                         <constraint firstAttribute="trailing" secondItem="UHh-EG-fjj" secondAttribute="trailing" constant="20" id="BxO-0u-eIl"/>
+                                        <constraint firstItem="rkC-Pp-5i1" firstAttribute="top" secondItem="UHh-EG-fjj" secondAttribute="bottom" constant="20" id="KLP-VF-m6p"/>
+                                        <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerX" secondItem="oLG-XS-h6j" secondAttribute="centerX" id="KgL-cZ-N1O"/>
                                         <constraint firstItem="UHh-EG-fjj" firstAttribute="leading" secondItem="oLG-XS-h6j" secondAttribute="leading" constant="20" id="Ks8-nJ-hSM"/>
+                                        <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerY" secondItem="oLG-XS-h6j" secondAttribute="centerY" id="l8u-yq-Lwy"/>
+                                        <constraint firstAttribute="trailing" secondItem="rkC-Pp-5i1" secondAttribute="trailing" constant="20" id="w4W-2e-gUA"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-Pp-5i1">
-                                <rect key="frame" x="40" y="498" width="334" height="40"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.28235294119999998" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="k7g-PR-uQy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="Log In / Sign Up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginCreateAction:" destination="KdA-dO-MQi" eventType="touchUpInside" id="HNf-Tu-lSW"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsA-wE-xGO">
                                 <rect key="frame" x="0.0" y="64" width="414" height="923"/>
                                 <subviews>
@@ -1546,29 +1569,29 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                                     <constraint firstItem="Btl-UT-hoX" firstAttribute="top" secondItem="QsA-wE-xGO" secondAttribute="top" id="rsK-PK-V0h"/>
                                 </constraints>
                             </scrollView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0qD-G3-vGK">
+                                <rect key="frame" x="197" y="508" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="rkC-Pp-5i1" secondAttribute="trailing" constant="20" id="00n-DB-kvq"/>
                             <constraint firstItem="VBE-C3-ila" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="4b0-Bl-x5c"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="VBE-C3-ila" secondAttribute="bottom" id="4cZ-li-IwB"/>
                             <constraint firstItem="q1M-hW-Dog" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="8zZ-fh-SmF"/>
                             <constraint firstAttribute="trailing" secondItem="VBE-C3-ila" secondAttribute="trailing" id="ALG-Jo-Few"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="Br8-1h-AFf"/>
-                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="J7P-Js-DEk"/>
+                            <constraint firstItem="0qD-G3-vGK" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="Ero-kE-9bq"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="58l-fz-q94" secondAttribute="bottom" constant="119" id="JOI-IJ-xag"/>
                             <constraint firstItem="q1M-hW-Dog" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="Ny4-p6-sAh"/>
                             <constraint firstAttribute="trailing" secondItem="q1M-hW-Dog" secondAttribute="trailing" id="PAm-on-Yt4"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="width" secondItem="7Fk-H1-gtg" secondAttribute="width" id="RAj-KJ-l1Y"/>
-                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="centerY" secondItem="7Fk-H1-gtg" secondAttribute="centerY" id="aUx-dK-IMV"/>
                             <constraint firstItem="Btl-UT-hoX" firstAttribute="height" secondItem="7Fk-H1-gtg" secondAttribute="height" priority="250" id="b6h-A7-uDV"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="q1M-hW-Dog" secondAttribute="bottom" id="cza-qR-VwX"/>
                             <constraint firstItem="VBE-C3-ila" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leading" id="dNn-0q-pUJ"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="QsA-wE-xGO" secondAttribute="bottom" id="feE-lu-kSH"/>
                             <constraint firstItem="QsA-wE-xGO" firstAttribute="top" secondItem="aDc-cc-Eia" secondAttribute="bottom" id="gvX-43-4KG"/>
                             <constraint firstItem="Jem-Mi-Jhz" firstAttribute="top" secondItem="58l-fz-q94" secondAttribute="bottom" constant="50" id="j8f-MN-APe"/>
-                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="leading" secondItem="7Fk-H1-gtg" secondAttribute="leadingMargin" constant="20" id="kLN-ma-386"/>
-                            <constraint firstItem="rkC-Pp-5i1" firstAttribute="top" secondItem="UHh-EG-fjj" secondAttribute="bottom" constant="20" id="qxd-HZ-Kij"/>
+                            <constraint firstItem="0qD-G3-vGK" firstAttribute="centerX" secondItem="7Fk-H1-gtg" secondAttribute="centerX" id="oIe-JH-5OA"/>
                             <constraint firstAttribute="trailing" secondItem="QsA-wE-xGO" secondAttribute="trailing" id="tCL-ka-aiE"/>
                         </constraints>
                         <variation key="default">
@@ -1582,6 +1605,8 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1036"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="0qD-G3-vGK" id="otv-zh-jE8"/>
+                        <outlet property="background" destination="q1M-hW-Dog" id="5gJ-0O-O0z"/>
                         <outlet property="countryLabel" destination="Y2h-WA-Ykx" id="yCB-RW-mXs"/>
                         <outlet property="loginCreateAccountButton" destination="rkC-Pp-5i1" id="3gF-zR-Mb2"/>
                         <outlet property="lookingForLabel" destination="aR9-0c-ff2" id="1f3-22-ba5"/>
@@ -1591,7 +1616,9 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                         <outlet property="profileView" destination="Btl-UT-hoX" id="LG1-hK-VQk"/>
                         <outlet property="scrollView" destination="QsA-wE-xGO" id="QeU-NP-fZs"/>
                         <outlet property="summaryLabel" destination="y6i-Ra-g6l" id="ysW-mz-5XB"/>
+                        <outlet property="visualEffects" destination="VBE-C3-ila" id="jS5-uj-kgd"/>
                         <segue destination="c5h-3r-Wfc" kind="show" identifier="segueToLoginSignUp" id="0E2-da-ynq"/>
+                        <segue destination="E7b-sh-k4L" kind="show" identifier="segueToCategoryViewController" id="Cyr-GX-oaH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-uj-orT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1601,7 +1628,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <!--startViewController-->
         <scene sceneID="o8e-tC-rZy">
             <objects>
-                <tabBarController storyboardIdentifier="startViewController" title="startViewController" automaticallyAdjustsScrollViewInsets="NO" id="skG-Lp-UM2" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="startViewController" title="startViewController" automaticallyAdjustsScrollViewInsets="NO" id="skG-Lp-UM2" customClass="TabBarController" customModule="messyhat_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="NrS-LM-1Ev">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1620,7 +1647,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <scene sceneID="H1C-dF-VHY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8cN-UE-Ush" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Profile" image="tabBarMyProfile" id="dJX-fy-yRz"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="My Profile" image="tabBarMyProfile" id="dJX-fy-yRz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sit-uH-xW9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1629,6 +1656,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="KdA-dO-MQi" kind="relationship" relationship="rootViewController" id="89L-vd-4c8"/>
+                        <segue destination="CWQ-X6-Vi2" kind="show" identifier="showVC" id="iJE-9d-pez"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SnT-yc-Ddj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1644,4 +1672,7 @@ MessyHat may change its Privacy Policy from time to time, and at MessyHat's sole
         <image name="tabBarHome" width="38" height="36"/>
         <image name="tabBarMyProfile" width="42" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cyr-GX-oaH"/>
+    </inferredMetricsTieBreakers>
 </document>

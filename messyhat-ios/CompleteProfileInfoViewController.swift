@@ -252,7 +252,7 @@ class CompleteProfileInfoViewController: UIViewController, UIPickerViewDataSourc
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+       // scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
     func textViewDidBeginEditing(textView: UITextView) {

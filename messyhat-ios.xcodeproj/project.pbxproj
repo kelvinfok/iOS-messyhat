@@ -25,6 +25,7 @@
 		8D602DEC1D4F732E00402D19 /* Code Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D602DEB1D4F732E00402D19 /* Code Bank.swift */; };
 		8D92E4F11D51247D00F298F2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */; };
 		8DAE37CB1D4523E100AE6D09 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */; };
+		8DBC9EE31D51D83200634392 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC9EE21D51D83200634392 /* TabBarController.swift */; };
 		8DC951501D45CB5500971EC2 /* CompleteProfileInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */; };
 		8DCB4A6E1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */; };
 		8DCB4A701D3E7A1C00EAF970 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */; };
@@ -55,6 +56,7 @@
 		8D602DEB1D4F732E00402D19 /* Code Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Code Bank.swift"; sourceTree = "<group>"; };
 		8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInSignUpViewController.swift; sourceTree = "<group>"; };
+		8DBC9EE21D51D83200634392 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteProfileInfoViewController.swift; sourceTree = "<group>"; };
 		8DCB4A6D1D3E74AF00EAF970 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8DCB4A6F1D3E7A1C00EAF970 /* SectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				8DAE37CA1D4523E100AE6D09 /* LogInSignUpViewController.swift */,
 				8D92E4F01D51247D00F298F2 /* SignUpViewController.swift */,
 				8DC9514F1D45CB5500971EC2 /* CompleteProfileInfoViewController.swift */,
+				8DBC9EE21D51D83200634392 /* TabBarController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				8D5345701D3E0D0E00FCF23D /* Categories.swift in Sources */,
 				8D53456E1D3E0C7F00FCF23D /* Category.swift in Sources */,
 				8D3EF3C21D3F241400BA4289 /* ProfileViewController.swift in Sources */,
+				8DBC9EE31D51D83200634392 /* TabBarController.swift in Sources */,
 				8DC951501D45CB5500971EC2 /* CompleteProfileInfoViewController.swift in Sources */,
 				8D5BDDB11D3FC6E200C2C49E /* Profile.swift in Sources */,
 				8DCB4A741D3E907600EAF970 /* ProfilesCollectionViewController.swift in Sources */,
