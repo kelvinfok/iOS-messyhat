@@ -12,11 +12,6 @@ import Parse
     let categories = Categories()
 
 class CategoriesCollectionViewController: UICollectionViewController {
-    
-    @IBAction func logout(sender: AnyObject) {
-        PFUser.logOut()
-        self.checkUserLogin()
-    }
 
     var selectedCategory: String!
     
@@ -31,7 +26,6 @@ class CategoriesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         showCollectionViewsLayout()
-        // checkUserLogin()
     }
     
     
@@ -43,7 +37,6 @@ class CategoriesCollectionViewController: UICollectionViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        // checkUserLogin()
     }
     
     
@@ -63,18 +56,6 @@ class CategoriesCollectionViewController: UICollectionViewController {
             self.presentViewController(pageViewController, animated: true, completion: nil)
             }
         }
-    }
-    
-
-    
-    // MARK: - Check Login
-    
-    func checkUserLogin() {
-        if PFUser.currentUser() == nil {
-            print(PFUser.currentUser())
-            performSegueWithIdentifier(StoryBoard.showLoginSegue, sender: nil)
-        }
-        print("Current user is .. \(PFUser.currentUser()?.email)")
     }
     
     // MARK: - CollectionViews Layout

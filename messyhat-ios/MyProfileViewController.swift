@@ -11,7 +11,6 @@ import Parse
 
 class MyProfileViewController: UIViewController{
 
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var visualEffects: UIVisualEffectView!
     @IBOutlet weak var loginCreateAccountButton: UIButton!
@@ -46,18 +45,12 @@ class MyProfileViewController: UIViewController{
         super.viewWillAppear(true)
         
         background.hidden = true
-        visualEffects.hidden = true
-        activityIndicator.hidden = true
         
         self.tabBarController?.tabBar.hidden = false
         
         if currentUserLoggedIn() {
             // current user is logged in
-//            self.activityIndicator.hidden = false
-//            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-//            activityIndicator.color = UIColor.darkGrayColor()
-//            activityIndicator.startAnimating()
-            getCurrentProfile()
+//                       getCurrentProfile()
         }
         else {
             // no user logged in

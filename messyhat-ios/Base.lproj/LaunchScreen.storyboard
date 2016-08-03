@@ -23,8 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MessyHat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPT-aD-zGg">
-                                <rect key="frame" x="149" y="258" width="302" height="84"/>
-                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="70"/>
+                                <rect key="frame" x="182" y="267" width="237" height="66"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="55"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
