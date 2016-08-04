@@ -1398,7 +1398,7 @@ Describe yourself and the skills you have</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app1" translatesAutoresizingMaskIntoConstraints="NO" id="exf-S2-Fda">
-                                <rect key="frame" x="-216" y="35" width="806" height="389"/>
+                                <rect key="frame" x="-216" y="35" width="806" height="399"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3P-fQ-SKf">
                                 <rect key="frame" x="0.0" y="434" width="375" height="233"/>
@@ -1474,7 +1474,7 @@ Describe yourself and the skills you have</string>
                             <constraint firstItem="WF7-17-9m9" firstAttribute="top" secondItem="Vag-8g-Wu7" secondAttribute="bottom" constant="8" id="tYP-uS-BWC"/>
                             <constraint firstItem="N3P-fQ-SKf" firstAttribute="centerX" secondItem="REI-UA-W1f" secondAttribute="centerX" id="yrD-VJ-l3i"/>
                             <constraint firstItem="exf-S2-Fda" firstAttribute="height" secondItem="REI-UA-W1f" secondAttribute="height" multiplier="0.65" id="z1D-xl-Bfq"/>
-                            <constraint firstItem="N3P-fQ-SKf" firstAttribute="top" secondItem="exf-S2-Fda" secondAttribute="bottom" constant="10" id="zBh-Re-hH6"/>
+                            <constraint firstItem="N3P-fQ-SKf" firstAttribute="top" secondItem="exf-S2-Fda" secondAttribute="bottom" id="zBh-Re-hH6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1796,7 +1796,7 @@ Describe yourself and the skills you have</string>
         </scene>
     </scenes>
     <resources>
-        <image name="app1" width="805" height="1691"/>
+        <image name="app1" width="805" height="1257"/>
         <image name="marketing" width="350" height="350"/>
         <image name="people" width="840" height="1259"/>
         <image name="people-bottom" width="900" height="540"/>
