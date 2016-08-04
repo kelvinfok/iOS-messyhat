@@ -10,10 +10,12 @@ import UIKit
 import Parse
 
     let categories = Categories()
+    var currentProfile = [Profile]()
 
 class CategoriesCollectionViewController: UICollectionViewController {
 
     var selectedCategory: String!
+    
     
     struct StoryBoard {
         static let showLoginSegue = "showLogin"
@@ -24,22 +26,29 @@ class CategoriesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
+        getCurrentUserProfile()
         showCollectionViewsLayout()
     }
     
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(true)
         checkFirstTimer()
     }
     
     
     override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewDidAppear(true)
     }
     
-    
+    func getCurrentUserProfile() {
+        if PFUser.currentUser() != nil {
+              ParseHelper.GetCurrentProfile(PFUser.currentUser()!) {
+                (result: [PFObject]?, error: NSError?) -> Void in
+                currentProfile = result as! [Profile]
+            }
+        }
+    }
     
     func checkFirstTimer() {
         
@@ -47,11 +56,11 @@ class CategoriesCollectionViewController: UICollectionViewController {
         let displayedWalkthroughs = userDefaults.boolForKey("DisplayedWalkthrough")
         
         if displayedWalkthroughs == true {
-            print("Proceed to collectViews")
+            print("Proceed to CollectionViews")
             
         }
         else {
-            print("Show walk-through")
+            print("1st time loading App. Proceed to walk-through screens.")
             if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") {
             self.presentViewController(pageViewController, animated: true, completion: nil)
             }

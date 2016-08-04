@@ -29,5 +29,11 @@ class ParseHelper {
         profilesCollectionQuery.findObjectsInBackgroundWithBlock(completionBlock)
     }
     
+    static func GetCurrentProfile(user: PFUser, completionBlock: PFQueryArrayResultBlock) {
+        let currentUserQuery = PFQuery(className: Profile.parseClassName())
+        currentUserQuery.whereKey("user", equalTo: user)
+        currentUserQuery.findObjectsInBackgroundWithBlock(completionBlock)
+    }
+    
     
 }

@@ -43,7 +43,7 @@
 		8D28746C1D40AD16009E7048 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		8D3D31971D4C853300A2952A /* WalkThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		8D3EF3C11D3F241400BA4289 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8D5345511D3DC74300FCF23D /* messyhat-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "messyhat-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5345511D3DC74300FCF23D /* MessyHat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessyHat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5345541D3DC74300FCF23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D5345591D3DC74300FCF23D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D53455B1D3DC74300FCF23D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		8D5345521D3DC74300FCF23D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D5345511D3DC74300FCF23D /* messyhat-ios.app */,
+				8D5345511D3DC74300FCF23D /* MessyHat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D5345501D3DC74300FCF23D /* messyhat-ios */ = {
+		8D5345501D3DC74300FCF23D /* MessyHat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D5345631D3DC74300FCF23D /* Build configuration list for PBXNativeTarget "messyhat-ios" */;
+			buildConfigurationList = 8D5345631D3DC74300FCF23D /* Build configuration list for PBXNativeTarget "MessyHat" */;
 			buildPhases = (
 				B944A17995F79E7611D90108 /* [CP] Check Pods Manifest.lock */,
 				8D53454D1D3DC74300FCF23D /* Sources */,
@@ -211,9 +211,9 @@
 			);
 			dependencies = (
 			);
-			name = "messyhat-ios";
+			name = MessyHat;
 			productName = "messyhat-ios";
-			productReference = 8D5345511D3DC74300FCF23D /* messyhat-ios.app */;
+			productReference = 8D5345511D3DC74300FCF23D /* MessyHat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8D53454C1D3DC74300FCF23D /* Build configuration list for PBXProject "messyhat-ios" */;
+			buildConfigurationList = 8D53454C1D3DC74300FCF23D /* Build configuration list for PBXProject "MessyHat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D5345501D3DC74300FCF23D /* messyhat-ios */,
+				8D5345501D3DC74300FCF23D /* MessyHat */,
 			);
 		};
 /* End PBXProject section */
@@ -452,7 +452,7 @@
 				INFOPLIST_FILE = "messyhat-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kelvinfok.messyhat-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MessyHat;
 			};
 			name = Debug;
 		};
@@ -464,14 +464,14 @@
 				INFOPLIST_FILE = "messyhat-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kelvinfok.messyhat-ios";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MessyHat;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8D53454C1D3DC74300FCF23D /* Build configuration list for PBXProject "messyhat-ios" */ = {
+		8D53454C1D3DC74300FCF23D /* Build configuration list for PBXProject "MessyHat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D5345611D3DC74300FCF23D /* Debug */,
@@ -480,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D5345631D3DC74300FCF23D /* Build configuration list for PBXNativeTarget "messyhat-ios" */ = {
+		8D5345631D3DC74300FCF23D /* Build configuration list for PBXNativeTarget "MessyHat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D5345641D3DC74300FCF23D /* Debug */,

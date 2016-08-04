@@ -52,56 +52,41 @@ class MyProfileViewController: UIViewController {
         
         self.tabBarController?.tabBar.hidden = false
         
-        if currentUserLoggedIn() {
-            // current user is logged in
+        if currentUserWithProfileLoggedIn() {
             getCurrentProfile()
         }
         else {
-            // no user logged in
             backgroundTop.hidden = false
             backgroundBottom.hidden = false
-
-            //visualEffects.hidden = false
         }
     }
     
-    func currentUserLoggedIn() -> Bool {
+    func currentUserWithProfileLoggedIn() -> Bool {
         
-//        var isLoggedin: Bool?
-//        print(PFUser.currentUser())
-//        if PFUser.currentUser() != nil {
-//        
-//        let ProfileQuery = Profile.query()
-//        ProfileQuery!.whereKey("user", equalTo: PFUser.currentUser()!)
-//        ProfileQuery!.findObjectsInBackgroundWithBlock {(result: [PFObject]?, error: NSError?) -> Bool
-//            print("result is \(result)")
-//            if result!.count == 0 {
-//                self.scrollView.hidden = true
-//                isLoggedin = false
-//                print("not logged in")
-//            }
-//            else {
-//                return true
-//                print("Logged in")
-//            }
-//        }
-//    }
-//        else {
-//            return false
-//        }
-//        
-//        return nil
-        print(PFUser.currentUser())
-        
-        if PFUser.currentUser() != nil {
-            return true
+        print("Current User is: \(PFUser.currentUser())")
+        print("Current profile is: \(currentProfile)")
+
+            if currentProfile.count > 0 && PFUser.currentUser() != nil {
+                    self.scrollView.hidden = false
+                    return true
+            }
+            else if PFUser.currentUser() != nil {
+                    ParseHelper.GetCurrentProfile(PFUser.currentUser()!) {
+                        (result: [PFObject]?, error: NSError?) -> Void in
+                        currentProfile = result as! [Profile]
+                        if currentProfile.count > 0 {
+                            self.showMyProfile()
+                        }
+                    }
         }
-        else {
-            self.scrollView.hidden = true
-            return false
-        }
-        
-        
+        self.scrollView.hidden = true
+        return false
+    }
+    
+    
+    func showMyProfile() -> Bool {
+        self.scrollView.hidden = false
+        return true
     }
     
     func getCurrentProfile() {

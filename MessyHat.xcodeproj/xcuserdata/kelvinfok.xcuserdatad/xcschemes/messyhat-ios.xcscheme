@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D5345501D3DC74300FCF23D"
-               BuildableName = "messyhat-ios.app"
-               BlueprintName = "messyhat-ios"
-               ReferencedContainer = "container:messyhat-ios.xcodeproj">
+               BuildableName = "MessyHat.app"
+               BlueprintName = "MessyHat"
+               ReferencedContainer = "container:MessyHat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5345501D3DC74300FCF23D"
-            BuildableName = "messyhat-ios.app"
-            BlueprintName = "messyhat-ios"
-            ReferencedContainer = "container:messyhat-ios.xcodeproj">
+            BuildableName = "MessyHat.app"
+            BlueprintName = "MessyHat"
+            ReferencedContainer = "container:MessyHat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5345501D3DC74300FCF23D"
-            BuildableName = "messyhat-ios.app"
-            BlueprintName = "messyhat-ios"
-            ReferencedContainer = "container:messyhat-ios.xcodeproj">
+            BuildableName = "MessyHat.app"
+            BlueprintName = "MessyHat"
+            ReferencedContainer = "container:MessyHat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5345501D3DC74300FCF23D"
-            BuildableName = "messyhat-ios.app"
-            BlueprintName = "messyhat-ios"
-            ReferencedContainer = "container:messyhat-ios.xcodeproj">
+            BuildableName = "MessyHat.app"
+            BlueprintName = "MessyHat"
+            ReferencedContainer = "container:MessyHat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
