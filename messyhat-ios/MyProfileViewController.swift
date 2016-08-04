@@ -86,6 +86,7 @@ class MyProfileViewController: UIViewController {
     
     func showMyProfile() -> Bool {
         self.scrollView.hidden = false
+        self.viewWillAppear(true)
         return true
     }
     

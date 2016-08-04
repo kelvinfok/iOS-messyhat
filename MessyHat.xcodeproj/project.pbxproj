@@ -453,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kelvinfok.messyhat-ios";
 				PRODUCT_NAME = MessyHat;
+				PROVISIONING_PROFILE = "4cb43ce9-b088-4491-9fb5-5ef4abedcbc3";
 			};
 			name = Debug;
 		};
@@ -465,6 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kelvinfok.messyhat-ios";
 				PRODUCT_NAME = MessyHat;
+				PROVISIONING_PROFILE = "4cb43ce9-b088-4491-9fb5-5ef4abedcbc3";
 			};
 			name = Release;
 		};

@@ -16,7 +16,8 @@ class Categories
     private var sections = [String]()
     
     static var subCategories = ["Startup - Early Stage", "Startup - E-commerce", "Startup - Finance", "Startup - Biotech", "Startup - IOT", "Startup - Healthcare",  "Startup - Security", "Startup - Logistics", "Startup - Virtual Reality", "Startup - Clean Tech", "Startup - Legal", "Startup - Social Media", "Startup - Data", "Startup - Marketing", "Startup - Travel", "Code - Ruby on Rails", "Code - Javascript", "Code - ASP.NET",
-                                "Code - Django", "Code - PHP", "Code - Java", "Code - Swift", "Code - Haskell"]
+                                "Code - Django", "Code - PHP", "Code - Java", "Code - Swift", "Code - Haskell",
+                                "Code - C++"]
     
     // MARK: - Public
     
@@ -177,6 +178,7 @@ class Code
         categories.append(Category(title: "Java", key: "Code - Java", image: UIImage(named: "code-java")!, section: "Code"))
         categories.append(Category(title: "Swift", key: "Code - Swift", image: UIImage(named: "code-swift")!, section: "Code"))
         categories.append(Category(title: "Haskell", key: "Code - Haskell", image: UIImage(named: "code-haskell")!, section: "Code"))
+        categories.append(Category(title: "C++", key: "Code - C++", image: UIImage(named: "code-cpp")!, section: "Code"))
         return categories
     }
 }
